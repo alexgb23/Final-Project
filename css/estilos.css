@@ -21,8 +21,22 @@
     justify-content: space-around;
     align-items: center;
     align-content: center;
+    z-index: 200;
 }
-
+#cont-del-nav{
+    width: 100%;
+    position: relative;
+    position: fixed;
+    height: 18vh;
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    z-index: 200;
+    transition: 0.5s;
+}
 
 #icono-menu{
     margin-top: 3%;
@@ -33,27 +47,39 @@
     border-radius: 25vw;
 }
 .cont-logo{
-    scale: 130%;
+    scale: 140%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .cont-logo img{
     margin-top: 50%;
     width: 5vw;
 }
-
 .cont-logo h3{
     color: white;
     font-weight: 400;
     font-size: 2vw;
 }
-.cont-btn-contact{
+#logo-modified img{
+    margin-top: 15%;
+    width: 3vw;
+    color: black;
+}
+#logo-modified h3{
+    color: rgba(116, 4, 27, 0.645);
+    font-weight: 550;
+    font-size: 2vw;
+    
+}
+
+.cont-contact{
     margin-left: 45%;
 }
 
-.btn-contact{
+#contact{
     width: 10vw;
     height: 9vh;
     border: none;
@@ -62,6 +88,11 @@
     font-size: 1.2vw;
     background-color: rgba(220, 20, 60, 0.645);
 }
+#contact:hover{
+    cursor: pointer;
+    background-color: rgb(245, 167, 50);
+}
+
 
 #interrogacion{
     width: 1.2vw;
@@ -111,3 +142,20 @@
     padding-inline: 0.5%;
     border-radius: 0.25vw;
 }
+#art-presentacion{
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ padding: 8%;
+ padding-inline: 18.5%;
+ text-align: justify;
+
+}
+#titulo-pag{
+    color: rgba(220, 20, 60, 0.645);
+}
+#titulo-contactar a{
+    text-decoration: none;
+   color: rgba(0, 0, 255, 0.596);
+}
+
