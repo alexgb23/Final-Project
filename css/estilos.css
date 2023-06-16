@@ -1,8 +1,21 @@
+@font-face {
+    font-family: 'prata';
+    src: url('../tipografia/prata/prata-Regular.ttf');
+}
+@font-face {
+    font-family: 'lato';
+    src: url('../tipografia/lato/lato-Regular.ttf');
+}
+@font-face {
+    font-family: 'Passions_Conflict';
+    src: url('../tipografia/Passions_Conflict/PassionsConflict-Regular.ttf');
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .cont-general{
     max-width: min(100%, 1600px);
 }  
@@ -22,6 +35,7 @@
     align-items: center;
     align-content: center;
     z-index: 200;
+    transition: 0.5s;
 }
 #cont-del-nav{
     width: 100%;
@@ -29,6 +43,7 @@
     position: fixed;
     height: 18vh;
     background-color:white;
+    box-shadow: 1px 1px 5px gray;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
@@ -62,6 +77,7 @@
     color: white;
     font-weight: 400;
     font-size: 2vw;
+    font-family: 'prata';
 }
 #logo-modified img{
     margin-top: 15%;
@@ -97,7 +113,13 @@
 #interrogacion{
     width: 1.2vw;
     margin-left: 3%;
+    transition: 0.5s;
 }
+
+#interrogacion:hover{
+    cursor: pointer;
+}
+
 #ayuda-btn{
    position: absolute;
    right: 6%;
@@ -105,10 +127,19 @@
    font-size: 1.2vw;
    z-index: 300;
     width: 25vw;
-    padding: 1%;
-    height: 22vh;
+    padding: 1.2%;
+    height: 23vh;
     background-color: white;
 }
+#ayuda-btn p{
+    font-family: 'lato';
+    font-weight: lighter;
+    font-size: 1vw;
+    line-height: 1.5em ;    
+    color: #231f20;
+   
+}
+
 
 
                       /* HEADER PRINCIPAL */
@@ -139,7 +170,8 @@
     position: absolute;
     color: white;
    bottom:20%;
-   font-size: 6vw;
+   font-size: 5.5vw;
+   font-family: 'prata';
    font-weight: 400;
 }
 
@@ -155,6 +187,7 @@
 }
 #art-presentacion{
  display: flex;
+ flex-direction: column;
  justify-content: center;
  text-align: center;
  padding: 8%;
@@ -162,7 +195,20 @@
  text-align: justify;
 }
 #art-presentacion p{
-    font-size: 1.8vw;
+    font-size: 1.6vw;
+    font-weight: 100;
+    font-family: 'prata';
+    line-height: 1.5em ;  
+}
+#firma{
+    font-family: 'Passions_Conflict';
+    text-align: center;
+    margin-top: 5%;
+    font-size: 4vw;
+}
+#firma-description{
+    text-align: center;
+    font-family: 'lato';
 }
 #titulo-pag{
     color: rgba(220, 20, 60, 0.645);
@@ -172,13 +218,13 @@
    color: rgba(0, 0, 255, 0.596);
 }
 
+                      /* ----------------SECCION UNO-------------- */
+
 .primera-Seccion{
     display: flex;
     flex-direction: row;
     display: grid;
     grid-template-columns:950px  1fr;
-   
-
 }
 #left{
     padding-left: 5%;
@@ -215,7 +261,22 @@
     background-color: rgba(220, 20, 60, 0.645);
     border: none;
 }
-
+#s1artR3{
+    margin-top: 10%;
+}
+#s1artR-Btn2{
+    width: 10vw;
+    height: 9vh;
+    font-size: 1.5vw;
+    margin: 3%;
+    border-radius: 0.5vw;
+    background-color:transparent;
+    border: 1px solid white;
+    position: absolute;
+    margin-top: 22%;
+    right: 22%;
+   
+}
 
 #right{
     padding-right: 12%;
@@ -251,7 +312,7 @@
     border: none;
 }
 
-                                                /*SECTION DOS*/
+                                 /*-------------------SECTION DOS----------------*/
 
 .segunda-Seccion{
     margin-top: 5%;
@@ -264,7 +325,6 @@
 #s2DivUp{
     position: absolute;
     width:30vw;
-    z-index: 200;
     height: 50vh;
     left: 3%;
    margin-top: 6%;
@@ -295,4 +355,238 @@
 .s2artDiv a{
    padding: 2%;
    text-decoration: none;
+}
+
+
+                                         /*-------------------SECTION TRES----------------*/
+
+.tercera-Seccion{
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 950px;
+}
+
+#s3srtRight{
+    padding-right: 8%;
+    margin-left: 4%;
+}
+
+#s3srtRight img{
+    width: 100%;
+    height: 70vh;
+}
+
+#s3srtleft{
+    padding-left: 10%; 
+}
+
+#s3srtleft img{
+    width: 100%;
+    height: 50vh;
+}
+#s3artR3{
+    margin-top: 10%;
+}
+#s3artR-Btn2{
+    position: absolute;
+    left: 6%;
+    margin-top: 18%;
+    width: 10vw;
+    height: 9vh;
+    font-size: 1.5vw;
+    border-radius: 0.5vw;
+    background-color:transparent;
+    border: 1px solid white;
+}
+
+                                       /*-------------------SECTION CUATRO----------------*/
+
+.cuarta-Seccion{
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 75vh; 
+}
+
+#s4DivUp{
+    position: absolute;
+    width:30vw;
+    height: 50vh;
+    left: 3%;
+    margin-top: 8%;
+    padding: 3%;
+}
+#s4Div-h4{
+    font-size: 3.2vw;
+    color: rgba(220, 20, 60, 0.645);
+}
+#s4art-p1{
+    font-size: 1.2vw;
+}
+.s4artDiv{
+    padding-top: 25%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.s4artDiv a{
+   padding: 2%;
+   text-decoration: none;
+}
+#s4articulo{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    width: 82%;
+    height: 75vh;
+    padding-left: 15%;
+    background-color: rgba(7, 7, 7, 0.048);
+}
+
+
+                                        /*-------------footer-------------------*/
+
+.pie-pag{
+    width: 100%;
+    height: 70vh;
+    margin-top: 8%;
+    background-color:  rgba(220, 20, 60, 0.645);
+    color: white;
+}
+
+.pie-pag h5{
+    padding: 3%;
+    text-align: center;
+    font-size: 4vw;
+}
+
+#fter-contact{
+    width: 12vw;
+    height: 9vh;
+    border: 1px solid white;
+    border-radius: 0.5vw;
+    color: white;
+    font-size: 1.2vw;
+    background-color:transparent;
+   margin-left: 45%;
+}
+
+#fterleftlogo{
+    margin-top: 4%;
+    margin-left: 3%;
+    width: 45%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#fterleftlogo a{
+    margin-inline: 5%;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+#fterleftlogo a:hover{
+    color: rgb(91, 3, 174);
+    border-bottom: 2px solid rgb(91, 3, 174);
+}
+
+#fterleftlogo img{
+    width: 6vw;
+}
+
+#fterleftlogo h3{
+    font-size: 2vw;
+}
+
+.pie-pag p{
+    margin-top: 1%;
+    margin-left: 4%;
+    color: rgba(255, 255, 255, 0.527);
+}
+
+#fterRight{
+    width: 24vw;
+    height: 60vh;
+    position: absolute;
+    right: 2%;
+    margin-top: -25%;
+}
+
+#fterRight h6{
+    font-size: 1.6vw;
+    margin-top: -6%;
+    margin-bottom: 6%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+
+#spnAfter{
+text-decoration: none;
+color: white;
+border-bottom: 2px solid white;
+}
+
+#spnAfter:hover{
+    text-decoration: none;
+    border-bottom: 2px solid rgb(91, 3, 174);
+    color: rgb(91, 3, 174);
+}
+
+#pAfter{
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+#pAfter:hover{
+    border-bottom: 2px solid rgb(91, 3, 174);
+    color: rgb(91, 3, 174);
+}
+
+#icnsRedesFre{
+    margin-top: 20%;
+    margin-bottom: 15%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+#fterRight p{
+    color: rgba(255, 255, 255, 0.527);
+    margin: 0;
+}
+
+#stars{
+    width: 8vw;
+}
+
+.icnsRedes{
+    width: 1.5vw;
+    margin-right: 6%;
+    transition: 0.5s;
+}
+
+.icnsRedes:hover{
+    cursor: pointer;
+    color: white;
+    transform: scale(1.4);
+}
+
+#img-diferente{
+    margin-left: 3%;
+    width: 4vw;
+    transition: 0.5s;
+}
+
+#img-diferente:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
