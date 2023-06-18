@@ -4,6 +4,12 @@ const imglogo=document.getElementById('logo')
 const btnHelp=document.getElementById('interrogacion')
 const mensajeAyuda=document.getElementById('ayuda-btn')
 const imgCabecera = document.getElementById('imgHder');
+const btnregistrarUser=document.querySelector('.btnclick')
+const modalLogin=document.querySelector('.modal-Login')
+const btnCerrarModal=document.getElementById('btnCerrar')
+const maincont=document.querySelector('.cont-general')
+const btnAceptarRegistro=document.getElementById('btnAceptar')
+
 
 addEventListener("wheel", (e) => {
     if (window.scrollY !==0) {
@@ -68,3 +74,25 @@ btnHelp.addEventListener('click', ()=>{
 
 })
 
+btnregistrarUser.addEventListener('click',()=>{
+  if(modalLogin.style.display=='none'){
+    modalLogin.style.display='block'
+    document.body.style.overflow='hidden'
+    modalLogin.style.opacity='1'
+  }
+})
+
+btnCerrarModal.addEventListener('click',()=>{
+ if(modalLogin.style.display=='block'){
+    modalLogin.style.display='none'
+    document.body.style.overflow='auto'
+  }
+})
+
+btnAceptarRegistro.addEventListener('click',()=>{
+let inputNombre=document.getElementById('nombre')
+let inputApellido1=document.getElementById('apellido1')
+    console.log(inputNombre.value,inputApellido1.value)
+
+  
+})

@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" type="image/png" href="multimedia/logomod.png">
     <title>Gourmet Moments</title>
 </head>
 
 <body>
-    <main class="cont-general">
+    <main class="cont-general" >
 
         <!--------------------------navegador----------------------->
 
@@ -29,7 +30,7 @@
             </article>
 
             <article class="cont-contact">
-                <button class="btnclick">CONTÁCTENOS</button>
+                <button class="btnclick">REGISTRATE <img src="multimedia/usuario.png" alt="usuario" id="usuario"> </button>
                 <img src="multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png"
                     alt="icono de interrogacion" id="interrogacion" width="100%">
             </article>
@@ -38,6 +39,30 @@
                     enviar el formulario, un planificador de cenas de Gourmet Moments se comunicará con usted lo antes
                     posible para responder sus preguntas y comenzar a planificar su cena.</p>
             </article>
+
+            <section class="modal-Login" style="display: none;" >
+                <img src="multimedia/btnCerrar.png" alt="boton de cerrar" id="btnCerrar">
+                <article class="rellenar">
+                    <h1>"Bienvenido "</h1>
+                    <h3>Ahora es el momento de conocerte a ti, estamos ansiosos por Ayudarte.</h3>
+                    <form action="" method="get" id="formulario-login">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" state="required" class="inputRegister">
+                        <label for="apellido1">Primer Apellido:</label>
+                        <input type="text" name="apellido1" id="apellido1" state="required" class="inputRegister">
+                        <label for="apellido2">Segundo Apellido:</label>
+                        <input type="text" name="apellido2" id="apellido2" class="inputRegister">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" name="email" id="email" state="required" class="inputRegister">
+                        <label for="telefono">Numero de Telefono:</label>
+                        <input type="tel" name="telefono" id="telefono" state="required" class="inputRegister">
+                        <label for="direccion">Direccion:</label>
+                        <input type="text" name="direccion" id="direccion" class="inputRegister">
+                        </form>
+                        <input type="submit" id ="btnAceptar" value="Aceptar">
+
+                </article>
+                </section>
     </nav>
 
         <!--------------------------cabecera----------------------->
@@ -320,9 +345,8 @@
 </footer >
 
 
-
     </main>
-
+  
     <script src="projectJs/funcionalidades.js"></script>
 </body>
 
