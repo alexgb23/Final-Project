@@ -16,12 +16,12 @@
     box-sizing: border-box;
 }
 
-.cont-general{
-    max-width: min(100%, 1600px);
-}  
+
 
 
                     /* NAV PRINCIPAL */
+
+
 
 
 .nav-principal{
@@ -72,22 +72,28 @@
 .cont-logo img{
     margin-top: 50%;
     width: 5vw;
+    transition: 0.5s;
 }
 .cont-logo h3{
+    margin-right: -1%;
+    margin-left: -1%;
     color: white;
     font-weight: 400;
-    font-size: 2vw;
+    font-size: 1.8vw;
     font-family: 'prata';
+    transition: 0.5s;
 }
 #logo-modified img{
     margin-top: 15%;
-    width: 3vw;
+    width: 2.5vw;
     color: black;
+    transition: 0.5s;
 }
 #logo-modified h3{
-    color: rgba(116, 4, 27, 0.645);
+    color:  rgba(110, 27, 43, 0.788);
     font-weight: 550;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    transition: 0.5s;
     
 }
 
@@ -95,17 +101,19 @@
     margin-left: 45%;
 }
 
-#contact{
-    width: 10vw;
+.btnclick{
+    padding-inline: 4%;
     height: 9vh;
+    color: white;
     border: none;
     border-radius: 0.5vw;
-    color: white;
+    font-family: 'lato';
     font-size: 1.2vw;
     background-color: rgba(220, 20, 60, 0.645);
 }
-#contact:hover{
+.btnclick:hover{
     cursor: pointer;
+    color: #231f20;
     background-color: rgb(245, 167, 50);
 }
 
@@ -184,6 +192,8 @@
     background-color: #dc143ca4;
     padding-inline: 0.5%;
     border-radius: 0.25vw;
+    font-family: 'lato';
+    line-height: 1.5em ;    
 }
 #art-presentacion{
  display: flex;
@@ -201,14 +211,19 @@
     line-height: 1.5em ;  
 }
 #firma{
+    width: 38%;
+    margin: 0 auto;
     font-family: 'Passions_Conflict';
     text-align: center;
     margin-top: 5%;
     font-size: 4vw;
+    border-bottom: 1px solid rgba(48, 9, 17, 0.645);
 }
+
 #firma-description{
     text-align: center;
     font-family: 'lato';
+    line-height: 1.5vw ;    
 }
 #titulo-pag{
     color: rgba(220, 20, 60, 0.645);
@@ -238,44 +253,51 @@
 #left img{
     width: 100%;
 }
+
 #s1l-h4{
-   
     font-size: 1vw;
     margin: 3%;
+    font-family: 'prata';
 }
+
 #s1l-p1{
-    
+    font-family: 'lato';
+    line-height: 1.4em ;    
     font-size: 1.5vw;
     margin: 3%;
 }
+
 #s1l-text{
-    font-size: 1.5vw;
+    font-size: 1.4vw;
+    line-height: 1.4em ;    
     margin: 3%;
+    font-family: 'lato';
 }
-#s1artL-btn{
-    width: 14vw;
-    height: 9vh;
-    font-size: 1.5vw;
-    margin: 3%;
-    border-radius: 0.5vw;
-    background-color: rgba(220, 20, 60, 0.645);
-    border: none;
-}
+
+
 #s1artR3{
     margin-top: 10%;
 }
 #s1artR-Btn2{
     width: 10vw;
     height: 9vh;
-    font-size: 1.5vw;
     margin: 3%;
+    font-size: 1.2vw;
+    font-family: 'lato';
     border-radius: 0.5vw;
     background-color:transparent;
     border: 1px solid white;
+    color: white;
     position: absolute;
     margin-top: 22%;
     right: 22%;
-   
+}
+
+#s1artR-Btn2:hover{
+        cursor: pointer;
+        color: #231f20;
+        background-color: rgb(245, 167, 50);
+    
 }
 
 #right{
@@ -292,24 +314,23 @@
     vertical-align: inherit;
     font-size: 1vw;
     margin: 3%;
+    font-family: 'lato';
+    
 }
 #s1r-h5{
-    vertical-align: inherit;
-    font-size: 4vw;
-    margin: 3%;
+    font-size: 3.1vw;
+    font-weight: 400;
+    color: #4c4461;
+    font-family: 'prata';
+    margin-left: 3%;
 }
 #s1r-text{
     font-size: 1.5vw;
     margin: 3%;
-}
-#s1artR-btn{
-    width: 20vw;
-    height: 9vh;
-    font-size: 1.5vw;
-    margin: 3%;
-    border-radius: 0.5vw;
-    background-color: rgba(220, 20, 60, 0.645);
-    border: none;
+    font-family: 'lato';
+    line-height: 1.4em ;   
+    Color:#231f20
+
 }
 
                                  /*-------------------SECTION DOS----------------*/
@@ -324,39 +345,82 @@
 
 #s2DivUp{
     position: absolute;
-    width:30vw;
+    width:35vw;
     height: 50vh;
     left: 3%;
-   margin-top: 6%;
+   margin-top: 2%;
    padding: 3%;
 }
 #s2Div-h4{
-    font-size: 3.2vw;
-    color: rgba(220, 20, 60, 0.645);
+    font-size: 3.1vw;
+    font-weight: 400;
+    color: #4c4461;
+    font-family: 'prata';
 }
 #s2articulo{
     display: grid;
     grid-template-columns:repeat(3, 1fr);
     width: 82%;
     height: 75vh;
-    padding-left: 15%;
+    padding-left: 24%;
     background-color: rgba(7, 7, 7, 0.048);
 }
 #s2art-p1{
     font-size: 1.2vw;
+    font-family: 'lato';
+    line-height: 1.4vw ;    
 }
 .s2artDiv{
     padding-top: 25%;
+    height: 80%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .s2artDiv a{
    padding: 2%;
    text-decoration: none;
+   font-size: 1.3vw;
+   line-height: 1.8vw ;    
+   font-family: 'prata';
+   color: #292929;
+   text-decoration: underline;
+}
+.s2artDiv a:hover{
+    color: rgb(220, 20, 60);
 }
 
+.s2artDiv h4{
+    padding: 2%;
+    margin-bottom: 5%;
+   font-size: 0.8vw;
+    font-family: 'lato';
+    color: #474848;
+ }
+ #s2DivDown{
+    position: absolute;
+    margin-top: 28%;
+    right: 2%;
+    font-size: 1.2vw;
+    font-family: 'lato';
+    display: flex;
+    color: #474848;
+ }
+ #s2DivDown a{
+  text-decoration: none;
+  color: #474848;
+  text-decoration: underline;
+ }
+ #s2DivDown a:hover{
+    text-decoration: none;
+    color: rgb(91, 3, 174);
+    text-decoration: underline;
+   }
+ .icoImgSvg{
+    cursor: pointer;
+    width: 1.8vw;
+    padding: 2%;
+ }
 
                                          /*-------------------SECTION TRES----------------*/
 
@@ -391,14 +455,21 @@
 }
 #s3artR-Btn2{
     position: absolute;
-    left: 6%;
+    left: 5%;
     margin-top: 18%;
     width: 10vw;
     height: 9vh;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+    font-family: 'lato';
     border-radius: 0.5vw;
     background-color:transparent;
     border: 1px solid white;
+    color: white;
+}
+#s3artR-Btn2:hover{
+    cursor: pointer;
+    color: #231f20;
+    background-color: rgb(245, 167, 50);
 }
 
                                        /*-------------------SECTION CUATRO----------------*/
@@ -413,36 +484,54 @@
 
 #s4DivUp{
     position: absolute;
-    width:30vw;
+    width:35vw;
     height: 50vh;
     left: 3%;
-    margin-top: 8%;
+    margin-top: 6%;
     padding: 3%;
 }
 #s4Div-h4{
-    font-size: 3.2vw;
-    color: rgba(220, 20, 60, 0.645);
+    font-size: 3.1vw;
+    font-weight: 400;
+    color: #4c4461;
+    font-family: 'prata';
 }
 #s4art-p1{
     font-size: 1.2vw;
+    font-family: 'lato';
+    line-height: 1.4em ; 
 }
 .s4artDiv{
     padding-top: 25%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-.s4artDiv a{
+.s4artDiv li{
    padding: 2%;
-   text-decoration: none;
+   list-style:none;
+   font-size: 1.1vw;
+   padding: 2%;   
+   font-family: 'prata';
+   color: #292929;
+}
+
+.s4artDiv h4{
+    padding: 2%;
+    margin-bottom: 5%;
+    font-size: 0.8vw;
+    font-family: 'lato';
+    color: #474848;
+}
+#modLaA{
+    margin-top: 15%;
 }
 #s4articulo{
     display: grid;
     grid-template-columns:repeat(3, 1fr);
     width: 82%;
     height: 75vh;
-    padding-left: 15%;
+    padding-left:24%;
     background-color: rgba(7, 7, 7, 0.048);
 }
 
@@ -455,12 +544,15 @@
     margin-top: 8%;
     background-color:  rgba(220, 20, 60, 0.645);
     color: white;
+    
 }
 
 .pie-pag h5{
     padding: 3%;
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.5vw;
+    font-weight: 200;
+    font-family: 'prata';
 }
 
 #fter-contact{
@@ -471,7 +563,13 @@
     color: white;
     font-size: 1.2vw;
     background-color:transparent;
-   margin-left: 45%;
+    margin-left: 45%;
+    font-family: 'lato';
+}
+#fter-contact:hover{
+    cursor: pointer;
+    color: #231f20;
+    background-color: rgb(245, 167, 50);
 }
 
 #fterleftlogo{
@@ -486,11 +584,14 @@
 }
 
 #fterleftlogo a{
-    margin-inline: 5%;
-    font-size: 1.5vw;
+    margin-left: 10%;
+ transition: 0.5s;
+    font-size: 1.1vw;
+    font-weight: 500;
     text-decoration: none;
     color: white;
     border-bottom: 2px solid white;
+    font-family: 'lato';
 }
 
 #fterleftlogo a:hover{
@@ -499,11 +600,15 @@
 }
 
 #fterleftlogo img{
-    width: 6vw;
+    width: 5vw;
 }
 
 #fterleftlogo h3{
+    margin-right: -3%;
+    margin-left: -3%;
     font-size: 2vw;
+    font-weight: 200;
+    font-family: 'prata';
 }
 
 .pie-pag p{
@@ -513,18 +618,18 @@
 }
 
 #fterRight{
-    width: 24vw;
+    width: 26vw;
     height: 60vh;
     position: absolute;
     right: 2%;
-    margin-top: -25%;
+    margin-top: -24%;
 }
 
 #fterRight h6{
-    font-size: 1.6vw;
-    margin-top: -6%;
+    font-size: 1.4vw;
+    margin-top: -4%;
     margin-bottom: 6%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'prata';
     font-weight: 100;
 }
 
@@ -562,10 +667,17 @@ border-bottom: 2px solid white;
 #fterRight p{
     color: rgba(255, 255, 255, 0.527);
     margin: 0;
+    font-family: 'lato';
+    line-height: 1.4em ; 
+}
+#spnFter{
+    font-size: 1vw;
+    font-family: 'lato';
+    line-height: 1.4em ; 
 }
 
 #stars{
-    width: 8vw;
+    width: 5vw;
 }
 
 .icnsRedes{
@@ -589,4 +701,61 @@ border-bottom: 2px solid white;
 #img-diferente:hover{
     cursor: pointer;
     transform: scale(1.1);
+}
+
+/*////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////**/
+
+
+@media (max-width: 768px) {
+
+    @font-face {
+        font-family: 'prata';
+        src: url('../tipografia/prata/prata-Regular.ttf');
+    }
+    @font-face {
+        font-family: 'lato';
+        src: url('../tipografia/lato/lato-Regular.ttf');
+    }
+    @font-face {
+        font-family: 'Passions_Conflict';
+        src: url('../tipografia/Passions_Conflict/PassionsConflict-Regular.ttf');
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+   
+
+    .primera-Seccion{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+   .tercera-Seccion{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+   }
+   #s1artLDiv button{
+    margin-bottom: 5%;
+}
+.cont-contact{
+    display: flex;
+    align-items: center;
+    margin-left: 45%;
+}
+#interrogacion{
+    width: 15%;
+    height: 15%;
+}
+#icono-menu{
+    margin-left: -100%;
+}
+
 }
