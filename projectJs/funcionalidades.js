@@ -118,6 +118,7 @@ let inputApellido1=document.getElementById('apellido1')
 icoMenu.addEventListener('click',(e)=>{
   if(icoMenu.id=='icono-menu'){
     abrirAside()
+ 
   }
  else if(icoMenu.id=='icono-cerrar'){
   cerrarAside()
@@ -133,6 +134,7 @@ icoMenu.addEventListener('click',(e)=>{
     icoMenu.style.backgroundColor='#a0122f'
     icoMenu.style.transition='0.4s'
     document.body.style.overflow='hidden'
+    
   }
 
   function cerrarAside(){
@@ -144,4 +146,5 @@ icoMenu.addEventListener('click',(e)=>{
     icoMenu.style.marginLeft='15%'
     icoMenu.style.backgroundColor='#dc143c3b'
     document.body.style.overflow='auto'
+    
   }

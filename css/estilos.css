@@ -71,13 +71,13 @@
     padding: 3%;
     background-color: #dc143c3b;
     border-radius: 25vw;
-    
+    cursor: pointer;
 }
 #icono-cerrar{
     width: 6vw;
     padding: 5%;
     border-radius: 25vw;
-    
+    cursor: pointer;
 }
 .cont-logo{
     position: relative;
@@ -176,13 +176,24 @@
 .nav-lateral{
     position: absolute;
     top: 0%;
+    padding-top: 2%;
     height: 100vh;
     background-color:  #a0122f;
     transition: 0.6s;
 }
+#art-Aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#art-Aside h3{
+    font-size: 1.5vw;
+ color: white;
+ font-family: 'prata';
+}
 
 #logo-Aside{
-    width: 4vw;
+    width: 5vw;
 }
 
 
