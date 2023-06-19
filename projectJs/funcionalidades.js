@@ -12,6 +12,7 @@ const btnAceptarRegistro=document.getElementById('btnAceptar')
 const cookisCont = document.getElementById('cookis')
 const icoMenu=document.getElementById('icono-menu')
 const asideLateral=document.querySelector('.nav-lateral')
+const arrowUl=document.getElementById('arrow')
 
 
 addEventListener("wheel", (e) => {
@@ -148,3 +149,25 @@ icoMenu.addEventListener('click',(e)=>{
     document.body.style.overflow='auto'
     
   }
+
+  arrowUl.addEventListener('click',()=>{
+    
+    if(arrowUl.style.rotate !=='-180deg'){
+      desplegarArrow()
+    }
+    else if(arrowUl.style.rotate =='-180deg'){
+      replegarArrow()
+    }
+  })
+
+  function desplegarArrow(){
+  arrowUl.style.rotate ='-180deg'
+  arrowUl.style.transition='0.5s'
+  }
+
+  function replegarArrow(){
+    arrowUl.style.rotate ='0deg'
+    arrowUl.style.transition='0.5s'
+    }
+  
+    

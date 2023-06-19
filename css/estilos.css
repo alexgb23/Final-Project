@@ -212,7 +212,10 @@
     font-size: 1.5vw;
     color : white;
 }
-.arrow{
+.nav-lateral a:hover{
+    color :  rgb(245, 167, 50);
+}
+#arrow{
     width: 0.8vw;
     margin-right: 10%;
 }
@@ -228,6 +231,9 @@
     margin-top: 4%;
     margin-left: 12%;
     cursor: pointer;
+}
+.btnclickAside:hover{
+   background-color:  rgb(245, 167, 50);
 }
 
                       /* HEADER PRINCIPAL */
@@ -649,7 +655,7 @@
 #fter-contact:hover{
     cursor: pointer;
     color: #231f20;
-    background-color: rgb(245, 167, 50);
+    background-color:  rgb(245, 167, 50);
 }
 
 #fterleftlogo{
