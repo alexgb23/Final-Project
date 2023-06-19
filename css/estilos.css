@@ -21,7 +21,20 @@
 
                     /* NAV PRINCIPAL */
 
-
+#cookis{
+    position: absolute;
+    top: 120%;
+    right: 30%;
+    width: 35vw;
+    height: 70vh;
+    margin: 0 auto;
+    z-index: 500;
+    border-radius: 1.5vw;
+    padding: 2%;
+    font-family: 'lato';	
+    text-align: justify;
+    background-color: white;
+}
 
 
 .nav-principal{
@@ -719,7 +732,7 @@ border-bottom: 2px solid white;
     height: 95vh;
     margin: 0 auto;
     z-index: 500;
-    background-color: rgb(66, 2, 15);
+    background-color: rgb(160, 18, 47);
    
 }
 #btnCerrar{

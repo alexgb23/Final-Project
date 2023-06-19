@@ -9,6 +9,7 @@ const modalLogin=document.querySelector('.modal-Login')
 const btnCerrarModal=document.getElementById('btnCerrar')
 const maincont=document.querySelector('.cont-general')
 const btnAceptarRegistro=document.getElementById('btnAceptar')
+const cookisCont = document.getElementById('cookis')
 
 
 addEventListener("wheel", (e) => {
@@ -34,7 +35,17 @@ addEventListener('load', () => {
    setInterval(() => {
       prueba()
    },'22000')
+  //  cokis()
 })
+
+
+function cokis(){
+  setTimeout(() => {
+    cookisCont.style.display='block';
+    document.body.style.overflow='hidden'
+  },'3000');
+}
+
 
 function prueba(){
     imgCabecera.src='multimedia/cart-with-oysters-caesar-salad-flutes-lemonade-1920x1080.jpg.webp'
@@ -71,7 +82,6 @@ btnHelp.addEventListener('click', ()=>{
   else if(mensajeAyuda.style.display=='block'){
     mensajeAyuda.style.display='none'
   }
-
 })
 
 btnregistrarUser.addEventListener('click',()=>{
