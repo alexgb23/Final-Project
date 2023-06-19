@@ -10,20 +10,25 @@ const btnCerrarModal=document.getElementById('btnCerrar')
 const maincont=document.querySelector('.cont-general')
 const btnAceptarRegistro=document.getElementById('btnAceptar')
 const cookisCont = document.getElementById('cookis')
+const icoMenu=document.getElementById('icono-menu')
+const asideLateral=document.querySelector('.nav-lateral')
 
 
 addEventListener("wheel", (e) => {
     if (window.scrollY !==0) {
-        console.log('kajdvhjbxnmz')
         navegador.id='cont-del-nav'
         navlogo.id='logo-modified'
         imglogo.src='multimedia/logomod.png'
+        icoMenu.src='multimedia/pngwingModified.png'
+        icoMenu.style.backgroundColor='transparent'
         btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937copyBlack.png'
        
     } 
    else{
     navegador.id='0'
     navlogo.id='0'
+    icoMenu.style.backgroundColor='#dc143c3b'
+    icoMenu.src='multimedia/pngwing.com.png'
     imglogo.src='multimedia/logo.png'
     btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png'
    }
@@ -106,3 +111,37 @@ let inputApellido1=document.getElementById('apellido1')
 
   
 })
+
+
+
+
+icoMenu.addEventListener('click',(e)=>{
+  if(icoMenu.id=='icono-menu'){
+    abrirAside()
+  }
+ else if(icoMenu.id=='icono-cerrar'){
+  cerrarAside()
+  }
+  })
+
+  function abrirAside(){
+    asideLateral.style.width='28%'
+    asideLateral.style.visibility='visible'
+    icoMenu.id='icono-cerrar'
+    icoMenu.style.marginLeft='88%'
+    icoMenu.src='multimedia/btnCerrar.png'
+    icoMenu.style.backgroundColor='#a0122f'
+    icoMenu.style.transition='0.4s'
+    document.body.style.overflow='hidden'
+  }
+
+  function cerrarAside(){
+    asideLateral.style.width=='0%'
+    asideLateral.style.visibility='hidden'
+    asideLateral.style.transition='0s'
+    icoMenu.id='icono-menu'
+    icoMenu.src='multimedia/pngwing.com.png'
+    icoMenu.style.marginLeft='15%'
+    icoMenu.style.backgroundColor='#dc143c3b'
+    document.body.style.overflow='auto'
+  }

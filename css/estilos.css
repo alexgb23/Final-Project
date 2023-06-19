@@ -66,15 +66,20 @@
 }
 
 #icono-menu{
-    margin-top: 3%;
     margin-left: 15%;
     width: 6vw;
     padding: 3%;
-    background-color: rgba(220, 20, 60, 0.232);
+    background-color: #dc143c3b;
     border-radius: 25vw;
+    
+}
+#icono-cerrar{
+    width: 6vw;
+    padding: 5%;
+    border-radius: 25vw;
+    
 }
 .cont-logo{
-    scale: 140%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -125,7 +130,7 @@
     border-radius: 0.5vw;
     font-family: 'lato';
     font-size: 1.2vw;
-    background-color: rgba(220, 20, 60, 0.645);
+    background-color: #db143ca4;
 }
 .btnclick:hover{
     cursor: pointer;
@@ -166,7 +171,19 @@
     color: #231f20;
    
 }
+                        /*ASIDE LATERAL*/
 
+.nav-lateral{
+    position: absolute;
+    top: 0%;
+    height: 100vh;
+    background-color:  #a0122f;
+    transition: 0.6s;
+}
+
+#logo-Aside{
+    width: 4vw;
+}
 
 
                       /* HEADER PRINCIPAL */
@@ -252,7 +269,7 @@
    color: rgba(0, 0, 255, 0.596);
 }
 
-                      /* ----------------SECCION UNO-------------- */
+                      /* SECCION UNO */
 
 .primera-Seccion{
     display: flex;
@@ -273,7 +290,7 @@
     width: 100%;
 }
 
-#s1l-h4{
+.s1l-h4{
     font-size: 1vw;
     margin: 3%;
     font-family: 'prata';
@@ -286,7 +303,7 @@
     margin: 3%;
 }
 
-#s1l-text{
+.s1l-text{
     font-size: 1.4vw;
     line-height: 1.4em ;    
     margin: 3%;
@@ -329,21 +346,21 @@
     width: 100%;
    
 }
-#s1r-h4{
+.s1r-h4{
     vertical-align: inherit;
     font-size: 1vw;
     margin: 3%;
     font-family: 'lato';
     
 }
-#s1r-h5{
+.s1r-h5{
     font-size: 3.1vw;
     font-weight: 400;
     color: #4c4461;
     font-family: 'prata';
     margin-left: 3%;
 }
-#s1r-text{
+.s1r-text{
     font-size: 1.5vw;
     margin: 3%;
     font-family: 'lato';
@@ -352,7 +369,7 @@
 
 }
 
-                                 /*-------------------SECTION DOS----------------*/
+                                 /*SECTION DOS*/
 
 .segunda-Seccion{
     margin-top: 5%;
@@ -441,10 +458,10 @@
     padding: 2%;
  }
 
-                                         /*-------------------SECTION TRES----------------*/
+                                         /*SECTION TRES*/
 
 .tercera-Seccion{
-    margin-top: 8%;
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     display: grid;
@@ -491,14 +508,14 @@
     background-color: rgb(245, 167, 50);
 }
 
-                                       /*-------------------SECTION CUATRO----------------*/
+                                       /*SECTION CUATRO*/
 
 .cuarta-Seccion{
     margin-top: 5%;
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    height: 75vh; 
+    height: 60vh; 
 }
 
 #s4DivUp{
@@ -515,7 +532,7 @@
     color: #4c4461;
     font-family: 'prata';
 }
-#s4art-p1{
+.s4art-p1{
     font-size: 1.2vw;
     font-family: 'lato';
     line-height: 1.4em ; 
@@ -549,18 +566,18 @@
     display: grid;
     grid-template-columns:repeat(3, 1fr);
     width: 82%;
-    height: 75vh;
+    height: 60vh;
     padding-left:24%;
     background-color: rgba(7, 7, 7, 0.048);
 }
 
 
-                                        /*-------------footer-------------------*/
+                                        /*FOOTER*/
 
 .pie-pag{
     width: 100%;
     height: 70vh;
-    margin-top: 8%;
+    margin-top: 5%;
     background-color:  rgba(220, 20, 60, 0.645);
     color: white;
     
@@ -722,7 +739,7 @@ border-bottom: 2px solid white;
     transform: scale(1.1);
 }
 
-/*------------------------------------Modal de registrar usuario----------------------------*/
+                                   /*Modal de registrar usuario*/
 
 .modal-Login{
     position: absolute;
@@ -849,6 +866,8 @@ border-bottom: 2px solid white;
 }
 #icono-menu{
     margin-left: -100%;
+    width: 100%;
+    z-index: -1;
 }
 
 }

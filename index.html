@@ -13,19 +13,19 @@
   
     <main class="cont-general" >
        
-        <!--------------------------navegador----------------------->
+                                            <!--NAVEGADOR-->
 
     <nav class="nav-principal">
             <article>
                 <figure class="navegador-iconos">
-                    <img src="multimedia/pngwing.com.png" alt="icono de menu" id="icono-menu" width="100%">
+                    <img src="multimedia/pngwing.com.png" alt="icono de menu" id="icono-menu" >
                 </figure>
             </article>
 
             <article class="cont-logo">
                 <h3>Gourmet</h3>
                 <figure>
-                    <img src="multimedia/logo.png" alt="logo" id="logo" width="100%">
+                    <img src="multimedia/logo.png" alt="logo" id="logo" >
                 </figure>
                 <h3>Moments</h3>
             </article>
@@ -33,7 +33,7 @@
             <article class="cont-contact">
                 <button class="btnclick">REGISTRATE <img src="multimedia/usuario.png" alt="usuario" id="usuario"> </button>
                 <img src="multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png"
-                    alt="icono de interrogacion" id="interrogacion" width="100%">
+                    alt="icono de interrogacion" id="interrogacion" >
             </article>
             <article id="ayuda-btn" style="display: none;">
                 <p>Haga clic en <a href="">Contáctenos</a>  en cualquier página y complete el formulario para comenzar. <br>Después de
@@ -41,22 +41,24 @@
                     posible para responder sus preguntas y comenzar a planificar su cena.</p>
             </article>
 
+                            <!--MODAL DE LOGIN DE USUARIO-->
+
             <section class="modal-Login" style="display: none;" >
                 <img src="multimedia/btnCerrar.png" alt="boton de cerrar" id="btnCerrar">
                 <article class="rellenar">
                     <h1>"Bienvenido "</h1>
                     <h3>Ahora es el momento de conocerte a ti, estamos ansiosos por Ayudarte.</h3>
-                    <form action="" method="get" id="formulario-login">
+                    <form action="#" method="get" id="formulario-login">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre" state="required" class="inputRegister">
+                        <input type="text" name="nombre" id="nombre" required class="inputRegister">
                         <label for="apellido1">Primer Apellido:</label>
-                        <input type="text" name="apellido1" id="apellido1" state="required" class="inputRegister">
+                        <input type="text" name="apellido1" id="apellido1" required class="inputRegister">
                         <label for="apellido2">Segundo Apellido:</label>
                         <input type="text" name="apellido2" id="apellido2" class="inputRegister">
                         <label for="email">E-Mail:</label>
-                        <input type="email" name="email" id="email" state="required" class="inputRegister">
+                        <input type="email" name="email" id="email" required class="inputRegister">
                         <label for="telefono">Numero de Telefono:</label>
-                        <input type="tel" name="telefono" id="telefono" state="required" class="inputRegister">
+                        <input type="tel" name="telefono" id="telefono" required class="inputRegister">
                         <label for="direccion">Direccion:</label>
                         <input type="text" name="direccion" id="direccion" class="inputRegister">
                         </form>
@@ -65,6 +67,8 @@
                 </article>
                 </section>
 
+                                        <!--USO DE COOKIS-->
+
                 <section id="cookis" style="display: none;">
                     <p>Nos preocupamos por tu privacidadTanto nosotros como nuestros socios almacenamos información en el dispositivo o accedemos a ella (por ejemplo, ID únicos en las cookies para el tratamiento de los datos personales). Puedes aceptar o gestionar las opciones disponibles, como el derecho de oposición al uso de los intereses legítimos, haciendo clic abajo, o en cualquier otro momento en la página de la política de privacidad. Si bien se informará a nuestros socios de las opciones elegidas, ello no afectará a los datos de navegación.Más información en nuestra política de cookies
                        </p>
@@ -72,13 +76,30 @@
                         Utilizar datos de localización geográfica precisa. Analizar activamente las características del dispositivo para su identificación. Almacenar o acceder a información en un dispositivo. anuncios y contenido personalizados, medición de anuncios y del contenido, información sobre el público y desarrollo de productos..</p>
                 </section>
                 
+                                             <!--navegador Lateral-->
+
+    <aside class="nav-lateral" style="width: 0%;visibility: hidden;">
+        <h3>Gourmet</h3>
+        <figure>
+            <img src="multimedia/logo.png" alt="imagen del logo en blanco" id="logo-Aside">
+        </figure>
+        <h3>Moments</h3>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button class="btnclick">CONTÁCTENOS</button>
+    </aside>
     </nav>
 
-        <!--------------------------cabecera----------------------->
+                                                <!--CABECERA-->
 
     <header class="cabecera">
             <article class="hdr-img">
-                <img src="" alt="slider de fotos" id="imgHder" width="100%">
+                <img src="" alt="slider de fotos" id="imgHder" >
 
             </article>
             <h2 id="titulo">Profundamente <br>arraigado <br>
@@ -86,7 +107,9 @@
             <h1 id="titulo-pequeno">Gourmet Moments, nos especializamos en ahorrarte trabajo</h1>
     </header>
 
-    <section>
+                                   <!--CUERPO WEB-->
+
+    <section id="articulo-presentacion">
             <article id="art-presentacion">
                 <p>Arraigada en experiencias cultivadas, <strong id="titulo-pag">Gourmet Moments</strong> Catering &
                     Events trabaja con una base de clientes diversa. Brindamos un servicio fuera de
@@ -106,14 +129,14 @@
     <section class="primera-Seccion">
             <article id="left">
                 <figure>
-                    <img src="multimedia/istockphoto-1345495900-612x612.jpg" alt="personas cenando" width="100%">
+                    <img src="multimedia/istockphoto-1345495900-612x612.jpg" alt="personas cenando" >
                 </figure>
                 <article id="s1artLDiv">
                     <p id="s1l-p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente rerum iure
                         repudiandae
                     </p>
-                    <h4 id="s1l-h4">Entrega</h5>
-                        <p id="s1l-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente rerum
+                    <h4 class="s1l-h4">Entrega</h4>
+                        <p class="s1l-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente rerum
                             iure
                             repudiandae perferendis accusantium corrupti vitae ipsa enim porro. Placeat porro delectus
                             officiis,
@@ -149,12 +172,12 @@
             </article>
             <article id="right">
                 <figure>
-                    <img src="multimedia/asian-shrimp-stir-fry-mfrh-original-580x500.jpg.webp" alt="plato de ensalada" width="100%">
+                    <img src="multimedia/asian-shrimp-stir-fry-mfrh-original-580x500.jpg.webp" alt="plato de ensalada" >
                 </figure>
                 <article id="s1artRDiv">
-                    <h4 id="s1r-h4">Cocina Al Momento</h4>
-                    <h5 id="s1r-h5">Entrega</h5>
-                    <p id="s1r-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum aliquid
+                    <h4 class="s1r-h4">Cocina Al Momento</h4>
+                    <h5 class="s1r-h5">Entrega</h5>
+                    <p class="s1r-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum aliquid
                         quos,
                         voluptatibus excepturi, natus nostrum quidem dolore, quisquam a nulla. Vitae maiores quisquam
                         ipsa
@@ -166,7 +189,7 @@
 
                 <article id="s1artR3">
                 <figure>
-                    <img src="multimedia/asian-shrimp-stir-fry-mfrh-original-580x500.jpg.webp" alt=""   width="100%">
+                    <img src="multimedia/asian-shrimp-stir-fry-mfrh-original-580x500.jpg.webp" alt=""   >
                     <button id="s1artR-Btn2">LEER MÁS »</button>
                 </figure>
                 </article>
@@ -178,7 +201,7 @@
             <article id="s2DivUp">
                 <h4 id="s2Div-h4">Menús frescos de temporada</h4>
                 <br>
-                <p id="s4art-p1">Nos encantan los ingredientes de temporada y obtener artículos de proveedores
+                <p class="s4art-p1">Nos encantan los ingredientes de temporada y obtener artículos de proveedores
                     artesanales locales. Después de encontrar los mejores ingredientes, elaboramos menús para resaltar
                     esos ingredientes y crear el viaje culinario que imaginas y deseas.</p>
             </article>
@@ -205,14 +228,14 @@
                 </article>
             </article>
             <article id="s2DivDown">
-                <p>Nos adaptamos a todas las preferencias dietéticas. Vea nuestros <a href="">menús dietéticos</a>  o <a href="">haga una pregunta </a>.&nbsp </p>
+                <p>Nos adaptamos a todas las preferencias dietéticas. Vea nuestros <a href="">menús dietéticos</a>  o <a href="">haga una pregunta </a>.&nbsp; </p>
             <figure>
-                <img src="multimedia/svg-24.svg" alt="" width="100%" class="icoImgSvg">
-                <img src="multimedia/svg-25.svg" alt="" width="100%" class="icoImgSvg">
-                <img src="multimedia/svg-26.svg" alt="" width="100%" class="icoImgSvg">
-                <img src="multimedia/svg-23.svg" alt="" width="100%" class="icoImgSvg">
-                <img src="multimedia/svg-27.svg" alt="" width="100%" class="icoImgSvg">
-                <img src="multimedia/svg-22.svg" alt="" width="100%" class="icoImgSvg">
+                <img src="multimedia/svg-24.svg" alt=""  class="icoImgSvg">
+                <img src="multimedia/svg-25.svg" alt=""  class="icoImgSvg">
+                <img src="multimedia/svg-26.svg" alt=""  class="icoImgSvg">
+                <img src="multimedia/svg-23.svg" alt=""  class="icoImgSvg">
+                <img src="multimedia/svg-27.svg" alt=""  class="icoImgSvg">
+                <img src="multimedia/svg-22.svg" alt=""  class="icoImgSvg">
             </figure>
         </article>
     </section>
@@ -220,11 +243,11 @@
     <section class="tercera-Seccion">
             <article id="s3srtleft">
                 <figure>
-                    <img src="multimedia/horsdoeuvres-hamachi_yuzu_tartare_0086-580x500.jpg.webp" alt="imagen de pintxos" width="100%">
+                    <img src="multimedia/horsdoeuvres-hamachi_yuzu_tartare_0086-580x500.jpg.webp" alt="imagen de pintxos" >
                 </figure>
-                <h4 id="s1r-h4">Cocina Al Momento</h4>
-                <h5 id="s1r-h5">Entrega</h5>
-                <p id="s1r-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum aliquid
+                <h4 class="s1r-h4">Cocina Al Momento</h4>
+                <h5 class="s1r-h5">Entrega</h5>
+                <p class="s1r-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum aliquid
                     quos,
                     voluptatibus excepturi, natus nostrum quidem dolore, quisquam a nulla. Vitae maiores quisquam
                     ipsa
@@ -234,7 +257,7 @@
                 <button class="btnclick">OCACIONES ESPECIALES »</button>
                 <article id="s3artR3">
                     <figure>
-                        <img src="multimedia/asian-shrimp-stir-fry-mfrh-original-580x500.jpg.webp" alt=""   width="100%">
+                        <img src="multimedia/asian-shrimp-stir-fry-mfrh-original-580x500.jpg.webp" alt=""   >
                         <button id="s3artR-Btn2">LEER MÁS »</button>
                     </figure>
                     </article>
@@ -245,10 +268,10 @@
 
                 <article id="s3srtRight">
                     <figure>
-                        <img src="multimedia/pxfuel.jpg" alt="chef propaganda"  width="100%">
+                        <img src="multimedia/pxfuel.jpg" alt="chef propaganda"  >
                     </figure>
-                    <h4 id="s1l-h4">Entrega</h5>
-                        <p id="s1l-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente rerum
+                    <h4 class="s1l-h4">Entrega</h4>
+                        <p class="s1l-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sapiente rerum
                             iure
                             repudiandae perferendis accusantium corrupti vitae ipsa enim porro. Placeat porro delectus
                             officiis,
@@ -282,11 +305,12 @@
         <article id="s4DivUp">
             <h4 id="s4Div-h4">Hecho en la ciudad de Bilbao</h4>
             <br>
-            <p id="s4art-p1">Al servicio de la ciudad de Bilbao y el área metropolitana circundante desde 2020..</p>
+            <p class="s4art-p1">Al servicio de la ciudad de Bilbao y el área metropolitana circundante desde 2020..</p>
         </article>
         <article id="s4articulo">
             <article class="s4artDiv">
                 <h4>AREAS DE SERVICIO</h4>
+                <ul>
                 <li>► Basauri</li>
                 <li>► Cruces</li>
                 <li>► Bilbao</li>
@@ -294,27 +318,33 @@
                 <li>► Bakio</li>
                 <li>► Casco Viejo</li>
                 <li>► Moyua</li>
+            </ul>
             </article>
             <article class="s4artDiv">
-                <li id="modLaA">Berango</li>
+                <ul>
+               <li id="modLaA">► Berango</li>
                <li>► Indautxu</li>
                <li>► Ansio</li>
                <li>► San Mames</li>
                <li>► Deusto</li>
                <li>► Portugalete</li>
                <li>► Erandio</li>
+            </ul>
             </article>
             <article class="s4artDiv">
                 <h4>DIRECCION</h4>
+                <ul>
               <li>Calle Ibañez Nueva #3</li>
               <li>p2 Bilbao c/p 48900 </li>
-              <br>
+            </ul>
+            <br>
               <h4>HORAS</h4>
+              <ul>
               <li>Operamos los 365 días </li>
               <li>del año. Horario de oficina: </li>
               <li>9 am - 5 pm, </li>
-                <li>de lunes a viernes</li>
-               
+              <li>de lunes a viernes</li>
+            </ul>
                
             </article>
         </article>
