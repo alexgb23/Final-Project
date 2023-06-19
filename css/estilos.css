@@ -131,6 +131,7 @@
     font-family: 'lato';
     font-size: 1.2vw;
     background-color: #db143ca4;
+    transition: 0.1s;
 }
 .btnclick:hover{
     cursor: pointer;
@@ -199,10 +200,26 @@
 #logo-Aside{
     width: 5vw;
 }
-.nav-lateral ul{
+
+.list-lat{
     margin-left: 8%;
     list-style: none;
     padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#list-lat-ol{
+    display: none;
+}
+.list-lat-down{
+    margin-left: 13%;
+    list-style: none;
+    padding: 4%;
+    list-style: none;
+    padding: 4%;
+    font-size: 1.5vw;
+    color : white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -211,13 +228,16 @@
     text-decoration: none;
     font-size: 1.5vw;
     color : white;
+    transition: 0.1s;
 }
+
 .nav-lateral a:hover{
     color :  rgb(245, 167, 50);
 }
 #arrow{
     width: 0.8vw;
     margin-right: 10%;
+    cursor: pointer;
 }
 .btnclickAside{
     padding:4%;
@@ -231,6 +251,7 @@
     margin-top: 4%;
     margin-left: 12%;
     cursor: pointer;
+    transition: 0.1s;
 }
 .btnclickAside:hover{
    background-color:  rgb(245, 167, 50);
@@ -309,7 +330,7 @@
 #firma-description{
     text-align: center;
     font-family: 'lato';
-    line-height: 1.5vw ;    
+    font-size: 1.5vw;  
 }
 #titulo-pag{
     color: rgba(220, 20, 60, 0.645);
@@ -861,6 +882,21 @@ border-bottom: 2px solid white;
     border-radius: 0.5vw;
     font-family: 'lato';
 }
+
+.acept-cookis{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 3%;
+}
+#btnAceptar-cookies{
+    margin-top: 3%;
+    padding: 2%;
+    border-radius: 0.3vw;
+    background-color: #a0122f;
+    color: white;
+}
+
 
 
 /*////////////////////////////////////////////////////////////////////////

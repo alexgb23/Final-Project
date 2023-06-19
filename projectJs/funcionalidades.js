@@ -13,6 +13,8 @@ const cookisCont = document.getElementById('cookis')
 const icoMenu=document.getElementById('icono-menu')
 const asideLateral=document.querySelector('.nav-lateral')
 const arrowUl=document.getElementById('arrow')
+const listDownAside=document.getElementById('list-lat-ol')
+const btnAceptcookies=document.getElementById('btnAceptar-cookies')
 
 
 addEventListener("wheel", (e) => {
@@ -41,7 +43,7 @@ addEventListener('load', () => {
    setInterval(() => {
       prueba()
    },'22000')
-  //  cokis()
+   cokis()
 })
 
 
@@ -105,16 +107,16 @@ btnCerrarModal.addEventListener('click',()=>{
   }
 })
 
+/////////////////////////////////////////////////////capturar datos de los input de registro de usuario/////////////////////
+
 btnAceptarRegistro.addEventListener('click',()=>{
-let inputNombre=document.getElementById('nombre')
-let inputApellido1=document.getElementById('apellido1')
+    let inputNombre=document.getElementById('nombre')
+    let inputApellido1=document.getElementById('apellido1')
     console.log(inputNombre.value,inputApellido1.value)
 
-  
 })
 
-
-
+//////////////////////////////////////////////eventos a realizar al clicar en icono de menu////////////////////////////
 
 icoMenu.addEventListener('click',(e)=>{
   if(icoMenu.id=='icono-menu'){
@@ -126,8 +128,8 @@ icoMenu.addEventListener('click',(e)=>{
   }
   })
 
-  function abrirAside(){
-    asideLateral.style.width='28%'
+  function abrirAside(){                                       //funcion para desplegar el aside lateral hacia la derecha
+    asideLateral.style.width='29%'
     asideLateral.style.visibility='visible'
     icoMenu.id='icono-cerrar'
     icoMenu.style.marginLeft='88%'
@@ -137,8 +139,8 @@ icoMenu.addEventListener('click',(e)=>{
     document.body.style.overflow='hidden'
     
   }
-
-  function cerrarAside(){
+  
+  function cerrarAside(){                                      //funcion para esconder el aside lateral
     asideLateral.style.width=='0%'
     asideLateral.style.visibility='hidden'
     asideLateral.style.transition='0s'
@@ -147,8 +149,9 @@ icoMenu.addEventListener('click',(e)=>{
     icoMenu.style.marginLeft='15%'
     icoMenu.style.backgroundColor='#dc143c3b'
     document.body.style.overflow='auto'
-    
   }
+
+//////////////////////////////////////////////eventos a realizar al clicar en flecha del menu lateral////////////////////////////
 
   arrowUl.addEventListener('click',()=>{
     
@@ -160,14 +163,21 @@ icoMenu.addEventListener('click',(e)=>{
     }
   })
 
-  function desplegarArrow(){
+  function desplegarArrow(){                     //funcion para desplegar flecha de menu lateral y mostrar listado de opciones
   arrowUl.style.rotate ='-180deg'
   arrowUl.style.transition='0.5s'
+  listDownAside.style.display='block'
+  asideLateral.style.overflow='auto'
   }
 
-  function replegarArrow(){
+  function replegarArrow(){                          //funcion para replegar flecha de menu lateral y ocultar listado de opciones
     arrowUl.style.rotate ='0deg'
     arrowUl.style.transition='0.5s'
+    listDownAside.style.display='none'
     }
-  
-    
+  //////////////////////////////////////////////eventos a realizar al clicar en boton de aceptar cookies////////////////////////////
+
+    btnAceptcookies.addEventListener('click',()=>{
+      cookisCont.style.display='none'
+      document.body.style.overflow='auto'
+    })
