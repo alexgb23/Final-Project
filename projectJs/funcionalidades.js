@@ -15,10 +15,15 @@ const asideLateral=document.querySelector('.nav-lateral')
 const arrowUl=document.getElementById('arrow')
 const listDownAside=document.getElementById('list-lat-ol')
 const btnAceptcookies=document.getElementById('btnAceptar-cookies')
+const checkCookies=document.getElementById('Acept-Privacity')
 
 
-addEventListener("wheel", (e) => {
-    if (window.scrollY !==0) {
+
+/////////////////////////////////eventos de mover la rueda del mouse///////////////////////////////
+
+addEventListener("wheel",() => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
+
+    if (window.scrollY > 10 ) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
         navegador.id='cont-del-nav'
         navlogo.id='logo-modified'
         imglogo.src='multimedia/logomod.png'
@@ -27,7 +32,10 @@ addEventListener("wheel", (e) => {
         btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937copyBlack.png'
        
     } 
-   else{
+    ////condicion cuando la rueda del mouse se mueve hacia arriba y que la barra lateral
+    /// no se encuentre visible porq me cambia el icono del menu/////
+
+   else if (window.scrollY < 10 & asideLateral.style.visibility=='hidden'){ 
     navegador.id='0'
     navlogo.id='0'
     icoMenu.style.backgroundColor='#dc143c3b'
@@ -37,25 +45,29 @@ addEventListener("wheel", (e) => {
    }
 });
 
+//////////////////funcion para cuando carga la pagina que cargue las fotos de portada
+//// haga el slider con transision y se repita y salgan las cookis 
 
 addEventListener('load', () => {
-   prueba()
+   sliderHead()
    setInterval(() => {
-      prueba()
+      sliderHead()
    },'22000')
    cokis()
 })
 
 
-function cokis(){
+function cokis(){            //////funcion para que se active el contenido de las cookis
   setTimeout(() => {
     cookisCont.style.display='block';
     document.body.style.overflow='hidden'
   },'3000');
+  btnAceptcookies.setAttribute('disabled','true')
 }
 
+/////////////////funcion para que se carguen las imagenes del head con transiciones automaticas
 
-function prueba(){
+function sliderHead(){
     imgCabecera.src='multimedia/cart-with-oysters-caesar-salad-flutes-lemonade-1920x1080.jpg.webp'
     imgCabecera.style.transition = '8s'
     imgCabecera.style.scale = '1.5'
@@ -82,7 +94,8 @@ function prueba(){
     },'22000');
 }
 
-
+////////////aqui se le da funcionalidad al boton de ayuda del nav, se activa y desactiva el contenedor
+ 
 btnHelp.addEventListener('click', ()=>{
   if(mensajeAyuda.style.display=='none'){
     mensajeAyuda.style.display='block'
@@ -92,6 +105,8 @@ btnHelp.addEventListener('click', ()=>{
   }
 })
 
+////////////////////////funcion para mostrar la modal de registro de usuarios
+
 btnregistrarUser.addEventListener('click',()=>{
   if(modalLogin.style.display=='none'){
     modalLogin.style.display='block'
@@ -100,23 +115,23 @@ btnregistrarUser.addEventListener('click',()=>{
   }
 })
 
-btnCerrarModal.addEventListener('click',()=>{
+btnCerrarModal.addEventListener('click',()=>{ ////funcion para cerrar la modal de registro de usuarios
  if(modalLogin.style.display=='block'){
     modalLogin.style.display='none'
     document.body.style.overflow='auto'
   }
 })
 
-/////////////////////////////////////////////////////capturar datos de los input de registro de usuario/////////////////////
+/////////////////////////////////////////////capturar datos de los input de registro de usuario///////////
 
-btnAceptarRegistro.addEventListener('click',()=>{
+btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar registro y recoger datos de los input
     let inputNombre=document.getElementById('nombre')
     let inputApellido1=document.getElementById('apellido1')
     console.log(inputNombre.value,inputApellido1.value)
 
 })
 
-//////////////////////////////////////////////eventos a realizar al clicar en icono de menu////////////////////////////
+//////////////////////////////////////////////eventos a realizar al clicar en icono de menu////////////////
 
 icoMenu.addEventListener('click',(e)=>{
   if(icoMenu.id=='icono-menu'){
@@ -137,7 +152,6 @@ icoMenu.addEventListener('click',(e)=>{
     icoMenu.style.backgroundColor='#a0122f'
     icoMenu.style.transition='0.4s'
     document.body.style.overflow='hidden'
-    
   }
   
   function cerrarAside(){                                      //funcion para esconder el aside lateral
@@ -153,8 +167,7 @@ icoMenu.addEventListener('click',(e)=>{
 
 //////////////////////////////////////////////eventos a realizar al clicar en flecha del menu lateral////////////////////////////
 
-  arrowUl.addEventListener('click',()=>{
-    
+  arrowUl.addEventListener('click',()=>{                     //funcion para desplegar flecha de menu lateral
     if(arrowUl.style.rotate !=='-180deg'){
       desplegarArrow()
     }
@@ -176,8 +189,15 @@ icoMenu.addEventListener('click',(e)=>{
     listDownAside.style.display='none'
     }
   //////////////////////////////////////////////eventos a realizar al clicar en boton de aceptar cookies////////////////////////////
-
+checkCookies.addEventListener('click',()=>{
+  if(checkCookies.checked==true){
+    btnAceptcookies.style.opacity='1'
+    btnAceptcookies.removeAttribute('disabled')
+    btnAceptcookies.style.cursor='pointer'
+  }
+})
     btnAceptcookies.addEventListener('click',()=>{
-      cookisCont.style.display='none'
-      document.body.style.overflow='auto'
+        cookisCont.style.display='none'
+        document.body.style.overflow='auto'
+        console.log('ok')
     })
