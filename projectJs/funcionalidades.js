@@ -17,13 +17,14 @@ const listDownAside=document.getElementById('list-lat-ol')
 const btnAceptcookies=document.getElementById('btnAceptar-cookies')
 const checkCookies=document.getElementById('Acept-Privacity')
 
+let usuarioRegistrado=[];
 
 
 /////////////////////////////////eventos de mover la rueda del mouse///////////////////////////////
 
 addEventListener("wheel",() => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
 
-    if (window.scrollY > 10 ) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
+    if (window.scrollY > 20 ) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
         navegador.id='cont-del-nav'
         navlogo.id='logo-modified'
         imglogo.src='multimedia/logomod.png'
@@ -35,7 +36,7 @@ addEventListener("wheel",() => { ///declaracion para que haga una instruccion cu
     ////condicion cuando la rueda del mouse se mueve hacia arriba y que la barra lateral
     /// no se encuentre visible porq me cambia el icono del menu/////
 
-   else if (window.scrollY < 10 & asideLateral.style.visibility=='hidden'){ 
+   else if ((window.scrollY < 20) && (asideLateral.style.visibility=='hidden')){ 
     navegador.id='0'
     navlogo.id='0'
     icoMenu.style.backgroundColor='#dc143c3b'
@@ -53,7 +54,8 @@ addEventListener('load', () => {
    setInterval(() => {
       sliderHead()
    },'22000')
-   cokis()
+  //  cokis()
+  
 })
 
 
@@ -127,7 +129,26 @@ btnCerrarModal.addEventListener('click',()=>{ ////funcion para cerrar la modal d
 btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar registro y recoger datos de los input
     let inputNombre=document.getElementById('nombre')
     let inputApellido1=document.getElementById('apellido1')
-    console.log(inputNombre.value,inputApellido1.value)
+    let inputApellido2=document.getElementById('apellido2')
+    let email=document.getElementById('mail')
+    let telefono=document.getElementById('telefono')
+    let direccion=document.getElementById('direccion')
+    let password=document.getElementById('contraseña')
+   
+    
+   if((inputNombre.value.trim() != "")  && (email.value.trim() != "") 
+   && (password.value.trim() != "")&& (email.value!==userSaveLocal.correo)){
+     usuarioRegistrado.push({nombre:inputNombre.value,primerApellido:inputApellido1.value,segundoApellido:inputApellido2.value,correo:email.value,telefono:telefono.value,direccion:direccion.value,contrasena:password.value})
+     localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
+   }
+   
+//    else {
+//     alert("Introduzca todos los campos");
+// }
+let userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
+for(let i=0;i<userSaveLocal.length;i++){
+  console.log(userSaveLocal.correo)
+}
 
 })
 
@@ -199,5 +220,4 @@ checkCookies.addEventListener('click',()=>{
     btnAceptcookies.addEventListener('click',()=>{
         cookisCont.style.display='none'
         document.body.style.overflow='auto'
-        console.log('ok')
     })

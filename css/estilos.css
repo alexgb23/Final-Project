@@ -385,6 +385,13 @@
     font-size: 1.5vw;
     margin: 3%;
 }
+#s1l-p1:first-letter{
+    font-size:200%;
+    float:left;
+    color:#f00;
+  }
+  
+
 
 .s1l-text{
     font-size: 1.4vw;
