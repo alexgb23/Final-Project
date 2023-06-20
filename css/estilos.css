@@ -833,23 +833,24 @@ border-bottom: 2px solid white;
 
 .modal-Login{
     position: absolute;
-    top: 15%;
+    top: 12%;
     right: 35%;
     width: 35vw;
-    height: 95vh;
+    height: 96vh;
     margin: 0 auto;
+    border-radius: 1vw;
     z-index: 500;
     background-color: rgb(160, 18, 47);
    
 }
 #btnCerrar{
     width: 1.5vw;
-    margin: 2%;
+    margin: 3%;
     float: right;
     cursor: pointer;
 }
 .rellenar{
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
    color: white;
 }
@@ -860,7 +861,7 @@ border-bottom: 2px solid white;
 .rellenar input{
     margin: 1%;
     width: 100%;
-    height: 5vh;
+    height: 4.5vh;
     font-size: 1.1vw;
     font-weight:550;
     border-radius: 0.3vw;
@@ -881,15 +882,15 @@ border-bottom: 2px solid white;
     font-size: 3vw;
     text-align: center;
     font-weight: 300;
-    margin-top: 5%;
+    margin-top: 4%;
 }
 .rellenar h3{
     font-family: 'lato';
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     text-align: center;
     font-weight: 100;
-    margin-top: 3%;
-    margin-bottom: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 #btnAceptar{
     width: 6vw;
@@ -917,6 +918,31 @@ border-bottom: 2px solid white;
     color: white;
 }
 
+                                /*Modal de iniciar sesion */
+
+.iniciarSesion{
+    position: absolute;
+    top: 12%;
+    right: 35%;
+    width: 35vw;
+    height: 96vh;
+    margin: 0 auto;
+    border-radius: 1vw;
+    z-index: 500;
+    background-color: rgb(160, 18, 47);
+}
+#btnCerrar-login{
+    width: 1.5vw;
+    margin: 3%;
+    float: right;
+    cursor: pointer;
+}
+#logo-login{
+    width: 4vw;
+}
+.rellenar div{
+    display: flex;
+}
 
 
 /*////////////////////////////////////////////////////////////////////////

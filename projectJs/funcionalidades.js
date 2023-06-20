@@ -4,9 +4,12 @@ const imglogo=document.getElementById('logo')
 const btnHelp=document.getElementById('interrogacion')
 const mensajeAyuda=document.getElementById('ayuda-btn')
 const imgCabecera = document.getElementById('imgHder');
-const btnregistrarUser=document.querySelector('.btnclick')
+const iniciarSesion=document.querySelector('.btnclick')
 const modalLogin=document.querySelector('.modal-Login')
+const btnCloseISesion=document.querySelector('#btnCerrar-login')
+const modalIniciarSesion=document.querySelector('.iniciarSesion')
 const btnCerrarModal=document.getElementById('btnCerrar')
+const btnRegistrarse=document.getElementById('registrarse')
 const maincont=document.querySelector('.cont-general')
 const btnAceptarRegistro=document.getElementById('btnAceptar')
 const cookisCont = document.getElementById('cookis')
@@ -17,7 +20,9 @@ const listDownAside=document.getElementById('list-lat-ol')
 const btnAceptcookies=document.getElementById('btnAceptar-cookies')
 const checkCookies=document.getElementById('Acept-Privacity')
 
-let usuarioRegistrado=[];
+let usuarioRegistrado=new Array();
+let userSaveLocal;
+let contador=0
 
 
 /////////////////////////////////eventos de mover la rueda del mouse///////////////////////////////
@@ -107,9 +112,26 @@ btnHelp.addEventListener('click', ()=>{
   }
 })
 
+////////////////////////funcion para mostrar la modal Iniciar Sesion
+
+iniciarSesion.addEventListener('click',()=>{
+  if(modalIniciarSesion.style.display=='none'){
+    modalIniciarSesion.style.display='block'
+    document.body.style.overflow='hidden'
+    modalIniciarSesion.style.opacity='1'
+  }
+})
+
+btnCloseISesion.addEventListener('click',()=>{ ////funcion para cerrar la modal de registro de usuarios
+ if(modalIniciarSesion.style.display=='block'){
+    modalIniciarSesion.style.display='none'
+    document.body.style.overflow='auto'
+  }
+})
+
 ////////////////////////funcion para mostrar la modal de registro de usuarios
 
-btnregistrarUser.addEventListener('click',()=>{
+btnRegistrarse.addEventListener('click',()=>{
   if(modalLogin.style.display=='none'){
     modalLogin.style.display='block'
     document.body.style.overflow='hidden'
@@ -120,9 +142,12 @@ btnregistrarUser.addEventListener('click',()=>{
 btnCerrarModal.addEventListener('click',()=>{ ////funcion para cerrar la modal de registro de usuarios
  if(modalLogin.style.display=='block'){
     modalLogin.style.display='none'
+    modalIniciarSesion.style.display='none'
     document.body.style.overflow='auto'
   }
 })
+
+
 
 /////////////////////////////////////////////capturar datos de los input de registro de usuario///////////
 
@@ -137,19 +162,28 @@ btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar regis
    
     
    if((inputNombre.value.trim() != "")  && (email.value.trim() != "") 
-   && (password.value.trim() != "")&& (email.value!==userSaveLocal.correo)){
-     usuarioRegistrado.push({nombre:inputNombre.value,primerApellido:inputApellido1.value,segundoApellido:inputApellido2.value,correo:email.value,telefono:telefono.value,direccion:direccion.value,contrasena:password.value})
+   && (password.value.trim() != "")){
+     usuarioRegistrado.push({nombre:inputNombre.value,primerApellido:inputApellido1.value,
+      segundoApellido:inputApellido2.value,correo:email.value,telefono:telefono.value,
+      direccion:direccion.value,contrasena:password.value})
+      
      localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
-   }
-   
-//    else {
-//     alert("Introduzca todos los campos");
-// }
-let userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
-for(let i=0;i<userSaveLocal.length;i++){
-  console.log(userSaveLocal.correo)
-}
 
+     setTimeout(() => {
+      modalLogin.style.display='none'
+     },2000)
+   }
+ 
+   else {
+    alert("Introduzca todos los campos");
+}
+userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
+let prueba=userSaveLocal.map((item)=>{
+  return item.correo
+})
+  
+
+console.log(prueba)
 })
 
 //////////////////////////////////////////////eventos a realizar al clicar en icono de menu////////////////
