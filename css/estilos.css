@@ -406,6 +406,7 @@
 
 #s1artR3{
     margin-top: 10%;
+    position: relative;
 }
 #s1artR-Btn2{
     width: 10vw;
@@ -418,8 +419,8 @@
     border: 1px solid white;
     color: white;
     position: absolute;
-    margin-top: 22%;
-    right: 22%;
+    bottom: 5%;
+    left: 5%;
 }
 
 #s1artR-Btn2:hover{
@@ -581,11 +582,12 @@
 }
 #s3artR3{
     margin-top: 10%;
+    position: relative;
 }
 #s3artR-Btn2{
     position: absolute;
     left: 5%;
-    margin-top: 18%;
+   bottom: 5%;
     width: 10vw;
     height: 9vh;
     font-size: 1.2vw;
@@ -673,7 +675,6 @@
     margin-top: 5%;
     background-color:  rgba(220, 20, 60, 0.645);
     color: white;
-    
 }
 
 .pie-pag h5{
@@ -1150,5 +1151,117 @@ width: 50%;
     padding-right: 0%;
     padding-inline: 3%;
 }
+.segunda-Seccion{
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30vh; 
+}
+#s2articulo{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    width: 82%;
+    height:100%;
+    padding-left: 24%;
+    margin-right: 0%;
+    background-color: rgba(7, 7, 7, 0.048);
+}
+.s2artDiv{
+    padding-top: 25%;
+    height:80%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+#s3srtleft{
+    padding-left: 0%; 
+    padding-inline: 3%;
+}
+#s3srRight{
+    padding-left: 0%; 
+    padding-inline: 0%;
+}
+#s3srtRight img{
+  display: none;
+}
 
+.cuarta-Seccion{
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30vh; 
+}
+#s4articulo{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    width: 82%;
+    height: 100%;
+    padding-left:24%;
+    background-color: rgba(7, 7, 7, 0.048);
+}
+.pie-pag{
+    width: 100%;
+    height: 40vh;
+    margin-top: 5%;
+    background-color:  rgba(220, 20, 60, 0.645);
+    color: white;
+}
+#fterRight{
+    width: 40vw;
+    height: 60vh;
+    position: absolute;
+    right: 2%;
+    margin-top: -40%;
+}
+#fterRight p{
+    color: rgba(255, 255, 255, 0.527);
+    margin: 0;
+    margin-top: -5%;
+    font-family: 'lato';
+    line-height: 0.1em; 
+}
+.pie-pag p{
+    margin-top: -5%;
+    margin-left: 4%;
+    font-size: 0.4em;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.527);
+}
+#fterleftlogo{
+    margin-top: 4%;
+    margin-left: 3%;
+    width: 45%;
+    height: 20vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+}
+.pie-pag h5{
+    padding: 3%;
+    text-align: left;
+    font-size: 2.5vw;
+    font-weight: 200;
+    font-family: 'prata';
+}
+#fter-contact{
+    width: 12vw;
+    height: 4vh;
+    border: 1px solid white;
+    border-radius: 0.5vw;
+    color: white;
+    font-size: 1.2vw;
+    background-color:transparent;
+    margin-left: 10%;
+    font-family: 'lato';
+}
+#s1artR-Btn2{
+    height: 4vh;
+}
+#s3artR-Btn2{
+    height: 4vh;
+}
 }
