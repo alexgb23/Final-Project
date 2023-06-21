@@ -1115,8 +1115,40 @@ border-bottom: 2px solid white;
 #usuario{
 width: 50%;
 }
+#imgHder{
+    position: relative;
+    min-width:fit-content;
+  float: right;
+    z-index:100;
+}
+#titulo{
+    position: absolute;
+    color: white;
+   bottom:45%;
+   font-size: 7.5vw;
+   z-index: 200;
+   font-family: 'prata';
+   font-weight: 400;
+}
 
-
-
+#titulo-pequeno{
+    position: absolute;
+    bottom: 35%;
+    color: white;
+    font-size: 3.5vw;
+    font-weight: 200;
+    z-index: 200;
+    background-color: #dc143ca4;
+    padding-inline: 0.5%;
+    border-radius: 0.25vw;
+    font-family: 'lato';   
+}
+#left{
+    padding-left: 0%;
+}
+#right{
+    padding-right: 0%;
+    padding-inline: 3%;
+}
 
 }
