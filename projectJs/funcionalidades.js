@@ -20,18 +20,18 @@ const listDownAside=document.getElementById('list-lat-ol')
 const btnAceptcookies=document.getElementById('btnAceptar-cookies')
 const checkCookies=document.getElementById('Acept-Privacity')
 const btniSesion=document.getElementById('isesion')
-let btnMostrarOcultarContraseña = document.getElementById('verContraseña')
-let btnShowHideContraseñaLogin = document.getElementById('verPassword')
+const btnMostrarOcultarContraseña = document.getElementById('verContraseña')
+const btnShowHideContraseñaLogin = document.getElementById('verPassword')
 
 //////////////////variables de los inputs////////////
 
-let inputNombre=document.getElementById('nombre')
-let inputApellido1=document.getElementById('apellido1')
-let inputApellido2=document.getElementById('apellido2')
-let email=document.getElementById('mail')
-let telefono=document.getElementById('telefono')
-let direccion=document.getElementById('direccion')
-let password=document.getElementById('contraseña')
+const inputNombre=document.getElementById('nombre')
+const inputApellido1=document.getElementById('apellido1')
+const inputApellido2=document.getElementById('apellido2')
+const email=document.getElementById('mail')
+const telefono=document.getElementById('telefono')
+const direccion=document.getElementById('direccion')
+const password=document.getElementById('contraseña')
 
 let usuarioRegistrado=[{nombre:'Alexander',primerApellido:'Galvez',segundoApellido:'Benavides',correo:'alexander.galvez@estudioenpenascal.com',telefono:'688872515',direccion:'Vista Alegre 2 5D',contrasena:'1234'}]
 let userSaveLocal;
@@ -43,7 +43,7 @@ let contador=0
 
 addEventListener("wheel",() => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
 
-    if (window.scrollY > 20 ) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
+    if (scrollY > 20 ) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
         navegador.id='cont-del-nav'
         navlogo.id='logo-modified'
         imglogo.src='multimedia/logomod.png'
@@ -55,7 +55,7 @@ addEventListener("wheel",() => { ///declaracion para que haga una instruccion cu
     ////condicion cuando la rueda del mouse se mueve hacia arriba y que la barra lateral
     /// no se encuentre visible porq me cambia el icono del menu/////
 
-   else if ((window.scrollY < 20) && (asideLateral.style.visibility=='hidden')){ 
+   else if ((scrollY < 20) && (asideLateral.style.visibility=='hidden')){ 
     navegador.id='0'
     navlogo.id='0'
     icoMenu.style.backgroundColor='#dc143c3b'
