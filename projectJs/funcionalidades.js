@@ -19,10 +19,24 @@ const arrowUl=document.getElementById('arrow')
 const listDownAside=document.getElementById('list-lat-ol')
 const btnAceptcookies=document.getElementById('btnAceptar-cookies')
 const checkCookies=document.getElementById('Acept-Privacity')
+const btniSesion=document.getElementById('isesion')
+let btnMostrarOcultarContraseña = document.getElementById('verContraseña')
+let btnShowHideContraseñaLogin = document.getElementById('verPassword')
 
-let usuarioRegistrado=new Array();
+//////////////////variables de los inputs////////////
+
+let inputNombre=document.getElementById('nombre')
+let inputApellido1=document.getElementById('apellido1')
+let inputApellido2=document.getElementById('apellido2')
+let email=document.getElementById('mail')
+let telefono=document.getElementById('telefono')
+let direccion=document.getElementById('direccion')
+let password=document.getElementById('contraseña')
+
+let usuarioRegistrado=[{nombre:'Alexander',primerApellido:'Galvez',segundoApellido:'Benavides',correo:'alexander.galvez@estudioenpenascal.com',telefono:'688872515',direccion:'Vista Alegre 2 5D',contrasena:'1234'}]
 let userSaveLocal;
 let contador=0
+
 
 
 /////////////////////////////////eventos de mover la rueda del mouse///////////////////////////////
@@ -60,8 +74,9 @@ addEventListener('load', () => {
       sliderHead()
    },'22000')
   //  cokis()
-  
+ 
 })
+
 
 
 function cokis(){            //////funcion para que se active el contenido de las cookis
@@ -152,15 +167,9 @@ btnCerrarModal.addEventListener('click',()=>{ ////funcion para cerrar la modal d
 /////////////////////////////////////////////capturar datos de los input de registro de usuario///////////
 
 btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar registro y recoger datos de los input
-    let inputNombre=document.getElementById('nombre')
-    let inputApellido1=document.getElementById('apellido1')
-    let inputApellido2=document.getElementById('apellido2')
-    let email=document.getElementById('mail')
-    let telefono=document.getElementById('telefono')
-    let direccion=document.getElementById('direccion')
-    let password=document.getElementById('contraseña')
+  
    
-    
+////////////guardar en el local el array de usuarios registrados
    if((inputNombre.value.trim() != "")  && (email.value.trim() != "") 
    && (password.value.trim() != "")){
      usuarioRegistrado.push({nombre:inputNombre.value,primerApellido:inputApellido1.value,
@@ -168,23 +177,106 @@ btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar regis
       direccion:direccion.value,contrasena:password.value})
       
      localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
-
-     setTimeout(() => {
       modalLogin.style.display='none'
-     },2000)
    }
  
    else {
-    alert("Introduzca todos los campos");
-}
-userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
-let prueba=userSaveLocal.map((item)=>{
-  return item.correo
-})
-  
+    errorEnCampos()
 
-console.log(prueba)
+}
 })
+////////////////Funcion para error en campos input vacios
+function errorEnCampos(){
+let inputNombreVacio=document.getElementById('errorNombre')
+let inputMailVacio=document.getElementById('errorMail')
+let inputPasswordVacio=document.getElementById('errorPassword')
+
+  if(inputNombre.value.trim() == ""){
+    inputNombreVacio.innerHTML='Campo Obligatorio'
+    inputNombreVacio.style.color='red'
+    inputNombreVacio.style.backgroundColor='black'
+  }
+  else if(inputNombre.value.trim()!==''){
+    inputNombreVacio.innerHTML=''
+  }
+ if(email.value.trim() == ""){
+    inputMailVacio.innerHTML='Campo Obligatorio'
+    inputMailVacio.style.color='red'
+    inputMailVacio.style.backgroundColor='black'
+  }
+  else if(email.value.trim()!==''){
+    inputMailVacio.innerHTML=''
+  }
+  if(password.value.trim() == ""){
+    inputPasswordVacio.innerHTML='Campo Obligatorio'
+    inputPasswordVacio.style.color='red'
+    inputPasswordVacio.style.backgroundColor='black'
+  }
+  else if(password.value.trim()!==''){
+    inputPasswordVacio.innerHTML=''
+  }
+}
+
+/////////////////////////////////////////mostrar/ocultar contraseña de registro de usuario
+  btnMostrarOcultarContraseña.addEventListener('click',()=>{
+    mostrarOcultarContraseña()
+  })
+    
+  function mostrarOcultarContraseña(){
+if(password.type=='password'){
+  password.type='text'
+  btnMostrarOcultarContraseña.src='multimedia/esconder.png'
+}
+else if(password.type=='text'){
+  password.type='password'
+  btnMostrarOcultarContraseña.src='multimedia/ver.png'
+}
+  }
+
+  /////////////////////mostrar/ocultar contraseña de login
+  btnShowHideContraseñaLogin.addEventListener('click',()=>{
+    showHidePaswrdLgin()
+  })
+
+  function showHidePaswrdLgin(){
+let inputPaswordLogin=document.getElementById('contraseñaSesion')
+    if(inputPaswordLogin.type=='password'){
+      inputPaswordLogin.type='text'
+      btnShowHideContraseñaLogin.src='multimedia/esconder.png'
+    }
+    else if(inputPaswordLogin.type=='text'){
+      inputPaswordLogin.type='password'
+      btnShowHideContraseñaLogin.src='multimedia/ver.png'
+    }
+  }
+
+/////////////////////////////Iniciar Sesion ////////////////
+
+btniSesion.addEventListener('click',()=>{
+  login()
+
+})
+
+
+//////////////////////////////funcion para iniciar sesion////////////
+function login() {
+  let registroInputCorreo=document.getElementById('emailSesion')
+  let registroInputPassword=document.getElementById('contraseñaSesion')
+ 
+  userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
+
+          for (let i = 0; i < userSaveLocal.length; i++) {
+          if ((registroInputCorreo.value === userSaveLocal[i].correo) && (registroInputPassword.value === userSaveLocal[i].contrasena)) {
+              console.log("Este usuario esta registrado");
+              modalIniciarSesion.style.display='none'
+              iniciarSesion.value='prueba'
+
+          } else if((registroInputCorreo.value !== userSaveLocal[i].correo )){
+              console.log("Este usuario no esta registrado");
+         }
+      }
+}
+
 
 //////////////////////////////////////////////eventos a realizar al clicar en icono de menu////////////////
 

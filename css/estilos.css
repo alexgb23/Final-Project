@@ -852,15 +852,15 @@ border-bottom: 2px solid white;
 .rellenar{
     width: 65%;
     margin: 0 auto;
-   color: white;
+    color: white;
 }
 #formulario-login{
     display: flex;
     flex-direction: column;
 }
-.rellenar input{
+.inputRegister{
     margin: 1%;
-    width: 100%;
+    width: 98%;
     height: 4.5vh;
     font-size: 1.1vw;
     font-weight:550;
@@ -870,16 +870,15 @@ border-bottom: 2px solid white;
 }
 .rellenar input:focus{
     outline: none;
-   
 }
 .rellenar label{
     font-family: 'prata';
     margin-left: 2%;
-    margin-top: 3%;
+    margin-top: 1.5%;
 }
 .rellenar h1{
     font-family: 'prata';
-    font-size: 3vw;
+    font-size: 2vw;
     text-align: center;
     font-weight: 300;
     margin-top: 4%;
@@ -894,6 +893,7 @@ border-bottom: 2px solid white;
 }
 #btnAceptar{
     width: 6vw;
+    padding: 3%;
     margin-top: 4%;
     border: none;
     margin-left: 40%;
@@ -901,6 +901,10 @@ border-bottom: 2px solid white;
     font-weight:600;
     border-radius: 0.5vw;
     font-family: 'lato';
+}
+#btnAceptar:hover{
+    cursor: pointer;
+    background-color:  rgb(245, 167, 50);
 }
 
 .acept-cookis{
@@ -916,6 +920,17 @@ border-bottom: 2px solid white;
     background-color: #a0122f;
     opacity: 0.3;
     color: white;
+}
+#verFlexBtnPasword{
+    position: relative;
+    display: flex;
+}
+
+#verContraseña{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 1.5vw;
 }
 
                                 /*Modal de iniciar sesion */
@@ -937,14 +952,66 @@ border-bottom: 2px solid white;
     float: right;
     cursor: pointer;
 }
+#login{
+    margin-top: 5%;
+}
 #logo-login{
     width: 4vw;
 }
-.rellenar div{
-    display: flex;
+.rellenar a{
+    color: white;
+   margin-left: 25%;
+}
+.rellenar a:hover{
+    color:  rgb(245, 167, 50);
+}
+#login input{
+    width: 98%;
+    height: 4.5vh;
+    font-size: 1.1vw;
+    font-weight:550;
+    border-radius: 0.3vw;
+    border: none;
+    font-family: 'lato';
+   margin-top: 3%;
+   margin-bottom: 3%;
+}
+#login-label{
+    margin-top: 5%;
 }
 
-
+#rellenarDiv{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#isesion{
+    margin-top: 12%;
+}
+.is__login--btn{
+    width: 90%;
+    padding: 3%;
+    border-radius: 2vw;
+    background-color: white;
+    border: none;
+    margin: 3%;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.is__login--btn:hover{
+    background-color: rgb(245, 167, 50);
+}
+#ocultarFlexBtnPasword{
+    position: relative;
+    display: flex;
+}
+#verPassword{
+    position: absolute;
+    right: 5%;
+    top: 28%;
+    width: 1.5vw;
+}
 /*////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////**/

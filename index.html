@@ -46,7 +46,7 @@
                             <section class="iniciarSesion" style="display: none;" >
                                 <img src="multimedia/btnCerrar.png" alt="boton de cerrar" id="btnCerrar-login">
                                 <article class="rellenar">
-                                    <div>
+                                    <div id="rellenarDiv">
                                     <h3>Gourmet</h3>
                                     <figure>
                                         <img src="multimedia/logo.png" alt="logo" id="logo-login">
@@ -58,14 +58,16 @@
                                         <label for="emailSesion">E-Mail:</label>
                                         <input type="email" id="emailSesion">
                                         <label for="contraseñaSesion">Contraseña</label>
-                                        <input type="password"  id="contraseñaSesion">
-                                        </form>
+                                        <div id="ocultarFlexBtnPasword" >
+                                        <input type="password"  id="contraseñaSesion"><img src="multimedia/ver.png" alt="ver contraseña" id="verPassword" title="Mostrar/Ocultar contraseña">
+                                        </div>
+                                    </form>
                                         <a href="#">¿Olvidaste tu contraseña?</a>
 
-                                        <button>Iniciar Sesion</button>
-                                        <button>Continuar con Google</button>
-                                        <button>Continuar con Facebook</button>
-                                        <button id="registrarse">Registrarse</button>
+                                        <button class="is__login--btn" id="isesion">Iniciar Sesion</button>
+                                        <button class="is__login--btn" id="entrarcongoogle">Continuar con Google</button>
+                                        <button class="is__login--btn" id="entrarconfacebook">Continuar con Facebook</button>
+                                        <button class="is__login--btn" id="registrarse">Registrarse</button>
                 
                                         <p>Si continúas, aceptas los Términos del servicio de Pinterest y confirmas que has leído nuestra Política de privacidad.
 
@@ -83,16 +85,22 @@
                     <form action="#" method="get" id="formulario-login">
                         <label for="nombre">Nombre:</label>
                         <input type="text" name="nombre" id="nombre" required class="inputRegister">
+                        <span id="errorNombre"></span>
                         <label for="apellido1">Primer Apellido:</label>
                         <input type="text" name="apellido1" id="apellido1" required class="inputRegister">
                         <label for="apellido2">Segundo Apellido:</label>
                         <input type="text" name="apellido2" id="apellido2" class="inputRegister">
                         <label for="mail">E-Mail:</label>
                         <input type="email" name="correo" id="mail" class="inputRegister">
+                        <span id="errorMail"></span>
                         <label for="telefono">Numero de Telefono:</label>
                         <input type="tel" name="telefono" id="telefono" required class="inputRegister">
                         <label for="contraseña">Contraseña</label>
-                        <input type="password" name="contraseña" id="contraseña" required class="inputRegister">
+
+                        <div id="verFlexBtnPasword">
+                        <input type="password" name="contraseña" id="contraseña" required class="inputRegister"><img src="multimedia/ver.png" alt="ver contraseña" id="verContraseña" title="Mostrar/Ocultar contraseña">
+                    </div>
+                        <span id="errorPassword"></span>
                         <label for="direccion">Direccion:</label>
                         <input type="text" name="direccion" id="direccion" class="inputRegister">
                         </form>
