@@ -115,8 +115,9 @@
 }
 
 .cont-contact{
-    margin-left: 35%;
     display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
     align-items: center;
 }
 
@@ -298,6 +299,7 @@
     color: white;
    bottom:20%;
    font-size: 5.5vw;
+   z-index: 200;
    font-family: 'prata';
    font-weight: 400;
 }
@@ -308,6 +310,7 @@
     color: white;
     font-size: 1.5vw;
     font-weight: 200;
+    z-index: 200;
     background-color: #dc143ca4;
     padding-inline: 0.5%;
     border-radius: 0.25vw;
@@ -1108,6 +1111,7 @@ border-bottom: 2px solid white;
     background-color: #db143ca4;
     transition: 0.1s;
 }
+
 #usuario{
 width: 50%;
 }

@@ -15,6 +15,7 @@ const btnAceptarRegistro=document.getElementById('btnAceptar')
 const cookisCont = document.getElementById('cookis')
 const icoMenu=document.getElementById('icono-menu')
 const asideLateral=document.querySelector('.nav-lateral')
+const asideLateralResponsive=document.querySelector('#nav-lateral-responsive')
 const arrowUl=document.getElementById('arrow')
 const listDownAside=document.getElementById('list-lat-ol')
 const btnAceptcookies=document.getElementById('btnAceptar-cookies')
@@ -301,9 +302,9 @@ icoMenu.addEventListener('click',(e)=>{
     document.body.style.overflow='hidden'
   }
   
-  function cerrarAside(){                                      //funcion para esconder el aside lateral
-    asideLateral.style.width=='0%'
-    asideLateral.style.visibility='hidden'
+  function cerrarAside(){     
+    asideLateral.style.visibility='hidden'                                 //funcion para esconder el aside lateral
+    asideLateral.style.width='0%'
     asideLateral.style.transition='0s'
     icoMenu.id='icono-menu'
     icoMenu.src='multimedia/pngwing.com.png'
