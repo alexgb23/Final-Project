@@ -42,7 +42,7 @@ let contador=0
 
 /////////////////////////////////eventos de mover la rueda del mouse///////////////////////////////
 
-addEventListener("onscroll",() => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
+addEventListener("scroll",() => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
 
     if (scrollY > 20 ) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
         navegador.id='cont-del-nav'
