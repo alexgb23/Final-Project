@@ -79,12 +79,15 @@
     border-radius: 25vw;
     cursor: pointer;
 }
-#icono-cerrar-responsive{
+#cerrar-responsive{
+    position: absolute;
     width: 6vw;
     padding: 5%;
     border-radius: 25vw;
     cursor: pointer;
+    z-index: 500;
 }
+
 .cont-logo{
     position: relative;
     display: flex;
@@ -1124,14 +1127,12 @@ width: 50%;
     position: relative;
     min-width:fit-content;
   float: right;
-    z-index:100;
 }
 #titulo{
     position: absolute;
     color: white;
    bottom:45%;
    font-size: 7.5vw;
-   z-index: 200;
    font-family: 'prata';
    font-weight: 400;
 }
@@ -1142,7 +1143,6 @@ width: 50%;
     color: white;
     font-size: 3.5vw;
     font-weight: 200;
-    z-index: 200;
     background-color: #dc143ca4;
     padding-inline: 0.5%;
     border-radius: 0.25vw;

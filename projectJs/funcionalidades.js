@@ -57,8 +57,8 @@ addEventListener("scroll",() => { ///declaracion para que haga una instruccion c
     /// no se encuentre visible porq me cambia el icono del menu/////
 
    else if ((scrollY < 20) && (asideLateral.style.visibility=='hidden')){ 
-    navegador.id='0'
-    navlogo.id='0'
+    navegador.removeAttribute('id')
+    navlogo.removeAttribute('id')
     icoMenu.style.backgroundColor='#dc143c3b'
     icoMenu.src='multimedia/pngwing.com.png'
     imglogo.src='multimedia/logo.png'
@@ -287,7 +287,7 @@ icoMenu.addEventListener('click',(e)=>{
       
  
   }
- else if(icoMenu.id=='icono-cerrar'){
+ else if((icoMenu.id=='icono-cerrar')|| (icoMenu.id=='icono-cerrar-responsive')){
   cerrarAside()
   }
   })
@@ -306,10 +306,11 @@ icoMenu.addEventListener('click',(e)=>{
       }
       else if(screen.width<=768){
       asideLateral.style.visibility='visible'
-      asideLateral.style.width='40%'
+      asideLateral.style.width='60%'
       asideLateral.style.visibility='visible'
-      icoMenu.id='icono-cerrar-responsive'
-      icoMenu.style.marginLeft='130%'
+      icoMenu.id='cerrar-responsive'
+      icoMenu.style.marginLeft='45%'
+      icoMenu.style.top='4%'
       icoMenu.src='multimedia/btnCerrar.png'
       icoMenu.style.backgroundColor='#a0122f'
       icoMenu.style.transition='0.4s'
