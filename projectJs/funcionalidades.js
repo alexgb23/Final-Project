@@ -75,12 +75,6 @@ addEventListener('load', () => {
       sliderHead()
    },'22000')
   //  cokis()
- if(screen.width>768){
- console.log('hola')
- }
-else {
- console.log('menor 768')
- }
 })
 
 
@@ -289,7 +283,8 @@ function login() {
 icoMenu.addEventListener('click',(e)=>{
   if(icoMenu.id=='icono-menu'){
     abrirAside()
-   
+    
+      
  
   }
  else if(icoMenu.id=='icono-cerrar'){
@@ -298,7 +293,7 @@ icoMenu.addEventListener('click',(e)=>{
   })
 
   function abrirAside(){ 
-   
+    if(screen.width>768){
       asideLateral.style.visibility='visible'
       asideLateral.style.width='29%'
       asideLateral.style.visibility='visible'
@@ -308,9 +303,19 @@ icoMenu.addEventListener('click',(e)=>{
       icoMenu.style.backgroundColor='#a0122f'
       icoMenu.style.transition='0.4s'
       document.body.style.overflow='hidden'
-    
-
-                       
+      }
+      else if(screen.width<=768){
+      asideLateral.style.visibility='visible'
+      asideLateral.style.width='40%'
+      asideLateral.style.visibility='visible'
+      icoMenu.id='icono-cerrar-responsive'
+      icoMenu.style.marginLeft='130%'
+      icoMenu.src='multimedia/btnCerrar.png'
+      icoMenu.style.backgroundColor='#a0122f'
+      icoMenu.style.transition='0.4s'
+      document.body.style.overflow='hidden'
+        }
+                   
   }
   
   function cerrarAside(){     
@@ -333,9 +338,11 @@ icoMenu.addEventListener('click',(e)=>{
     else if(arrowUl.style.rotate =='-180deg'){
       replegarArrow()
     }
+   
   })
 
-  function desplegarArrow(){                     //funcion para desplegar flecha de menu lateral y mostrar listado de opciones
+  function desplegarArrow(){      
+                                            //funcion para desplegar flecha de menu lateral y mostrar listado de opciones
   arrowUl.style.rotate ='-180deg'
   arrowUl.style.transition='0.5s'
   listDownAside.style.display='block'
