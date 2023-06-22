@@ -78,7 +78,6 @@ addEventListener('load', () => {
 })
 
 
-
 function cokis(){            //////funcion para que se active el contenido de las cookis
   setTimeout(() => {
     cookisCont.style.display='block';
@@ -161,7 +160,6 @@ btnCerrarModal.addEventListener('click',()=>{ ////funcion para cerrar la modal d
     document.body.style.overflow='auto'
   }
 })
-
 
 
 /////////////////////////////////////////////capturar datos de los input de registro de usuario///////////
