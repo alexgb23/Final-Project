@@ -283,11 +283,9 @@ function login() {
 icoMenu.addEventListener('click',(e)=>{
   if(icoMenu.id=='icono-menu'){
     abrirAside()
-    
-      
- 
   }
- else if((icoMenu.id=='icono-cerrar')|| (icoMenu.id=='icono-cerrar-responsive')){
+  
+ else if((icoMenu.id=='icono-cerrar') || (icoMenu.id=='cerrar-responsive')){
   cerrarAside()
   }
   })
@@ -319,8 +317,8 @@ icoMenu.addEventListener('click',(e)=>{
                    
   }
   
-  function cerrarAside(){     
-    asideLateral.style.visibility='hidden'                                 //funcion para esconder el aside lateral
+  function cerrarAside(){                          //funcion para esconder el aside lateral
+    asideLateral.style.visibility='hidden' 
     asideLateral.style.width='0%'
     asideLateral.style.transition='0s'
     icoMenu.id='icono-menu'

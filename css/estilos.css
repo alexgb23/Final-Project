@@ -81,8 +81,8 @@
 }
 #cerrar-responsive{
     position: absolute;
-    width: 6vw;
-    padding: 5%;
+    width: 12vw;
+    padding: 2.5%;
     border-radius: 25vw;
     cursor: pointer;
     z-index: 500;
