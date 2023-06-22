@@ -75,7 +75,12 @@ addEventListener('load', () => {
       sliderHead()
    },'22000')
   //  cokis()
- 
+ if(screen.width>768){
+ console.log('hola')
+ }
+else {
+ console.log('menor 768')
+ }
 })
 
 
@@ -284,6 +289,7 @@ function login() {
 icoMenu.addEventListener('click',(e)=>{
   if(icoMenu.id=='icono-menu'){
     abrirAside()
+   
  
   }
  else if(icoMenu.id=='icono-cerrar'){
@@ -291,15 +297,20 @@ icoMenu.addEventListener('click',(e)=>{
   }
   })
 
-  function abrirAside(){                                       //funcion para desplegar el aside lateral hacia la derecha
-    asideLateral.style.width='29%'
-    asideLateral.style.visibility='visible'
-    icoMenu.id='icono-cerrar'
-    icoMenu.style.marginLeft='88%'
-    icoMenu.src='multimedia/btnCerrar.png'
-    icoMenu.style.backgroundColor='#a0122f'
-    icoMenu.style.transition='0.4s'
-    document.body.style.overflow='hidden'
+  function abrirAside(){ 
+   
+      asideLateral.style.visibility='visible'
+      asideLateral.style.width='29%'
+      asideLateral.style.visibility='visible'
+      icoMenu.id='icono-cerrar'
+      icoMenu.style.marginLeft='88%'
+      icoMenu.src='multimedia/btnCerrar.png'
+      icoMenu.style.backgroundColor='#a0122f'
+      icoMenu.style.transition='0.4s'
+      document.body.style.overflow='hidden'
+    
+
+                       
   }
   
   function cerrarAside(){     
