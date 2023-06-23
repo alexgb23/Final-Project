@@ -4,7 +4,7 @@ const imglogo=document.querySelector('#logo')
 const btnHelp=document.querySelector('#interrogacion')
 const mensajeAyuda=document.querySelector('#ayuda-btn')
 const imgCabecera = document.querySelector('#imgHder');
-const iniciarSesion=document.querySelector('.btnclick')
+const iniciarSesion=document.querySelector('.btnclickNav')
 const modalLogin=document.querySelector('.modal-Login')
 const btnCloseISesion=document.querySelector('#btnCerrar-login')
 const modalIniciarSesion=document.querySelector('.iniciarSesion')
@@ -21,7 +21,7 @@ const listDownAside=document.querySelector('#list-lat-ol')
 const btnAceptcookies=document.querySelector('#btnAceptar-cookies')
 const checkCookies=document.querySelector('#Acept-Privacity')
 const btniSesion=document.querySelector('#isesion')
-const btnMostrarOcultarContraseña = document.querySelector('#verContraseña')
+const btnMostrarOcultarContraseña = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 
 //////////////////variables de los inputs deregistrar usuarios////////////
@@ -32,7 +32,7 @@ const inputApellido2=document.querySelector('#apellido2')
 const email=document.querySelector('#mail')
 const telefono=document.querySelector('#telefono')
 const direccion=document.querySelector('#direccion')
-const password=document.querySelector('#contraseña')
+const password=document.querySelector('#contrasenna')
 
 //////////////////variables de los inputs login////////////
 

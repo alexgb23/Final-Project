@@ -126,10 +126,27 @@
 .cont-contact{
     display: flex;
     justify-content: flex-end;
-    margin-right: 10%;
     align-items: center;
+    margin-right: 5%;
 }
-
+.btnclickNav{
+    display: flex;
+    align-items: center;
+    padding-inline: 6%;
+    height: 9vh;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    font-family: 'lato';
+    font-size: 1.2vw;
+    background-color: #db143ca4;
+    transition: 0.1s;
+}
+.btnclickNav:hover{
+    cursor: pointer;
+    color: #231f20;
+    background-color: rgb(245, 167, 50);
+}
 .btnclick{
     display: flex;
     align-items: center;
@@ -149,7 +166,8 @@
     background-color: rgb(245, 167, 50);
 }
 #usuario{
-    width: 2.8vw;
+    width: 3vw;
+    height: auto;
 }
 
 #interrogacion{
@@ -947,7 +965,7 @@ border-bottom: 2px solid white;
     display: flex;
 }
 
-#verContraseña{
+#verContrasena{
     position: absolute;
     right: 5%;
     top: 20%;
@@ -989,7 +1007,7 @@ border-bottom: 2px solid white;
 #login input{
     width: 98%;
     height: 4.5vh;
-    font-size: 1.1vw;
+    font-size: 1rem;
     font-weight:550;
     border-radius: 0.3vw;
     border: none;
@@ -1071,7 +1089,20 @@ border-bottom: 2px solid white;
         text-align: justify;
         background-color: white;
     }
-
+    .nav-principal{
+        width: 100%;
+        position: absolute;
+        height: 18vh;
+        background-color:transparent;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        z-index: 200;
+        transition: 0.5s;
+    }
+   
     .primera-Seccion{
         padding: 0;
         margin: 0;
@@ -1089,12 +1120,13 @@ border-bottom: 2px solid white;
 }
 .cont-contact{
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    margin-left: 45%;
+    margin-right: 5%;
 }
+
 #interrogacion{
-    width: 15%;
-    height: 15%;
+    display: none;
 }
 #icono-menu{
     margin-left: 20%;
@@ -1115,6 +1147,25 @@ border-bottom: 2px solid white;
     font-family: 'prata';
     transition: 0.5s;
 }
+.btnclickNav{
+    display: flex;
+    align-items: center;
+    width: 21vw;
+    padding-inline: 12%;
+    height:5vh;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    font-family: 'lato';
+    font-size: 2.2vw;
+    background-color: #db143ca4;
+    transition: 0.1s;
+}
+.btnclickNav:hover{
+    cursor: pointer;
+    color: #231f20;
+    background-color: rgb(245, 167, 50);
+}
 
 .btnclick{
     display: flex;
@@ -1131,12 +1182,13 @@ border-bottom: 2px solid white;
 }
 
 #usuario{
-width: 50%;
+width: 30%;
 }
 #imgHder{
     position: relative;
     min-width:fit-content;
-  float: right;
+    float: right;
+  
 }
 #titulo{
     position: absolute;
@@ -1221,7 +1273,6 @@ width: 50%;
     margin-top: 5%;
     background-color:  rgba(220, 20, 60, 0.645);
     color: white;
-    border: 2px solid black;
 }
 #fterRight{
     width: 40vw;
@@ -1414,6 +1465,23 @@ width: 50%;
         float: right;
         cursor: pointer;
     }
-
+    #login input{
+        font-size: 0.9rem;
+        border-radius: 1.5vw;
+    }
+    .is__login--btn{
+        font-size: 0.9rem;
+        padding: 1.8%;
+    }
+    .inputRegister{
+        font-size: 0.9rem;
+        border-radius: 1.5vw;
+    }
+    #verPassword{
+        position: absolute;
+        right: 5%;
+        top: 28%;
+        width: 6vw;
+    }
 
 }
