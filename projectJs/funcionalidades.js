@@ -282,7 +282,7 @@ userSaveLocal.forEach(element => {
   for(let i=0;i<element.correo.length;i++){
   if(registroInputCorreo.value===element[i].correo){
     // registroInputCorreo.value='USUARIO NO REGISTRADO'
-    console.log(element[i].correo)
+    alert(element[i].correo)
     
   }
  
