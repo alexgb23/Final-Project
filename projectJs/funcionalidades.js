@@ -97,22 +97,22 @@ function sliderHead(){
       imgCabecera.src='multimedia/main-dish-wild-sea-bass-fennel-potato-puree-mfrh-original-1920x1080.jpg.webp'
       imgCabecera.style.transition = '8s'
       imgCabecera.style.scale = '0.99'
-    },'7000');
+    },'50000');
     setTimeout(() => {
       imgCabecera.src='multimedia/red-flowers-candles-mfrh-original-1920x1080.jpg.webp'
       imgCabecera.style.transition = '8s'
       imgCabecera.style.scale = '1.3'
-    },'12000');
+    },'50001');
     setTimeout(() => {
       imgCabecera.src='multimedia/lobster-rolls-mfrh-original-1920x1080.jpg.webp'
       imgCabecera.style.transition = '8s'
       imgCabecera.style.scale = '0.99'
-    },'18000');
+    },'100001');
     setTimeout(() => {
       imgCabecera.src='multimedia/lunch-main-beef-tenderloin-roast-vegetables-mfrh-original-1920x1080.jpg.webp'
       imgCabecera.style.transition = '8s'
       imgCabecera.style.scale = '1.2'
-    },'22000');
+    },'150001');
 }
 
 ////////////aqui se le da funcionalidad al boton de ayuda del nav, se activa y desactiva el contenedor
