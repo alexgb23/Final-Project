@@ -26,13 +26,13 @@ const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 
 //////////////////variables de los inputs////////////
 
-const inputNombre=document.querySelector('nombre')
-const inputApellido1=document.querySelector('apellido1')
-const inputApellido2=document.querySelector('apellido2')
-const email=document.querySelector('mail')
-const telefono=document.querySelector('telefono')
-const direccion=document.querySelector('direccion')
-const password=document.querySelector('contraseña')
+const inputNombre=document.querySelector('#nombre')
+const inputApellido1=document.querySelector('#apellido1')
+const inputApellido2=document.querySelector('#apellido2')
+const email=document.querySelector('#mail')
+const telefono=document.querySelector('#telefono')
+const direccion=document.querySelector('#direccion')
+const password=document.querySelector('#contraseña')
 
 let usuarioRegistrado=[{nombre:'Alexander',primerApellido:'Galvez',segundoApellido:'Benavides',correo:'alexander.galvez@estudioenpenascal.com',telefono:'688872515',direccion:'Vista Alegre 2 5D',contrasena:'1234'}]
 let userSaveLocal;
@@ -74,7 +74,7 @@ addEventListener('load', () => {
    setInterval(() => {
       sliderHead()
    },'22000')
-   cokis()
+  //  cokis()
 })
 
 
@@ -187,28 +187,19 @@ btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar regis
 function errorEnCampos(){
   if(inputNombre.value.trim() == ""){
     inputNombre.setAttribute('placeholder','Campo Obligatorio')
-    inputNombre.style.color='black'
-    inputNombre.style.backgroundColor='pink'
+    inputNombre.style.backgroundColor='yellow'
   }
-//   else if(inputNombre.value.trim()!==''){
-//     inputNombre.innerHTML=''
-//   }
-//  if(email.value.trim() == ""){
-//     inputMail.innerHTML='Campo Obligatorio'
-//     inputMail.style.color='red'
-//     inputMail.style.backgroundColor='black'
-//   }
-//   else if(email.value.trim()!==''){
-//     inputMail.innerHTML=''
-//   }
-//   if(password.value.trim() == ""){
-//     inputPassword.innerHTML='Campo Obligatorio'
-//     inputPassword.style.color='red'
-//     inputPassword.style.backgroundColor='black'
-//   }
-//   else if(password.value.trim()!==''){
-//     inputPassword.innerHTML=''
-//   }
+ 
+ if(email.value.trim() == ""){
+    email.setAttribute('placeholder','Campo Obligatorio')
+    email.style.backgroundColor='yellow'
+  }
+ 
+ if(password.value.trim() == ""){
+    password.setAttribute('placeholder','Campo Obligatorio')
+    password.style.backgroundColor='yellow'
+  }
+ 
 }
 
 /////////////////////////////////////////mostrar/ocultar contraseña de registro de usuario

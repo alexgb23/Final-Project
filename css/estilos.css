@@ -887,6 +887,9 @@ border-bottom: 2px solid white;
 .rellenar input:focus{
     outline: none;
 }
+::placeholder {
+    color: red;
+  }
 .rellenar label{
     font-family: 'prata';
     margin-left: 2%;
