@@ -37,12 +37,14 @@ const password=document.querySelector('#contraseña')
 //////////////////variables de los inputs login////////////
 
 let registroInputCorreo=document.querySelector('#emailSesion')
-let registroInputPassword=document.querySelector('#contraseñaSesion')
+let registroInputPassword=document.querySelector('#contrasenaSesion')
 let noregistro=document.querySelector('#noregistered')
 
 
-let usuarioRegistrado=[{nombre:'Alexander',primerApellido:'Galvez',segundoApellido:'Benavides',correo:'alexander.galvez@gmail.com',telefono:'688872515',direccion:'Vista Alegre 2 5D',contrasena:'1234'}]
+let usuarioRegistrado=[{nombre:'Alexander',primerApellido:'Galvez',segundoApellido:'Benavides',correo:'alexander.galvez880208@gmail.com',telefono:'688872515',direccion:'Vista Alegre 2 5D',contrasena:'1234'}]
 let userSaveLocal;
+let correosdelLocal;
+let contraseñasdelLocal;
 let contador=0
 
 
@@ -82,7 +84,6 @@ addEventListener('load', () => {
    setInterval(() => {
       sliderHead()
    },'22000')
-   userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
   //  cokis()
 })
 
@@ -207,16 +208,17 @@ function errorEnCampos(){
 }
 
 /////////////////////////////////////////mostrar/ocultar contraseña de registro de usuario
-  btnMostrarOcultarContraseña.addEventListener('click',()=>{
-    mostrarOcultarContraseña()
-  })
+
+btnMostrarOcultarContraseña.addEventListener('click',()=>{
+  mostrarOcultarContraseña()
+})
     
   function mostrarOcultarContraseña(){
-if(password.type=='password'){
+if(password.type==='password'){
   password.type='text'
   btnMostrarOcultarContraseña.src='multimedia/esconder.png'
 }
-else if(password.type=='text'){
+else if(password.type==='text'){
   password.type='password'
   btnMostrarOcultarContraseña.src='multimedia/ver.png'
 }
@@ -228,13 +230,13 @@ else if(password.type=='text'){
   })
 
   function showHidePaswrdLgin(){
-let inputPaswordLogin=document.querySelector('#contraseñaSesion')
-    if(inputPaswordLogin.type=='password'){
-      inputPaswordLogin.type='text'
+
+    if(registroInputPassword.type=='password'){
+      registroInputPassword.type='text'
       btnShowHideContraseñaLogin.src='multimedia/esconder.png'
     }
-    else if(inputPaswordLogin.type=='text'){
-      inputPaswordLogin.type='password'
+    else if(registroInputPassword.type=='text'){
+      registroInputPassword.type='password'
       btnShowHideContraseñaLogin.src='multimedia/ver.png'
     }
   }
@@ -250,6 +252,8 @@ btniSesion.addEventListener('click',()=>{
 function login() {
  
   userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
+  contraseñasdelLocal=userSaveLocal.map(element => element.contrasena)
+  correosdelLocal=userSaveLocal.map(element => element.correo)
 
       userSaveLocal.forEach(element => {
         if((registroInputCorreo.value===element.correo) && (registroInputPassword.value === element.contrasena)){
@@ -257,42 +261,36 @@ function login() {
           iniciarSesion.innerHTML='Bienvenido/a '+ '<br>'+ element.nombre  + '<img src="multimedia/kisspng-computer-icons-user-profile-avatar-5ab752869bb860.8278856115219636546379.png" alt="usuario" id="usuario">'
           iniciarSesion.src='multimedia/usuario.png'
         }
-        // else if((registroInputCorreo.value!==element.correo)&&(registroInputPassword.value !== element.contrasena)){
-        //   noregistro.innerHTML='USUARIO NO REGISTRADO'
-        //   noregistro.style.color='yellow'
-        //    }
-      // else if((registroInputCorreo.value!==element.correo)){
-      //    noregistro.innerHTML='USUARIO INCORRECTO'
-      //    noregistro.style.color='yellow'
-      //     }
+      }) 
 
-      //  else  if((registroInputPassword.value !== element.contrasena)){
-      //       noregistro.innerHTML='CONTRASEÑA INCORRECTA'
-      //       noregistro.style.color='yellow'
-      //        }
-       
-      })   
+      for(let i = 0; i < correosdelLocal.length; i++) 
+      for(let i = 0; i < contraseñasdelLocal.length; i++)
+
+       if((registroInputCorreo.value===correosdelLocal[i]) && (registroInputPassword.value !== contraseñasdelLocal[i])){
+        registroInputPassword.value=''
+        registroInputPassword.setAttribute('placeholder','CONTRASEÑA INCORRECTA')
+          }
+
+
 }
 
 registroInputPassword.addEventListener('click',()=>{
+  revisarusuarios()
+})
+
+function revisarusuarios(){
   userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
- 
-userSaveLocal.forEach(element => {
-
-  for(let i=0;i<element.correo.length;i++){
-  if(registroInputCorreo.value===element[i].correo){
-    // registroInputCorreo.value='USUARIO NO REGISTRADO'
-    alert(element[i].correo)
-    
+  contraseñasdelLocal=userSaveLocal.map(element => element.contrasena)
+  correosdelLocal=userSaveLocal.map(element => element.correo)
+  
+   for(let i = 0; i < correosdelLocal.length; i++) 
+   for(let i = 0; i < contraseñasdelLocal.length; i++)
+  
+  if(registroInputCorreo.value !== correosdelLocal[i] ){
+    registroInputCorreo.value=''
+    registroInputCorreo.setAttribute('placeholder','USUARIO NO REGISTRADO')
   }
- 
 }
-
-})
-})
-
-
-
 
 
 //////////////////////////////////////////////eventos a realizar al clicar en icono de menu////////////////

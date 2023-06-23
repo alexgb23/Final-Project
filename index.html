@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -55,11 +55,11 @@
                                      </div>
 
                                     <form action="#" method="get" id="login">
-                                        <label for="emailSesion">E-Mail:</label>
-                                        <input type="email" id="emailSesion">
-                                        <label for="contraseñaSesion">Contraseña</label>
+                                        <label for="correoE">Correo:</label>
+                                        <input type="email" name="correoE" id="emailSesion" required>
+                                        <label for="cont">Contraseña:</label>
                                         <div id="ocultarFlexBtnPasword" >
-                                        <input type="password"  id="contraseñaSesion">
+                                        <input type="password" name="cont"  id="contrasenaSesion" required>
                                         <img src="multimedia/ver.png" alt="ver contraseña" id="verPassword" title="Mostrar/Ocultar contraseña">
                                         </div>
                                     </form>
@@ -92,11 +92,11 @@
                         <input type="text" name="apellido1" id="apellido1" required class="inputRegister">
                         <label for="apellido2">Segundo Apellido:</label>
                         <input type="text" name="apellido2" id="apellido2" class="inputRegister">
-                        <label for="mail">E-Mail:</label>
+                        <label for="correo">Correo:</label>
                         <input type="email" name="correo" id="mail" class="inputRegister">
                         <label for="telefono">Numero de Telefono:</label>
                         <input type="tel" name="telefono" id="telefono" required class="inputRegister">
-                        <label for="contraseña">Contraseña</label>
+                        <label for="contraseña">Contraseña:</label>
 
                         <div id="verFlexBtnPasword">
                         <input type="password" name="contraseña" id="contraseña" required class="inputRegister"><img src="multimedia/ver.png" alt="ver contraseña" id="verContraseña" title="Mostrar/Ocultar contraseña">
@@ -141,6 +141,7 @@
     <section class="nav-lateral-scroll">
            <ul>
             <li class="list-lat"><a href="">Experiencias</a><img src="multimedia/flechabajo.png" alt="" id="arrow"></li>
+           </ul>
             <ol id="list-lat-ol">
                 <li class="list-lat-down">lkjvfbcchbuvgi</li>
                 <li class="list-lat-down">lkjvfbcchbuvgi</li>
@@ -150,7 +151,7 @@
                 <li class="list-lat-down">lkjvfbcchbuvgi</li>
                 <li class="list-lat-down">lkjvfbcchbuvgi</li>
             </ol>
-           
+           <ul>
             <li class="list-lat"><a href="">Menus</a></li>
             <li class="list-lat"><a href="">Lugares</a></li>
             <li class="list-lat"><a href="">Acontecimientos</a></li>
@@ -166,7 +167,7 @@
 
     <header class="cabecera">
             <article class="hdr-img">
-                <img src="" alt="slider de fotos" id="imgHder" >
+                <img src="#" alt="slider de fotos" id="imgHder" >
 
             </article>
             <h2 id="titulo">Profundamente <br>arraigado <br>
