@@ -325,7 +325,7 @@
     padding-inline: 0.5%;
     border-radius: 0.25vw;
     font-family: 'lato';
-    line-height: 1.5em ;    
+    
 }
 #art-presentacion{
  display: flex;
@@ -340,7 +340,7 @@
     font-size: 1.6vw;
     font-weight: 100;
     font-family: 'prata';
-    line-height: 1.5em ;  
+    line-height: 1.6em ;  
 }
 #firma{
     width: 38%;
@@ -394,21 +394,24 @@
 
 #s1l-p1{
     font-family: 'lato';
-    line-height: 1.4em ;    
+    line-height: 1.6em ;    
     font-size: 1.5vw;
     margin: 3%;
 }
 #s1l-p1:first-letter{
-    font-size:200%;
+    font-size:3em;
+    font-family: 'prata';
+    margin: 1%;
+    margin-top:2.5% ;
     float:left;
-    color:#f00;
+    color:#db143ca4;
   }
   
 
 
 .s1l-text{
     font-size: 1.4vw;
-    line-height: 1.4em ;    
+    line-height: 1.6em ;    
     margin: 3%;
     font-family: 'lato';
 }
@@ -468,7 +471,7 @@
     font-size: 1.5vw;
     margin: 3%;
     font-family: 'lato';
-    line-height: 1.4em ;   
+    line-height: 1.6em ;   
     Color:#231f20
 
 }
@@ -508,7 +511,7 @@
 #s2art-p1{
     font-size: 1.2vw;
     font-family: 'lato';
-    line-height: 1.4vw ;    
+    line-height: 1.6vw ;    
 }
 .s2artDiv{
     padding-top: 25%;
@@ -640,7 +643,7 @@
 .s4art-p1{
     font-size: 1.2vw;
     font-family: 'lato';
-    line-height: 1.4em ; 
+    line-height: 1.6em ; 
 }
 .s4artDiv{
     padding-top: 25%;
