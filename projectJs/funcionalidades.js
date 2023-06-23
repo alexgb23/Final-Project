@@ -44,19 +44,19 @@ let contador=0
 
 addEventListener("scroll",() => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
 
-    if (scrollY > 20 ) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
+    if ((scrollY > 20) && (icoMenu.id=='icono-menu') ) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
         navegador.id='cont-del-nav'
         navlogo.id='logo-modified'
         imglogo.src='multimedia/logomod.png'
         icoMenu.src='multimedia/pngwingModified.png'
         icoMenu.style.backgroundColor='transparent'
         btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937copyBlack.png'
-       
     } 
+  
     ////condicion cuando la rueda del mouse se mueve hacia arriba y que la barra lateral
     /// no se encuentre visible porq me cambia el icono del menu/////
 
-   else if ((scrollY < 20) && (asideLateral.style.visibility=='hidden')){ 
+   else if ((scrollY == 0) && (asideLateral.style.visibility=='hidden')){ 
     navegador.removeAttribute('id')
     navlogo.removeAttribute('id')
     icoMenu.style.backgroundColor='#dc143c3b'
@@ -64,6 +64,7 @@ addEventListener("scroll",() => { ///declaracion para que haga una instruccion c
     imglogo.src='multimedia/logo.png'
     btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png'
    }
+
 });
 
 //////////////////funcion para cuando carga la pagina que cargue las fotos de portada
@@ -186,18 +187,13 @@ btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar regis
 ////////////////Funcion para error en campos input vacios
 function errorEnCampos(){
   if(inputNombre.value.trim() == ""){
-    inputNombre.setAttribute('placeholder','Campo Obligatorio')
-    inputNombre.style.backgroundColor='yellow'
+    inputNombre.setAttribute('placeholder','"Campo Obligatorio"')
   }
- 
  if(email.value.trim() == ""){
-    email.setAttribute('placeholder','Campo Obligatorio')
-    email.style.backgroundColor='yellow'
+    email.setAttribute('placeholder','"Campo Obligatorio"')
   }
- 
  if(password.value.trim() == ""){
-    password.setAttribute('placeholder','Campo Obligatorio')
-    password.style.backgroundColor='yellow'
+    password.setAttribute('placeholder','"Campo Obligatorio"')
   }
  
 }
@@ -239,7 +235,6 @@ let inputPaswordLogin=document.querySelector('#contraseñaSesion')
 
 btniSesion.addEventListener('click',()=>{
   login()
-
 })
 
 
@@ -265,7 +260,7 @@ function login() {
 
 //////////////////////////////////////////////eventos a realizar al clicar en icono de menu////////////////
 
-icoMenu.addEventListener('click',(e)=>{
+icoMenu.addEventListener('click',()=>{
   if(icoMenu.id=='icono-menu'){
     abrirAside()
   }
@@ -279,9 +274,8 @@ icoMenu.addEventListener('click',(e)=>{
     if(screen.width>768){
       asideLateral.style.visibility='visible'
       asideLateral.style.width='29%'
-      asideLateral.style.visibility='visible'
       icoMenu.id='icono-cerrar'
-      icoMenu.style.marginLeft='88%'
+      icoMenu.style.marginLeft='90%'
       icoMenu.src='multimedia/btnCerrar.png'
       icoMenu.style.backgroundColor='#a0122f'
       icoMenu.style.transition='0.4s'
@@ -290,10 +284,9 @@ icoMenu.addEventListener('click',(e)=>{
       else if(screen.width<=768){
       asideLateral.style.visibility='visible'
       asideLateral.style.width='60%'
-      asideLateral.style.visibility='visible'
       icoMenu.id='cerrar-responsive'
       icoMenu.style.marginLeft='45%'
-      icoMenu.style.top='4%'
+      icoMenu.style.top='5%'
       icoMenu.src='multimedia/btnCerrar.png'
       icoMenu.style.backgroundColor='#a0122f'
       icoMenu.style.transition='0.4s'
