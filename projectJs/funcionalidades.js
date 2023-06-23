@@ -1,38 +1,38 @@
 const navegador=document.querySelector('.nav-principal')
 const navlogo=document.querySelector('.cont-logo')
-const imglogo=document.getElementById('logo')
-const btnHelp=document.getElementById('interrogacion')
-const mensajeAyuda=document.getElementById('ayuda-btn')
-const imgCabecera = document.getElementById('imgHder');
+const imglogo=document.querySelector('#logo')
+const btnHelp=document.querySelector('#interrogacion')
+const mensajeAyuda=document.querySelector('#ayuda-btn')
+const imgCabecera = document.querySelector('#imgHder');
 const iniciarSesion=document.querySelector('.btnclick')
 const modalLogin=document.querySelector('.modal-Login')
 const btnCloseISesion=document.querySelector('#btnCerrar-login')
 const modalIniciarSesion=document.querySelector('.iniciarSesion')
-const btnCerrarModal=document.getElementById('btnCerrar')
-const btnRegistrarse=document.getElementById('registrarse')
+const btnCerrarModal=document.querySelector('#btnCerrar')
+const btnRegistrarse=document.querySelector('#registrarse')
 const maincont=document.querySelector('.cont-general')
-const btnAceptarRegistro=document.getElementById('btnAceptar')
-const cookisCont = document.getElementById('cookis')
-const icoMenu=document.getElementById('icono-menu')
+const btnAceptarRegistro=document.querySelector('#btnAceptar')
+const cookisCont = document.querySelector('#cookis')
+const icoMenu=document.querySelector('#icono-menu')
 const asideLateral=document.querySelector('.nav-lateral')
 const asideLateralResponsive=document.querySelector('#nav-lateral-responsive')
-const arrowUl=document.getElementById('arrow')
-const listDownAside=document.getElementById('list-lat-ol')
-const btnAceptcookies=document.getElementById('btnAceptar-cookies')
-const checkCookies=document.getElementById('Acept-Privacity')
-const btniSesion=document.getElementById('isesion')
-const btnMostrarOcultarContraseña = document.getElementById('verContraseña')
-const btnShowHideContraseñaLogin = document.getElementById('verPassword')
+const arrowUl=document.querySelector('#arrow')
+const listDownAside=document.querySelector('#list-lat-ol')
+const btnAceptcookies=document.querySelector('#btnAceptar-cookies')
+const checkCookies=document.querySelector('#Acept-Privacity')
+const btniSesion=document.querySelector('#isesion')
+const btnMostrarOcultarContraseña = document.querySelector('#verContraseña')
+const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 
 //////////////////variables de los inputs////////////
 
-const inputNombre=document.getElementById('nombre')
-const inputApellido1=document.getElementById('apellido1')
-const inputApellido2=document.getElementById('apellido2')
-const email=document.getElementById('mail')
-const telefono=document.getElementById('telefono')
-const direccion=document.getElementById('direccion')
-const password=document.getElementById('contraseña')
+const inputNombre=document.querySelector('nombre')
+const inputApellido1=document.querySelector('apellido1')
+const inputApellido2=document.querySelector('apellido2')
+const email=document.querySelector('mail')
+const telefono=document.querySelector('telefono')
+const direccion=document.querySelector('direccion')
+const password=document.querySelector('contraseña')
 
 let usuarioRegistrado=[{nombre:'Alexander',primerApellido:'Galvez',segundoApellido:'Benavides',correo:'alexander.galvez@estudioenpenascal.com',telefono:'688872515',direccion:'Vista Alegre 2 5D',contrasena:'1234'}]
 let userSaveLocal;
@@ -185,9 +185,9 @@ btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar regis
 })
 ////////////////Funcion para error en campos input vacios
 function errorEnCampos(){
-let inputNombreVacio=document.getElementById('errorNombre')
-let inputMailVacio=document.getElementById('errorMail')
-let inputPasswordVacio=document.getElementById('errorPassword')
+let inputNombreVacio=document.querySelector('#errorNombre')
+let inputMailVacio=document.querySelector('#errorMail')
+let inputPasswordVacio=document.querySelector('#errorPassword')
 
   if(inputNombre.value.trim() == ""){
     inputNombreVacio.innerHTML='Campo Obligatorio'
@@ -237,7 +237,7 @@ else if(password.type=='text'){
   })
 
   function showHidePaswrdLgin(){
-let inputPaswordLogin=document.getElementById('contraseñaSesion')
+let inputPaswordLogin=document.querySelector('#contraseñaSesion')
     if(inputPaswordLogin.type=='password'){
       inputPaswordLogin.type='text'
       btnShowHideContraseñaLogin.src='multimedia/esconder.png'
@@ -258,8 +258,8 @@ btniSesion.addEventListener('click',()=>{
 
 //////////////////////////////funcion para iniciar sesion////////////
 function login() {
-  let registroInputCorreo=document.getElementById('emailSesion')
-  let registroInputPassword=document.getElementById('contraseñaSesion')
+  let registroInputCorreo=document.querySelector('#emailSesion')
+  let registroInputPassword=document.querySelector('#contraseñaSesion')
  
   userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
 
