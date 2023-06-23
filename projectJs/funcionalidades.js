@@ -24,7 +24,7 @@ const btniSesion=document.querySelector('#isesion')
 const btnMostrarOcultarContraseña = document.querySelector('#verContraseña')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 
-//////////////////variables de los inputs////////////
+//////////////////variables de los inputs deregistrar usuarios////////////
 
 const inputNombre=document.querySelector('#nombre')
 const inputApellido1=document.querySelector('#apellido1')
@@ -34,7 +34,14 @@ const telefono=document.querySelector('#telefono')
 const direccion=document.querySelector('#direccion')
 const password=document.querySelector('#contraseña')
 
-let usuarioRegistrado=[{nombre:'Alexander',primerApellido:'Galvez',segundoApellido:'Benavides',correo:'alexander.galvez@estudioenpenascal.com',telefono:'688872515',direccion:'Vista Alegre 2 5D',contrasena:'1234'}]
+//////////////////variables de los inputs login////////////
+
+let registroInputCorreo=document.querySelector('#emailSesion')
+let registroInputPassword=document.querySelector('#contraseñaSesion')
+let noregistro=document.querySelector('#noregistered')
+
+
+let usuarioRegistrado=[{nombre:'Alexander',primerApellido:'Galvez',segundoApellido:'Benavides',correo:'alexander.galvez@gmail.com',telefono:'688872515',direccion:'Vista Alegre 2 5D',contrasena:'1234'}]
 let userSaveLocal;
 let contador=0
 
@@ -75,6 +82,7 @@ addEventListener('load', () => {
    setInterval(() => {
       sliderHead()
    },'22000')
+   userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
   //  cokis()
 })
 
@@ -240,22 +248,51 @@ btniSesion.addEventListener('click',()=>{
 
 //////////////////////////////funcion para iniciar sesion////////////
 function login() {
-  let registroInputCorreo=document.querySelector('#emailSesion')
-  let registroInputPassword=document.querySelector('#contraseñaSesion')
  
   userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
 
-          for (let i = 0; i < userSaveLocal.length; i++) {
-          if ((registroInputCorreo.value === userSaveLocal[i].correo) && (registroInputPassword.value === userSaveLocal[i].contrasena)) {
-              console.log("Este usuario esta registrado");
-              modalIniciarSesion.style.display='none'
-              iniciarSesion.value='prueba'
+      userSaveLocal.forEach(element => {
+        if((registroInputCorreo.value===element.correo) && (registroInputPassword.value === element.contrasena)){
+          modalIniciarSesion.style.display='none'
+          iniciarSesion.innerHTML='Bienvenido/a '+ '<br>'+ element.nombre  + '<img src="multimedia/kisspng-computer-icons-user-profile-avatar-5ab752869bb860.8278856115219636546379.png" alt="usuario" id="usuario">'
+          iniciarSesion.src='multimedia/usuario.png'
+        }
+        // else if((registroInputCorreo.value!==element.correo)&&(registroInputPassword.value !== element.contrasena)){
+        //   noregistro.innerHTML='USUARIO NO REGISTRADO'
+        //   noregistro.style.color='yellow'
+        //    }
+      // else if((registroInputCorreo.value!==element.correo)){
+      //    noregistro.innerHTML='USUARIO INCORRECTO'
+      //    noregistro.style.color='yellow'
+      //     }
 
-          } else if((registroInputCorreo.value !== userSaveLocal[i].correo )){
-              console.log("Este usuario no esta registrado");
-         }
-      }
+      //  else  if((registroInputPassword.value !== element.contrasena)){
+      //       noregistro.innerHTML='CONTRASEÑA INCORRECTA'
+      //       noregistro.style.color='yellow'
+      //        }
+       
+      })   
 }
+
+registroInputPassword.addEventListener('click',()=>{
+  userSaveLocal=JSON.parse(localStorage.getItem("Usuarios"))
+ 
+userSaveLocal.forEach(element => {
+
+  for(let i=0;i<element.correo.length;i++){
+  if(registroInputCorreo.value!==element){
+    // registroInputCorreo.value='USUARIO NO REGISTRADO'
+    console.log(element.correo)
+    
+  }
+ 
+}
+
+})
+})
+
+
+
 
 
 //////////////////////////////////////////////eventos a realizar al clicar en icono de menu////////////////
