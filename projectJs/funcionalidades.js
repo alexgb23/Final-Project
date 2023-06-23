@@ -280,9 +280,9 @@ registroInputPassword.addEventListener('click',()=>{
 userSaveLocal.forEach(element => {
 
   for(let i=0;i<element.correo.length;i++){
-  if(registroInputCorreo.value!==element){
+  if(registroInputCorreo.value===element[i].correo){
     // registroInputCorreo.value='USUARIO NO REGISTRADO'
-    console.log(element.correo)
+    console.log(element[i].correo)
     
   }
  
