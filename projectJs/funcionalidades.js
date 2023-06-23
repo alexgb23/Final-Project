@@ -74,7 +74,7 @@ addEventListener('load', () => {
    setInterval(() => {
       sliderHead()
    },'22000')
-  //  cokis()
+   cokis()
 })
 
 
