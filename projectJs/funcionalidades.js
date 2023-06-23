@@ -185,34 +185,30 @@ btnAceptarRegistro.addEventListener('click',()=>{ ////funcion para aceptar regis
 })
 ////////////////Funcion para error en campos input vacios
 function errorEnCampos(){
-let inputNombreVacio=document.querySelector('#errorNombre')
-let inputMailVacio=document.querySelector('#errorMail')
-let inputPasswordVacio=document.querySelector('#errorPassword')
-
   if(inputNombre.value.trim() == ""){
-    inputNombreVacio.innerHTML='Campo Obligatorio'
-    inputNombreVacio.style.color='red'
-    inputNombreVacio.style.backgroundColor='black'
+    inputNombre.setAttribute('placeholder','Campo Obligatorio')
+    inputNombre.style.color='black'
+    inputNombre.style.backgroundColor='pink'
   }
-  else if(inputNombre.value.trim()!==''){
-    inputNombreVacio.innerHTML=''
-  }
- if(email.value.trim() == ""){
-    inputMailVacio.innerHTML='Campo Obligatorio'
-    inputMailVacio.style.color='red'
-    inputMailVacio.style.backgroundColor='black'
-  }
-  else if(email.value.trim()!==''){
-    inputMailVacio.innerHTML=''
-  }
-  if(password.value.trim() == ""){
-    inputPasswordVacio.innerHTML='Campo Obligatorio'
-    inputPasswordVacio.style.color='red'
-    inputPasswordVacio.style.backgroundColor='black'
-  }
-  else if(password.value.trim()!==''){
-    inputPasswordVacio.innerHTML=''
-  }
+//   else if(inputNombre.value.trim()!==''){
+//     inputNombre.innerHTML=''
+//   }
+//  if(email.value.trim() == ""){
+//     inputMail.innerHTML='Campo Obligatorio'
+//     inputMail.style.color='red'
+//     inputMail.style.backgroundColor='black'
+//   }
+//   else if(email.value.trim()!==''){
+//     inputMail.innerHTML=''
+//   }
+//   if(password.value.trim() == ""){
+//     inputPassword.innerHTML='Campo Obligatorio'
+//     inputPassword.style.color='red'
+//     inputPassword.style.backgroundColor='black'
+//   }
+//   else if(password.value.trim()!==''){
+//     inputPassword.innerHTML=''
+//   }
 }
 
 /////////////////////////////////////////mostrar/ocultar contraseña de registro de usuario
@@ -357,6 +353,10 @@ checkCookies.addEventListener('click',()=>{
     btnAceptcookies.style.opacity='1'
     btnAceptcookies.removeAttribute('disabled')
     btnAceptcookies.style.cursor='pointer'
+  }
+  else if(checkCookies.checked!==true){
+    btnAceptcookies.style.opacity='0.3'
+    btnAceptcookies.setAttribute('disabled','true')
   }
 })
     btnAceptcookies.addEventListener('click',()=>{
