@@ -972,6 +972,7 @@ border-bottom: 2px solid white;
     width: 1.5vw;
 }
 
+
                                 /*Modal de iniciar sesion */
 
 .iniciarSesion{
@@ -1483,5 +1484,12 @@ width: 30%;
         top: 28%;
         width: 6vw;
     }
+#verContrasena{
+    width: 6vw;
+}
+
+
+
+
 
 }
