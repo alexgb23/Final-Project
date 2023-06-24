@@ -113,14 +113,14 @@
 }
 #logo-modified img{
     margin-top: 15%;
-    width: 2.5vw;
+    width: 3vw;
     color: black;
     transition: 0.5s;
 }
 #logo-modified h3{
     color:  rgba(110, 27, 43, 0.788);
     font-weight: 550;
-    font-size: 1.8vw;
+    font-size: 2vw;
     transition: 0.5s;
     
 }
@@ -1511,6 +1511,19 @@ width: 30%;
 .s1r-text{
     margin: 0%;
     text-align: justify;
+}
+#logo-modified img{
+    margin-top: 15%;
+    width: 5vw;
+    color: black;
+    transition: 0.5s;
+}
+#logo-modified h3{
+    color:  rgba(110, 27, 43, 0.788);
+    font-weight: 550;
+    font-size: 3vw;
+    transition: 0.5s;
+    
 }
 
 
