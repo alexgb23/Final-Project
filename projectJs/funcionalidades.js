@@ -24,7 +24,7 @@ const btniSesion = document.querySelector('#isesion')
 const btnMostrarOcultarContraseña = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 
-//////////////////variables de los inputs deregistrar usuarios////////////
+//////////////////variables de los inputs de registrar usuarios////////////
 
 const inputNombre = document.querySelector('#nombre')
 const inputApellido1 = document.querySelector('#apellido1')
@@ -40,7 +40,7 @@ let registroInputCorreo = document.querySelector('#emailSesion')
 let registroInputPassword = document.querySelector('#contrasenaSesion')
 let noregistro = document.querySelector('#noregistered')
 
-
+/////////////////////array de usuarios registrados que no cambian////////////
 let usuarioRegistrado = [{ nombre: 'Alexander', primerApellido: 'Galvez', segundoApellido: 'Benavides', correo: 'alexander.galvez880208@gmail.com', telefono: '688872515', direccion: 'Vista Alegre 2 5D', contrasena: '1234' }]
 
 

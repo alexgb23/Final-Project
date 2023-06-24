@@ -22,20 +22,22 @@
                     /* NAV PRINCIPAL */
 
 #cookis{
+    display: grid;
     position: absolute;
-    top: 120%;
+    top: 100%;
     right: 30%;
-    width: 35vw;
-    height: 70vh;
+    width: 40%;
     margin: 0 auto;
     z-index: 500;
     border-radius: 1.5vw;
     padding: 2%;
     font-family: 'lato';	
-    text-align: justify;
     background-color: white;
 }
-
+#cookis p{
+    font-size: 1.1rem;
+    text-align: justify;
+}
 
 .nav-principal{
     width: 100%;
@@ -947,9 +949,7 @@ border-bottom: 2px solid white;
 
 .acept-cookis{
     display: flex;
-    text-align: center;
-    align-items: center;
-    margin-top: 3%;
+    margin-top: 4%;
 }
 #btnAceptar-cookies{
     margin-top: 3%;
@@ -1078,6 +1078,7 @@ border-bottom: 2px solid white;
         margin: 0 auto;
     }
     #cookis{
+        display: grid;
         position: absolute;
         top: 0%;
         left: 0%;
@@ -1085,10 +1086,15 @@ border-bottom: 2px solid white;
         height: 100vh;
         z-index: 500;
         border-radius: 1.5vw;
-        padding: 5%;
+        padding: 6%;
         font-family: 'lato';	
-        text-align: justify;
         background-color: white;
+    }
+    
+    .acept-cookis{
+        display: flex;
+        margin-top: 4%;
+        justify-content: space-between;
     }
     .nav-principal{
         width: 100%;
@@ -1488,6 +1494,18 @@ width: 30%;
     width: 6vw;
 }
 
+#art-presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 8%;
+    padding-inline: 5%;
+    text-align: justify;
+   }
+   #art-presentacion p{
+    font-size:0.8rem;
+   }
 
 
 
