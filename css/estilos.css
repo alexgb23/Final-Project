@@ -42,7 +42,7 @@
 .nav-principal{
     width: 100%;
     position: absolute;
-    height: 18vh;
+    height: 16vh;
     background-color:transparent;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -56,7 +56,7 @@
     width: 100%;
     position: relative;
     position: fixed;
-    height: 15%;
+    height: 16%;
     background-color:white;
     box-shadow: 1px 1px 5px gray;
     display: grid;
@@ -1097,7 +1097,7 @@ border-bottom: 2px solid white;
     .nav-principal{
         width: 100%;
         position: absolute;
-        height: 18vh;
+        height: 10vh;
         background-color:transparent;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1107,7 +1107,20 @@ border-bottom: 2px solid white;
         z-index: 200;
         transition: 0.5s;
     }
-   
+    #cont-del-nav{
+        width: 100%;
+        position: relative;
+        position: fixed;
+        height: 10%;
+        background-color:white;
+        box-shadow: 1px 1px 5px gray;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        transition: 0.5s;
+    }
     .primera-Seccion{
         padding: 0;
         margin: 0;
@@ -1155,7 +1168,7 @@ border-bottom: 2px solid white;
 .btnclickNav{
     width: 21vw;
     padding-inline: 12%;
-    height:5vh;
+    height:4vh;
     font-size: 0.6em;
 }
 .btnclickNav:hover{
