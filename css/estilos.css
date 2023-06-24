@@ -492,17 +492,16 @@
     font-family: 'lato';
     line-height: 1.6em ;   
     Color:#231f20
-
 }
 
                                  /*SECTION DOS*/
 
 .segunda-Seccion{
+    position: relative;
+    display: grid;
     margin-top: 5%;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    height: 75vh; 
 }
 
 #s2DivUp{
@@ -660,7 +659,7 @@
     font-family: 'prata';
 }
 .s4art-p1{
-    font-size: 1.2vw;
+    font-size: clamp(0.6em, 2vw, 1.1em);
     font-family: 'lato';
     line-height: 1.6em ; 
 }
@@ -1224,9 +1223,6 @@ width: 30%;
     padding-inline: 3%;
 }
 .segunda-Seccion{
-    margin-top: 5%;
-    display: flex;
-    justify-content: flex-end;
     width: 100%;
     height: 30vh; 
 }
@@ -1503,7 +1499,7 @@ width: 30%;
     text-align: justify;
    }
    .s1l-text{
-  
+  text-align: justify;
     line-height: 1.6em ;    
     margin: 0%;
 }
@@ -1511,7 +1507,13 @@ width: 30%;
     width: 100%;
     text-align:justify;
 }
-
+#s1artRDiv{
+    text-align: justify;
+}
+.s1r-text{
+    margin: 0%;
+    text-align: justify;
+}
 
 
 
