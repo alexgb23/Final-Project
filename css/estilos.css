@@ -429,7 +429,7 @@
 
 
 .s1l-text{
-    font-size: 1.4vw;
+    font-size:clamp(0.8em, 2vw, 1.45em);
     line-height: 1.6em ;    
     margin: 3%;
     font-family: 'lato';
@@ -487,7 +487,7 @@
     margin-left: 3%;
 }
 .s1r-text{
-    font-size: 1.5vw;
+    font-size:clamp(0.8em, 2vw, 1.45em);
     margin: 3%;
     font-family: 'lato';
     line-height: 1.6em ;   
@@ -1502,13 +1502,16 @@ width: 30%;
     padding-inline: 3%;
     text-align: justify;
    }
-   /* #art-presentacion p{
-    font-size:0.8em;
-   } */
-
-   #s1l-p1{
-    font-size: 0.8em;
-   }
+   .s1l-text{
+  
+    line-height: 1.6em ;    
+    margin: 0%;
+}
+#s1artLDiv{
+    width: 100%;
+    text-align:justify;
+    padding-inline: 3%;
+}
 
 
 
