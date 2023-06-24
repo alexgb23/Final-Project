@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div{
+  width:100%;
+  height: 50px;
+  background-color: red;
+  font-weight: bold;
+
+ 
+ 
+}
+p{ 
+ position: relative;
+animation: mymove 5s infinite;
+}
+
+#div1 {animation-timing-function: linear;}
+
+
+@keyframes mymove {
+  from {left: 300px;}
+  to {left: -300px;}
+}
+</style>
+</head>
+<body>
+
+
+<div >
+<p id="div1">mzhifuudpolxbudfydpolkakxlknuidyufopdkidgfoijdxnmzhifuudpolxbudfydpolkakxlknuidyufopdkidgfoijdxn</p>
+
+</div>
+
+
+</body>
+</html>
+
+

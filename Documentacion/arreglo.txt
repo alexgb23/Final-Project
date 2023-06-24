@@ -1,0 +1,15 @@
+infoProduct.addEventListener("DOMSubtreeModified", sumaSubTotal);
+
+function sumaSubTotal(){
+    
+    
+    let suma
+        suma=listLibros.map(item => item.precio)
+           
+        let sumat
+       sumat= suma.reduce((a,b )=>parseFloat(a)  +parseFloat (b) ,0) ;
+      
+        console.log(sumat);
+
+
+}

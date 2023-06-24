@@ -35,7 +35,7 @@
     background-color: white;
 }
 #cookis p{
-    font-size: 1.1rem;
+    font-size:clamp(1em, 2vw, 1.1em);
     text-align: justify;
 }
 
@@ -107,7 +107,7 @@
     margin-left: -1%;
     color: white;
     font-weight: 400;
-    font-size: 1.8vw;
+    font-size: 2.5vw;
     font-family: 'prata';
     transition: 0.5s;
 }
@@ -120,7 +120,7 @@
 #logo-modified h3{
     color:  rgba(110, 27, 43, 0.788);
     font-weight: 550;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     transition: 0.5s;
     
 }
@@ -357,7 +357,7 @@
  text-align: justify;
 }
 #art-presentacion p{
-    font-size: 1.6vw;
+    font-size:clamp(0.7em, 2vw, 1.5em);
     font-weight: 100;
     font-family: 'prata';
     line-height: 1.6em ;  
@@ -415,8 +415,7 @@
 #s1l-p1{
     font-family: 'lato';
     line-height: 1.6em ;    
-    font-size: 1.5vw;
-    margin: 3%;
+    font-size:clamp(0.8em, 2vw, 1.45em);
 }
 #s1l-p1:first-letter{
     font-size:3em;
@@ -1500,11 +1499,15 @@ width: 30%;
     justify-content: center;
     text-align: center;
     padding: 8%;
-    padding-inline: 5%;
+    padding-inline: 3%;
     text-align: justify;
    }
-   #art-presentacion p{
-    font-size:0.8rem;
+   /* #art-presentacion p{
+    font-size:0.8em;
+   } */
+
+   #s1l-p1{
+    font-size: 0.8em;
    }
 
 
