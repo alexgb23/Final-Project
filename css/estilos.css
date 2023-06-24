@@ -140,7 +140,7 @@
     border: none;
     border-radius: 0.5vw;
     font-family: 'lato';
-    font-size: clamp(1em, 2vw, 1.2em);
+    font-size: 1.4vw;
     background-color: #db143ca4;
     transition: 0.1s;
 }
@@ -158,7 +158,7 @@
     border: none;
     border-radius: 0.5vw;
     font-family: 'lato';
-    font-size: 1.2vw;
+    font-size: 1.1em;
     background-color: #db143ca4;
     transition: 0.1s;
 }
@@ -1152,37 +1152,22 @@ border-bottom: 2px solid white;
     font-family: 'prata';
     transition: 0.5s;
 }
-/* .btnclickNav{
-    display: flex;
-    align-items: center;
+.btnclickNav{
     width: 21vw;
     padding-inline: 12%;
     height:5vh;
-    color: white;
-    border: none;
-    border-radius: 0.5vw;
-    font-family: 'lato';
-    background-color: #db143ca4;
-    transition: 0.1s;
+    font-size: 0.6em;
 }
 .btnclickNav:hover{
     cursor: pointer;
     color: #231f20;
     background-color: rgb(245, 167, 50);
-} */
+}
 
 .btnclick{
-    display: flex;
-    align-items: center;
-    padding-inline: 4%;
+    padding-inline: 2%;
     height: 4vh;
-    color: white;
-    border: none;
-    border-radius: 0.5vw;
-    font-family: 'lato';
-    font-size: 1.6vw;
-    background-color: #db143ca4;
-    transition: 0.1s;
+    font-size: 0.7em;
 }
 
 #usuario{
