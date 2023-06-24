@@ -140,7 +140,7 @@
     border: none;
     border-radius: 0.5vw;
     font-family: 'lato';
-    font-size: 1.2vw;
+    font-size: clamp(1em, 2vw, 1.2em);
     background-color: #db143ca4;
     transition: 0.1s;
 }
@@ -1152,7 +1152,7 @@ border-bottom: 2px solid white;
     font-family: 'prata';
     transition: 0.5s;
 }
-.btnclickNav{
+/* .btnclickNav{
     display: flex;
     align-items: center;
     width: 21vw;
@@ -1162,7 +1162,6 @@ border-bottom: 2px solid white;
     border: none;
     border-radius: 0.5vw;
     font-family: 'lato';
-    font-size: 2.2vw;
     background-color: #db143ca4;
     transition: 0.1s;
 }
@@ -1170,7 +1169,7 @@ border-bottom: 2px solid white;
     cursor: pointer;
     color: #231f20;
     background-color: rgb(245, 167, 50);
-}
+} */
 
 .btnclick{
     display: flex;
@@ -1499,7 +1498,7 @@ width: 30%;
     text-align: justify;
    }
    .s1l-text{
-  text-align: justify;
+    text-align: justify;
     line-height: 1.6em ;    
     margin: 0%;
 }
