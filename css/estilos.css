@@ -407,15 +407,16 @@
 }
 
 .s1l-h4{
-    font-size: 1vw;
+    font-size: clamp(0.6em, 1.5vw, 1.2em);
     margin: 3%;
     font-family: 'prata';
 }
 
 #s1l-p1{
     font-family: 'lato';
+    margin-top: 4%;
     line-height: 1.6em ;    
-    font-size:clamp(0.8em, 2vw, 1.45em);
+    font-size:clamp(0.8em, 2vw, 1.2em);
 }
 #s1l-p1:first-letter{
     font-size:3em;
@@ -429,9 +430,8 @@
 
 
 .s1l-text{
-    font-size:clamp(0.8em, 2vw, 1.45em);
+    font-size:clamp(0.8em, 2vw, 1.2em);
     line-height: 1.6em ;    
-    margin: 3%;
     font-family: 'lato';
 }
 
@@ -474,7 +474,7 @@
 }
 .s1r-h4{
     vertical-align: inherit;
-    font-size: 1vw;
+    font-size: clamp(0.6em, 1.5vw, 1em);
     margin: 3%;
     font-family: 'lato';
     
@@ -487,8 +487,7 @@
     margin-left: 3%;
 }
 .s1r-text{
-    font-size:clamp(0.8em, 2vw, 1.45em);
-    margin: 3%;
+    font-size:clamp(0.8em, 2vw, 1.2em);
     font-family: 'lato';
     line-height: 1.6em ;   
     Color:#231f20
