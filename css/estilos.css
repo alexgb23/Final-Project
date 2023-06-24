@@ -1166,6 +1166,7 @@ border-bottom: 2px solid white;
 
 .btnclick{
     padding-inline: 2%;
+    margin-top: 3%;
     height: 4vh;
     font-size: 0.7em;
 }
