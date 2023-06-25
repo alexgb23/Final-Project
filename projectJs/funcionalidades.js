@@ -595,50 +595,53 @@ btnAceptcookies.addEventListener('click', () => {
 
 
 /////////////////////condicionales de botones/////////////////////////////////
+
+
 document.addEventListener('click', e => {
+  
 
-  switch ((e.target.className=='btnclick')|| (e.target.className=='icnsRedes') || (e.target.id=='s3artR-Btn2') ||
-   (e.target.id=='s1artR-Btn2')|| (e.target.id=='img-diferente')) { 
-    case (e.target.innerHTML=='VER SERVICIO DE DJ »'):
-      location.href = 'DeeJae.html'
-      break
-    case (e.target.innerHTML=='VER CHEF DISPONIBLES »'):
-      location.href = 'Chef.html'
-      break
-    case (e.target.id=='s3artR-Btn2'):
-      location.href = 'Bebidas.html'
-      break
-    case (e.target.id=='s1artR-Btn2'):
-      location.href = 'tiposMenus.html'
-      break
-    case (e.target.alt=='Red social facebook'):
-      location.href = 'https://es-es.facebook.com/'
-      break
-    case (e.target.alt=='Red social instagram'):
-      location.href = 'https://www.instagram.com/'
-      break
-    case (e.target.alt=='red social linkedin'):
-      location.href = 'https://es.linkedin.com/?src=go-pa&trk=sem-ga_campid.18146679037_asid.140850334975_crid.619061882347_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.20271&mcid=6968657504633266178&cid=&gclid=Cj0KCQjwy9-kBhCHARIsAHpBjHgFDljIVo6L3-49VRGvOgSnVR-zjwloIGdC3eX1J2PqJXDGwdK-nsEaAgQcEALw_wcB&gclsrc=aw.ds'
-      break
-    case (e.target.alt=='red sicial twitter'):
-      location.href = 'https://twitter.com/?lang=es'
-      break
-    case (e.target.alt=='icono de ubicacion'):
-      location.href = 'https://www.google.es/maps/preview'
-      break
-    case (e.target.id=='img-diferente'):
-      crearDivWassap()
-
+  if((e.target.className=='btnclick') && (e.target.innerHTML=='VER SERVICIO DE DJ »')){
+    location.href = 'DeeJae.html'
   }
-
+  else if((e.target.className=='btnclick') && (e.target.innerHTML=='VER CHEF DISPONIBLES »')){
+    location.href = 'Chef.html'
+  }
+  else if((e.target.id=='s3artR-Btn2')){
+    location.href = 'Bebidas.html'
+  }
+  else if((e.target.id=='s1artR-Btn2')){
+    location.href = 'tiposMenus.html'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='Red social instagram')){
+    location.href = 'https://www.instagram.com/'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='Red social facebook')){
+    location.href = 'https://es-es.facebook.com/'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='red social linkedin')){
+    location.href = 'https://es.linkedin.com/?src=go-pa&trk=sem-ga_campid.18146679037_asid.140850334975_crid.619061882347_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.20271&mcid=6968657504633266178&cid=&gclid=Cj0KCQjwy9-kBhCHARIsAHpBjHgFDljIVo6L3-49VRGvOgSnVR-zjwloIGdC3eX1J2PqJXDGwdK-nsEaAgQcEALw_wcB&gclsrc=aw.ds'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='red sicial twitter')){
+    location.href = 'https://twitter.com/?lang=es'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='icono de ubicacion')){
+    location.href = 'https://www.google.es/maps/preview'
+  }
+  else if((e.target.id=='img-diferente')){
+    crearDivWassap()
+  }
+  else if(e.target.id !=='interrogacion'){
+    mensajeAyuda.style.display = 'none'
+  }
 })
 
-
 function crearDivWassap(){
+ 
   let divWassap=document.createElement('div')
   divWassap.id='divWassap'
   contWassap.appendChild(divWassap)
 
+   
   let wassapContainer=document.createElement('div')
   wassapContainer.id='wassap-container'
   divWassap.appendChild(wassapContainer)
