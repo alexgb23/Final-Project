@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" type="image/png" href="multimedia/logomod.png">
+    <title>Gourmet Moments Bebidas</title>
+    
+</head>
+<body>
+
+  
+    <main class="cont-general-Bebidas">
+        <div class="parallax-Bebidas"></div>
+           
+        <!--NAVEGADOR-->
+
+        <nav class="nav-principal">
+            <div>
+                <figure class="navegador-iconos">
+                    <img src="multimedia/pngwing.com.png" alt="icono de menu" id="icono-menu">
+                </figure>
+            </div>
+
+            <article class="cont-logo">
+                <h3>Gourmet</h3>
+                <figure>
+                    <img src="multimedia/logo.png" alt="logo" id="logo">
+                </figure>
+                <h3>Moments</h3>
+            </article>
+
+            <div class="cont-contact">
+                <button class="btnclickNav">Iniciar <br> Sesion <img src="multimedia/usuario.png" alt="usuario"
+                        id="usuario"> </button>
+                <img src="multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png"
+                    alt="icono de interrogacion" id="interrogacion">
+            </div>
+            <div id="ayuda-btn" style="display: none;">
+                <p>Haga clic en <a href="">Contáctenos</a> en cualquier página y complete el formulario para comenzar.
+                    <br>Después de
+                    enviar el formulario, un planificador de cenas de Gourmet Moments se comunicará con usted lo antes
+                    posible para responder sus preguntas y comenzar a planificar su cena.</p>
+            </div>
+
+            <!--MODAL INICIO DE SESION-->
+
+            <section class="iniciarSesion" style="display: none;">
+                <img src="multimedia/btnCerrar.png" alt="boton de cerrar" id="btnCerrar-login">
+                <article class="rellenar">
+                    <div id="rellenarDiv">
+                        <h3 class="responsiveh3">Gourmet</h3>
+                        <figure>
+                            <img src="multimedia/logo.png" alt="logo" id="logo-login">
+                        </figure>
+                        <h3 class="responsiveh3">Moments</h3>
+                    </div>
+
+                    <form action="#" method="get" id="login">
+                        <label for="emailSesion">Correo:</label>
+                        <input type="email" name="emailSesion" id="emailSesion" required>
+                        <label for="contrasenaSesion">Contraseña:</label>
+                        <div id="ocultarFlexBtnPasword">
+                            <input type="password" name="contrasenaSesion" id="contrasenaSesion" required>
+                            <img src="multimedia/ver.png" alt="ver contraseña" id="verPassword"
+                                title="Mostrar/Ocultar contraseña">
+                        </div>
+                    </form>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+
+                    <SPAN id="noregistered"></SPAN>
+
+                    <button class="is__login--btn" id="isesion">Iniciar Sesion</button>
+                    <button class="is__login--btn" id="entrarcongoogle">Continuar con Google</button>
+                    <button class="is__login--btn" id="entrarconfacebook">Continuar con Facebook</button>
+                    <button class="is__login--btn" id="registrarse">Registrarse</button>
+
+                    <p>Si continúas, aceptas los Términos del servicio de Pinterest y confirmas que has leído nuestra
+                        Política de privacidad.
+
+                        Aviso de recopilación de datos</p>
+                </article>
+            </section>
+
+            <!--MODAL DE LOGIN DE USUARIO-->
+
+            <div class="modal-Login" style="display: none;">
+                <img src="multimedia/btnCerrar.png" alt="boton de cerrar" id="btnCerrar">
+                <article class="rellenar">
+                    <h2>"Bienvenido "</h2>
+                    <h3 id="texto--cambiante">Ahora es el momento de conocerte a ti, estamos ansiosos por Ayudarte.</h3>
+                    <form action="#" method="get" id="formulario-login">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" required class="inputRegister">
+                        <label for="apellido1">Primer Apellido:</label>
+                        <input type="text" name="apellido1" id="apellido1" required class="inputRegister">
+                        <label for="apellido2">Segundo Apellido:</label>
+                        <input type="text" name="apellido2" id="apellido2" class="inputRegister">
+                        <label for="mail">Correo:</label>
+                        <input type="email" name="mail" id="mail" class="inputRegister">
+                        <label for="telefono">Numero de Telefono:</label>
+                        <input type="tel" name="telefono" id="telefono" required class="inputRegister">
+                        <label for="contrasenna">Contraseña:</label>
+
+                        <div id="verFlexBtnPasword">
+                            <input type="password" name="contrasenna" id="contrasenna" required class="inputRegister">
+                            <img src="multimedia/ver.png" alt="ver contrasena" id="verContrasena"
+                                title="Mostrar/Ocultar contraseña">
+                        </div>
+                        <label for="direccion">Direccion:</label>
+                        <input type="text" name="direccion" id="direccion" class="inputRegister">
+                    </form>
+                    <input type="submit" id="btnAceptar" value="Aceptar">
+
+                </article>
+            </div>
+
+            <!--USO DE COOKIS-->
+
+            <div id="cookis" style="display: none;">
+                <p>Nos preocupamos por tu privacidadTanto nosotros como nuestros socios almacenamos información en el
+                    dispositivo o accedemos a ella (por ejemplo, ID únicos en las cookies para el tratamiento de los
+                    datos personales). Puedes aceptar o gestionar las opciones disponibles, como el derecho de oposición
+                    al uso de los intereses legítimos, haciendo clic abajo, o en cualquier otro momento en la página de
+                    la política de privacidad. Si bien se informará a nuestros socios de las opciones elegidas, ello no
+                    afectará a los datos de navegación.Más información en nuestra política de cookies
+                </p>
+                <p> Tanto nosotros como nuestros asociados tratamos los datos para proporcionar: <br>
+                    Utilizar datos de localización geográfica precisa. Analizar activamente las características del
+                    dispositivo para su identificación. Almacenar o acceder a información en un dispositivo. anuncios y
+                    contenido personalizados, medición de anuncios y del contenido, información sobre el público y
+                    desarrollo de productos..</p>
+                <div class="acept-cookis">
+                    <input type="checkbox" id="Acept-Privacity">
+                    <p>&nbsp; He leído y acepto la <a
+                            href="https://retoadventur.com/policies/privacy-policy?gclid=Cj0KCQjwnMWkBhDLARIsAHBOftp-6JOwNP_RJPp3ytcD_K5DFTx3op0TSwmFCV3GIyUdl5csTtCeI-UaAgeGEALw_wcB">
+                            política de privacidad</a> .</p>
+                </div>
+                <div class="acept-cookis">
+                    <input type="checkbox" id="Acept-Notifications">
+                    <p>&nbsp; Acepto que me envien notificaciones al correo electronico</p>
+                </div>
+                <button id="btnAceptar-cookies">Aceptar</button>
+            </div>
+
+            <!--navegador Lateral-->
+
+            <aside class="nav-lateral" style="width: 0%; visibility: hidden;">
+                <section>
+                    <div id="art-Aside">
+                        <h3>Gourmet</h3>
+                        <figure>
+                            <img src="multimedia/logo.png" alt="imagen del logo en blanco" id="logo-Aside">
+                        </figure>
+                        <h3>Moments</h3>
+                    </div>
+
+                    <div class="nav-lateral-scroll">
+                        <ul>
+                            <li class="list-lat"><a href="">Experiencias</a><img src="multimedia/flechabajo.png" alt=""
+                                    id="arrow"></li>
+                        </ul>
+                        <ol id="list-lat-ol">
+                            <li class="list-lat-down">lkjvfbcchbuvgi</li>
+                            <li class="list-lat-down">lkjvfbcchbuvgi</li>
+                            <li class="list-lat-down">lkjvfbcchbuvgi</li>
+                            <li class="list-lat-down">lkjvfbcchbuvgi</li>
+                            <li class="list-lat-down">lkjvfbcchbuvgi</li>
+                            <li class="list-lat-down">lkjvfbcchbuvgi</li>
+                            <li class="list-lat-down">lkjvfbcchbuvgi</li>
+                        </ol>
+                        <ul>
+                            <li class="list-lat"><a href="">Menus</a></li>
+                            <li class="list-lat"><a href="">Lugares</a></li>
+                            <li class="list-lat"><a href="">Acontecimientos</a></li>
+                            <li class="list-lat"><a href="">Compañias</a></li> 
+                        </ul>
+
+                        <button class="btnclickAside">CONTÁCTENOS</button>
+                    </div>
+                </section>
+            </aside>
+
+        </nav>
+
+        <!--CABECERA-->
+
+        <header class="cabecera" id="cab-Tragos">
+            <div class="hdr-img">
+                <img src="#" alt="slider de fotos" id="imgHder">
+
+            </div>
+            <h2 id="titulo">Profundamente <br>arraigado <br>
+                en la experiencia</h2>
+            <h1 id="titulo-pequeno">Gourmet Moments, nos especializamos en ahorrarte trabajo</h1>
+        </header>
+
+        <!--CUERPO WEB-->
+
+        <div id="articulo-presentacion">
+            <div id="art-presentacion">
+                <p>Arraigada en experiencias cultivadas, <strong id="titulo-pag">Gourmet Moments</strong> Catering &
+                    Events trabaja con una base de clientes diversa. Brindamos un servicio fuera de
+                    las instalaciones para todo tipo de clientes, Nos
+                    especializamos en solucionarle la vida, si necesita asesoramiento no dude en <strong
+                        id="titulo-contactar"><a href="#"><u>contactarnos</u></a> </strong> nos dirigimos
+                    cualquier lugar elegido por el cliente en la ciudad de Bilbao y sus alrededores. Establecidos en
+                    2020,
+                    nos enorgullecemos de nuestra reputación, honestidad e innovación.
+                    <br>
+                </p>
+                <span id="firma"> Alexander Galvez</span>
+                <span id="firma-description">ALEXANDER GALVEZ, FUNDADOR Y DIRECTOR</span>
+            </div>
+        </div>
+
+ 
+
+        <section class="segunda-Seccion">
+            <article id="s2DivUp">
+                <h4 id="s2Div-h4">Menús frescos de temporada</h4>
+                <br>
+                <p class="s4art-p1">Nos encantan los ingredientes de temporada y obtener artículos de proveedores
+                    artesanales locales. Después de encontrar los mejores ingredientes, elaboramos menús para resaltar
+                    esos ingredientes y crear el viaje culinario que imaginas y deseas.</p>
+            </article>
+            <div id="s2articulo">
+                <article class="s2artDiv">
+                    <h4>SERVICIOS</h4>
+                    <a href="">Cenas en Casa</a>
+                    <a href="">Bodas</a>
+                    <a href="">Cenas de Empresa</a>
+                    <a href="">Eventos</a>
+                </article>
+                <article class="s2artDiv">
+                    <h4>COMIDAS</h4>
+                    <a href="">Cena Familiar</a>
+                    <a href="">Cena de Amigos</a>
+                    <a href="">Tragos Preparados</a>
+                    <a href="">Pintxos</a>
+                </article>
+                <article class="s2artDiv">
+                    <h4>ESPECIALIDAD</h4>
+                    <a href="">Saludable y <br> Amigable con la <br> Dieta</a>
+                    <a href="">Dee Jae Animation</a>
+
+                </article>
+            </div>
+            <div id="s2DivDown">
+                <p>Nos adaptamos a todas las preferencias dietéticas. Vea nuestros <a href="">menús dietéticos</a> o <a
+                        href="">haga una pregunta </a>.&nbsp; </p>
+                <figure>
+                    <img src="multimedia/svg-24.svg" alt="" class="icoImgSvg">
+                    <img src="multimedia/svg-25.svg" alt="" class="icoImgSvg">
+                    <img src="multimedia/svg-26.svg" alt="" class="icoImgSvg">
+                    <img src="multimedia/svg-23.svg" alt="" class="icoImgSvg">
+                    <img src="multimedia/svg-27.svg" alt="" class="icoImgSvg">
+                    <img src="multimedia/svg-22.svg" alt="" class="icoImgSvg">
+                </figure>
+            </div>
+        </section>
+
+       <div id="lista-parallax"></div>
+
+        <section class="cuarta-Seccion">
+            <article id="s4DivUp">
+                <h4 id="s4Div-h4">Hecho en la ciudad de Bilbao</h4>
+                <br>
+                <p class="s4art-p1">Al servicio de la ciudad de Bilbao y el área metropolitana circundante desde 2020..
+                </p>
+            </article>
+            <div id="s4articulo">
+                <article class="s4artDiv">
+                    <h4>AREAS DE SERVICIO</h4>
+                    <ul>
+                        <li>► Basauri</li>
+                        <li>► Cruces</li>
+                        <li>► Bilbao</li>
+                        <li>► Bermeo</li>
+                        <li>► Bakio</li>
+                        <li>► Casco Viejo</li>
+                        <li>► Moyua</li>
+                    </ul>
+                </article>
+                <div class="s4artDiv">
+                    <ul>
+                        <li id="modLaA">► Berango</li>
+                        <li>► Indautxu</li>
+                        <li>► Ansio</li>
+                        <li>► San Mames</li>
+                        <li>► Deusto</li>
+                        <li>► Portugalete</li>
+                        <li>► Erandio</li>
+                    </ul>
+                </div>
+                <article class="s4artDiv">
+                    <h4>DIRECCION</h4>
+                    <ul>
+                        <li>Calle: Vista Alegre 2</li>
+                        <li>p2 Bilbao c/p 48900 </li>
+                    </ul>
+                    <br>
+                    <h4>HORAS</h4>
+                    <ul>
+                        <li>Operamos los 365 días </li>
+                        <li>del año. Horario de oficina: </li>
+                        <li>9 am - 5 pm, </li>
+                        <li>de lunes a viernes</li>
+                    </ul>
+
+                </article>
+            </div>
+
+        </section>
+
+        <footer class="pie-pag" id="piedepagina">
+            <div id="footer__container">
+            <h5>¿Listo para comenzar?</h5>
+            <button id="fter-contact">CONTÁCTENOS »</button>
+            <article id="fterleftlogo">
+                <h3>Gourmet</h3>
+                <img src="multimedia/logo.png" alt="logo">
+                <h3> Moments</h3>
+                <a href="">Empresa</a>
+                <a href="">Carreras</a>
+                <a href="">Contactos</a>
+
+            </article>
+            <article id="fterRight">
+                <figure>
+                    <img src="multimedia/cinco-estrellas.png" alt="cinco estrellas blancas" id="stars">
+                </figure>
+                <h6> “Gourmet Moments lo mejor de la ciudad de Bilbao”.</h6>
+                <span id="spnFter">ANTHONY M. A TRAVÉS DE <a href="" id="spnAfter">GOOGLE</a> </span>
+                <figure id="icnsRedesFre">
+                    <img src="multimedia/instagram.png" alt="Red social instagram" class="icnsRedes" width="100">
+                    <img src="multimedia/facebook.png" alt="Red social facebook" class="icnsRedes" width="100">
+                    <img src="multimedia/linkedin.png" alt="red social linkedin" class="icnsRedes" width="100">
+                    <img src="multimedia/gorjeo.png" alt="red sicial twitter" class="icnsRedes" width="100">
+                    <img src="multimedia/ubicacion.png" alt="icono de ubicacion" class="icnsRedes" width="100">
+                    <img src="multimedia/whatsapp.png" alt="icono de wassap" id="img-diferente" width="100">
+                </figure>
+                <p>Calle Mendieta 3 | Basauri, Bilbao 48901 |<a href="" id="pAfter">688.778.2515</a></p>
+            </article>
+
+            <p>© 2023 Gourmet Moments & Events | Privacy | Site Credits</p>
+            </div>
+        </footer>
+ 
+    </main>
+
+    <script src="projectJs/funcionalidades.js"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@ const navlogo = document.querySelector('.cont-logo')
 const imglogo = document.querySelector('#logo')
 const btnHelp = document.querySelector('#interrogacion')
 const mensajeAyuda = document.querySelector('#ayuda-btn')
+const header = document.querySelector('.cabecera')
 const imgCabecera = document.querySelector('#imgHder');
 const iniciarSesion = document.querySelector('.btnclickNav')
 const modalLogin = document.querySelector('.modal-Login')
@@ -23,6 +24,7 @@ const checkCookies = document.querySelector('#Acept-Privacity')
 const btniSesion = document.querySelector('#isesion')
 const btnMostrarOcultarContraseña = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
+
 
 //////////////////variables de los inputs de registrar usuarios////////////
 
@@ -77,11 +79,38 @@ addEventListener("scroll", () => { ///declaracion para que haga una instruccion 
 //// haga el slider con transision y se repita y salgan las cookis 
 
 addEventListener('load', () => {
-  sliderHead()
+if(header.id == 'cab-Index') {
+  sliderHeadIndex()
   setInterval(() => {
-    sliderHead()
-  }, '22000')
+    sliderHeadIndex()
+  }, '150001')
   //  cokis()
+}
+else if(header.id == 'cab-Tragos') {
+  sliderHeadBebidas()
+  setInterval(() => {
+    sliderHeadBebidas()
+  }, '300001')
+}
+else if(header.id == 'cab-Menus') {
+  sliderHeadMenus()
+  setInterval(() => {
+    sliderHeadMenus()
+  }, '200001')
+}
+else if(header.id == 'cab-Chef') {
+  sliderHeadChef()
+  setInterval(() => {
+    sliderHeadChef()
+  }, '200001')
+}
+else if(header.id == 'cab-DeeJae') {
+  sliderHeadDJae()
+  setInterval(() => {
+    sliderHeadDJae()
+  }, '200001')
+}
+
 })
 
 
@@ -93,10 +122,9 @@ function cokis() {            //////funcion para que se active el contenido de l
   btnAceptcookies.setAttribute('disabled', 'true')
 }
 
-/////////////////funcion para que se carguen las imagenes del head con transiciones automaticas
-
-function sliderHead() {
+function sliderHeadIndex() {
   imgCabecera.src = 'multimedia/cart-with-oysters-caesar-salad-flutes-lemonade-1920x1080.jpg.webp'
+  '/imgDeeJae'
   imgCabecera.style.transition = '8s'
   imgCabecera.style.scale = '1.5'
 
@@ -120,6 +148,147 @@ function sliderHead() {
     imgCabecera.style.transition = '8s'
     imgCabecera.style.scale = '1.2'
   }, '150001');
+}
+
+function sliderHeadChef() {
+  imgCabecera.src = 'multimedia/imgChef/AnyConv.com__pexels-pietro-jeng-671956_4_11zon.webp'
+  imgCabecera.style.transition = '8s'
+  imgCabecera.style.scale = '1.5'
+
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgChef/AnyConv.com__pexels-elevate-1267320_2_11zon.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '0.99'
+  }, '50000');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgChef/AnyConv.com__pexels-elle-hughes-2696064_3_11zon.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.3'
+  }, '50001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgChef/AnyConv.com__pexels-fidel-hajj-2814828_7_11zon.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '0.99'
+  }, '100001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgChef/AnyConv.com__pexels-huy-phan-1422384_8_11zon.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '150001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgChef/AnyConv.com__pexels-pixabay-262978_5_11zon.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '200001');
+}
+
+/////////////////funcion para que se carguen las imagenes del head con transiciones automaticas
+
+function sliderHeadDJae() {
+  imgCabecera.src = 'multimedia/imgDeeJae/dj-para-fiestas-en-casa.jpg.webp'
+  imgCabecera.style.transition = '8s'
+  imgCabecera.style.scale = '1.5'
+
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgDeeJae/dj-para-musica-de-fiestas-en-navarra-factoriadj_2_11zon.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '0.99'
+  }, '50000');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgDeeJae/fiestas-madrid-julio-1024x597_3_11zon.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.3'
+  }, '50001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgDeeJae/WSQLVVCUYJCT7A3GYYACNFJGUU_4_11zon'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '0.99'
+  }, '100001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgDeeJae/Genesis-e1469136442640.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '150001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgDeeJae/shutterstock_219317206.webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '200001');
+
+}
+
+function sliderHeadMenus() {
+  imgCabecera.src = 'multimedia/ImgMenus/AnyConv.com__wallpaperflare.com_wallpaper(1).webp'
+  imgCabecera.style.transition = '8s'
+  imgCabecera.style.scale = '1.5'
+
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/ImgMenus/AnyConv.com__wallpaperflare.com_wallpaper(2).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '0.99'
+  }, '50000');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/ImgMenus/AnyConv.com__wallpaperflare.com_wallpaper(3).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.3'
+  }, '50001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/ImgMenus/AnyConv.com__wallpaperflare.com_wallpaper(4).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '0.99'
+  }, '100001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/ImgMenus/AnyConv.com__wallpaperflare.com_wallpaper(5).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '150001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/ImgMenus/AnyConv.com__wallpaperflare.com_wallpaper(6).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '200001');
+}
+
+function sliderHeadBebidas() {
+  imgCabecera.src = 'multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(1).webp'
+  imgCabecera.style.transition = '8s'
+  imgCabecera.style.scale = '1.5'
+
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(2).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '0.99'
+  }, '50000');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(3).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.3'
+  }, '50001');
+  setTimeout(() => {
+    imgCabecera.src ='multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(4).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '0.99'
+  }, '100001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(5).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '150001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(6).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '200001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(7).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '250001');
+  setTimeout(() => {
+    imgCabecera.src = 'multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(8).webp'
+    imgCabecera.style.transition = '8s'
+    imgCabecera.style.scale = '1.2'
+  }, '300001');
 }
 
 ////////////aqui se le da funcionalidad al boton de ayuda del nav, se activa y desactiva el contenedor
@@ -422,3 +591,40 @@ btnAceptcookies.addEventListener('click', () => {
   cookisCont.style.display = 'none'
   document.body.style.overflow = 'auto'
 })
+
+
+/////////////////////condicionales de botones/////////////////////////////////
+
+document.addEventListener('click', e => {
+  if((e.target.className=='btnclick') && (e.target.innerHTML=='VER SERVICIO DE DJ »')){
+    location.href = 'DeeJae.html'
+  }
+  else if((e.target.className=='btnclick') && (e.target.innerHTML=='VER CHEF DISPONIBLES »')){
+    location.href = 'Chef.html'
+  }
+  else if((e.target.id=='s3artR-Btn2')){
+    location.href = 'Bebidas.html'
+  }
+  else if((e.target.id=='s1artR-Btn2')){
+    location.href = 'tiposMenus.html'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='Red social instagram')){
+    location.href = 'https://www.instagram.com/'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='Red social facebook')){
+    location.href = 'https://es-es.facebook.com/'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='red social linkedin')){
+    location.href = 'https://es.linkedin.com/?src=go-pa&trk=sem-ga_campid.18146679037_asid.140850334975_crid.619061882347_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.20271&mcid=6968657504633266178&cid=&gclid=Cj0KCQjwy9-kBhCHARIsAHpBjHgFDljIVo6L3-49VRGvOgSnVR-zjwloIGdC3eX1J2PqJXDGwdK-nsEaAgQcEALw_wcB&gclsrc=aw.ds'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='red sicial twitter')){
+    location.href = 'https://twitter.com/?lang=es'
+  }
+  else if((e.target.className=='icnsRedes') && (e.target.alt=='icono de ubicacion')){
+    location.href = 'https://www.google.es/maps/preview'
+  }
+  else if((e.target.id=='img-diferente')){
+    alert('no')
+  }
+})
+
