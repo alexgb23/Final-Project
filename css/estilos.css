@@ -1343,10 +1343,22 @@ width: 30%;
 }
 .s2artDiv{
     padding-top: 25%;
-    height:80%;
+    height:100%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-align: left;
+    border: 2px solid red
+}
+
+.s2artDiv a{
+   padding: 0%;
+   font-size: 2.3vw;
+   line-height: 4vw ;    
+   
 }
 #s3srtleft{
     padding-left: 0%; 
@@ -1638,7 +1650,7 @@ width: 30%;
     height: 35vh;
     position: relative;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 6%;
     display: flex;
     justify-content: flex-end;
     background-color: white;
@@ -1651,7 +1663,26 @@ width: 30%;
     margin-top: 0%;
     padding: 2%;
 }
-
+#s2articulo{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    width: 82%;
+    padding: 1%;
+    padding-bottom: 15%;
+    padding-left: 24%;
+    background-color: rgba(7, 7, 7, 0.048);
+}
+#s2DivDown{
+    position: absolute;
+    width: 80%;
+    margin-top: 60%;
+    right: 2%;
+    font-size: 2.5vw;
+    font-family: 'lato';
+    display: flex;
+    flex-direction: column;
+    color: #474848;
+ }
 
 
 

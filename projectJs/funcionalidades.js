@@ -26,7 +26,6 @@ const btnMostrarOcultarContraseña = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 const contWassap=document.querySelector('.pie-pag')
 
-
 //////////////////variables de los inputs de registrar usuarios////////////
 
 const inputNombre = document.querySelector('#nombre')
