@@ -1644,7 +1644,7 @@ width: 30%;
     padding: 2%;
 }
 .segunda-Seccion{
-    height: 35vh;
+    height: 45vh;
     position: relative;
     padding-top: 5%;
     padding-bottom: 6%;
@@ -1672,7 +1672,7 @@ width: 30%;
 #s2DivDown{
     position: absolute;
     width: 78%;
-    margin-top: 45%;
+    margin-top: 55%;
     right: 2%;
     font-size: 2.5vw;
     font-family: 'lato';
