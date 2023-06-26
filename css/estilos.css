@@ -756,6 +756,12 @@
 #modLaA{
     margin-top: 15%;
 }
+#horash4{
+    margin-top: 20%;
+}
+.listaArreglo{ 
+    width: 70%;
+}
 #s4articulo{
     display: grid;
     grid-template-columns:repeat(3, 1fr);
@@ -1736,9 +1742,15 @@ width: 30%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     margin: 0%;
 }
+#modLaA{
+    margin-top: 35%;
+}
+.listaArreglo{ 
+    width: 90%;
+}
+
 
 
 
