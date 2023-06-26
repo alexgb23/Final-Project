@@ -815,7 +815,7 @@
     margin-bottom: 2%;
 }
 #logodelfooter h3{
-   font-size: clamp(1.8em, 2vw, 2.5em);
+   font-size: clamp(1.6em, 2vw, 2.5em);
 }
 
 #contderechafooter{
@@ -844,7 +844,7 @@
 #fterleftlogo a{
     margin-right: 6%;
     transition: 0.5s;
-    font-size:clamp(1.2em, 2vw, 1.5vw);
+    font-size:clamp(1em, 2vw, 1.5vw);
     font-weight: 500;
     text-decoration: none;
     color: white;
@@ -864,7 +864,7 @@
 
 .pie-pag p{
     color: rgba(255, 255, 255, 0.527);
-    font-size:clamp(0.8em, 2vw, 1.2em);
+    font-size:clamp(0.6em, 2vw, 1.2em);
 }
 
 #spnAfter{
@@ -1735,12 +1735,12 @@ width: 30%;
     width: 100%;
 }
 #fter-contact{
-    width: 20vw;
+    width: 25vw;
     height: 4vh;
     border: 1px solid white;
     border-radius: 0.5vw;
     color: white;
-    font-size: 2vw;
+    font-size: 2.5vw;
     background-color:transparent;
     font-family: 'lato';
     margin-bottom: 6%;
@@ -1748,8 +1748,26 @@ width: 30%;
 #fterleftlogo img{
     width: 15vw;
     height: 15vw;
-    margin-inline: -10%;
+    margin-inline: -8%;
 }
+.icnsRedes{
+    width: 8vw;
+    margin-right: 2%;
+    transition: 0.5s;
+}
+#img-diferente{
+    margin-left: 4%;
+    width: 15vw;
+    transition: 0.5s;
+    margin-bottom: 2%;
+}
+#stars{
+    width: 12vw;
+}
+
+
+
+
 
 
 }
