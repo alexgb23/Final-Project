@@ -575,6 +575,7 @@
 }
 #s2Div-h4{
     font-size: 3.1vw;
+    padding-bottom: 4%;
     font-weight: 400;
     color: #4c4461;
     font-family: 'prata';
@@ -1633,13 +1634,24 @@ width: 30%;
     margin-top: 0%;
     padding: 2%;
 }
+.segunda-Seccion{
+    height: 28vh;
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    
+}
 #s2DivUp{
     position: absolute;
-    width:45vw;
+    width:40vw;
     left: 2%;
     margin-top: 0%;
     padding: 2%;
 }
+
 
 
 
