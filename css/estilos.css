@@ -50,7 +50,7 @@
     position: fixed;
     overflow: auto;
     background-image: url('../multimedia/imgTragos/AnyConv.com__Cocktail_Bananas_Kiwi_Lime_Black_background_577774_1280x853.webp');
-    background-size:cover;
+    background-size:contain;
     z-index: -1;
 }
 #lista-parallax{
