@@ -25,6 +25,7 @@
     background-image: url('../multimedia/imgDeeJae/Genesis_Nightclub_Chavon.webp');
     background-size:contain;
     background-position:center;
+    background-position: fixed;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: -1;
@@ -35,8 +36,11 @@
     position: fixed;
     overflow: auto;
     background-image: url('../multimedia/vista-superior-arreglo-verduras-otono-_1_.webp');
-    background-size:cover;
+    background-size:contain;
     background-position:center;
+    background-position: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     z-index: -1;
 }
 .parallax-Chef{
@@ -47,6 +51,7 @@
     background-image: url('../multimedia/imgChef/AnyConv.com__pexels-huy-phan-1422384_8_11zon.webp');
     background-size:contain;
     background-position:center;
+    background-position: fixed;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: -1;
@@ -59,6 +64,7 @@
     background-image: url('../multimedia/imgTragos/AnyConv.com__Cocktail_Bananas_Kiwi_Lime_Black_background_577774_1280x853.webp');
     background-size:contain;
     background-position:center;
+    background-position: fixed;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: -1;
