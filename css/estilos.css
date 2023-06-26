@@ -364,6 +364,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    object-fit:cover;
 }
 
 #titulo{
@@ -1279,8 +1280,9 @@ width: 30%;
 }
 #imgHder{
     position: relative;
-    min-width:fit-content;
-    float: right;
+    contain: cover;
+    width: 100%;
+    height: 100%;
   
 }
 #titulo{
