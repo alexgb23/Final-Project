@@ -775,23 +775,53 @@
                                         /*FOOTER*/
 
 .pie-pag{
-    width: 100%;
-    height:70vh;
     background-color:  white;
     color: white;
 }
-#footer__container{
-    width: 100%;
-    height: 70vh;
-    background-color:  rgba(220, 20, 60, 0.645);
-}
-
 .pie-pag h5{
-    padding: 3%;
+    padding: 1%;
     text-align: center;
     font-size: 3.5vw;
     font-weight: 200;
     font-family: 'prata';
+}
+#footer__container{
+    font-size: 1em;
+    background-color:  rgba(220, 20, 60, 0.645);
+}
+#titulat-footer{
+    width: 100%;
+    height: 20%;
+}
+.contenedor-Grid-footer{
+    display: flex;
+    display: flexbox;
+}
+#fterleftlogo{
+    padding-left: 8%;
+   padding-bottom: 2%;
+    width: 50%;
+}
+#fterRight {
+    padding-left: 4%;
+    width: 50%;
+}
+#fterRight h6{
+   font-size: 1.8em;
+}
+#logodelfooter{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+}
+#logodelfooter h3{
+   font-size: clamp(1em, 2vw, 2.5em);
+}
+
+#contderechafooter{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7%;
 }
 
 #fter-contact{
@@ -802,8 +832,8 @@
     color: white;
     font-size: 1.2vw;
     background-color:transparent;
-    margin-left: 45%;
     font-family: 'lato';
+    margin-bottom: 6%;
 }
 #fter-contact:hover{
     cursor: pointer;
@@ -811,21 +841,10 @@
     background-color:  rgb(245, 167, 50);
 }
 
-#fterleftlogo{
-    margin-top: 4%;
-    margin-left: 3%;
-    width: 45%;
-    height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
 #fterleftlogo a{
-    margin-left: 10%;
- transition: 0.5s;
-    font-size: 1.1vw;
+    margin-right: 6%;
+    transition: 0.5s;
+    font-size: 1.5vw;
     font-weight: 500;
     text-decoration: none;
     color: white;
@@ -839,37 +858,13 @@
 }
 
 #fterleftlogo img{
-    width: 5vw;
-}
-
-#fterleftlogo h3{
-    margin-right: -3%;
-    margin-left: -3%;
-    font-size: 2vw;
-    font-weight: 200;
-    font-family: 'prata';
+    width: 6vw;
+    height: 6vw;
 }
 
 .pie-pag p{
-    margin-top: 1%;
-    margin-left: 4%;
     color: rgba(255, 255, 255, 0.527);
-}
-
-#fterRight{
-    width: 26vw;
-    height: 60vh;
-    position: absolute;
-    right: 2%;
-    margin-top: -24%;
-}
-
-#fterRight h6{
-    font-size: 1.4vw;
-    margin-top: -4%;
-    margin-bottom: 6%;
-    font-family:'prata';
-    font-weight: 100;
+    font-size: 1.5vw;
 }
 
 #spnAfter{
@@ -896,33 +891,28 @@ border-bottom: 2px solid white;
 }
 
 #icnsRedesFre{
-    margin-top: 20%;
-    margin-bottom: 15%;
+   padding: 2%;
     display: flex;
     align-items: center;
     align-content: center;
 }
 
-#fterRight p{
-    color: rgba(255, 255, 255, 0.527);
-    margin: 0;
-    font-family: 'lato';
-    line-height: 1.4em ; 
-}
+
 #spnFter{
-    font-size: 1vw;
+    font-size: 1.2em;
     font-family: 'lato';
-    line-height: 1.4em ; 
+    line-height: 2em ; 
 }
 
 #stars{
-    width: 5vw;
+    width: 6vw;
 }
 
 .icnsRedes{
     width: 1.5vw;
     margin-right: 6%;
     transition: 0.5s;
+
 }
 
 .icnsRedes:hover{
@@ -935,6 +925,7 @@ border-bottom: 2px solid white;
     margin-left: 3%;
     width: 4vw;
     transition: 0.5s;
+    margin-bottom: 2%;
 }
 
 #img-diferente:hover{
@@ -1397,69 +1388,17 @@ width: 30%;
     padding-left:24%;
     background-color: rgba(7, 7, 7, 0.048);
 }
-.pie-pag{
-    width: 100%;
-    height: 32vh;
-}
-#footer__container{
-    width: 100%;
-    height: 32vh;
-}
-#fterRight{
-    width: 40vw;
-    height: 25vh;
-    position: absolute;
-    right: 2%;
-    margin-top: -60%;
-}
-#fterRight p{
-    color: rgba(255, 255, 255, 0.527);
-    margin: 0;
-    margin-top: -5%;
-    font-family: 'lato';
-    line-height: 0.1em; 
-}
-.pie-pag p{
-    margin-top: -5%;
-    margin-left: 4%;
-    font-size: 0.4em;
-    display: flex;
-    justify-content: space-between;
-    color: rgba(255, 255, 255, 0.527);
-}
-#fterleftlogo{
-    margin-top: 4%;
-    margin-left: 3%;
-    width: 45%;
-    height: 20vh;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    align-content: center;
-}
-.pie-pag h5{
-    padding: 3%;
-    text-align: left;
-    font-size: 2.5vw;
-    font-weight: 200;
-    font-family: 'prata';
-}
-#fter-contact{
-    width: 12vw;
-    height: 4vh;
-    border: 1px solid white;
-    border-radius: 0.5vw;
-    color: white;
-    font-size: 1.2vw;
-    background-color:transparent;
-    margin-left: 10%;
-    font-family: 'lato';
-}
+
 #s1artR-Btn2{
+    width: 18vw;
     height: 4vh;
+    font-size: 0.7em;
 }
+
 #s3artR-Btn2{
+    width: 16vw;
     height: 4vh;
+    font-size: 0.7em;
 }
 .nav-lateral-scroll{
     margin-top: 10%;
@@ -1751,6 +1690,18 @@ width: 30%;
     width: 90%;
 }
 
+                                                    /*footer responsive*/
+.contenedor-Grid-footer{
+    display: flex;
+   flex-direction: column;
+}
+#fterleftlogo{
+    padding-left: 8%;
+    width: 100%;
+}
+#fterRight {
+    width: 100%;
+}
 
 
 
