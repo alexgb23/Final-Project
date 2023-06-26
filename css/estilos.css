@@ -781,7 +781,7 @@
 .pie-pag h5{
     padding: 1%;
     text-align: center;
-    font-size: 3.5vw;
+    font-size:clamp(2em, 4vw, 3.5vw);
     font-weight: 200;
     font-family: 'prata';
 }
@@ -807,7 +807,7 @@
     width: 50%;
 }
 #fterRight h6{
-   font-size: 1.8em;
+   font-size:clamp(1.1em, 2vw, 1.8em);
 }
 #logodelfooter{
     display: flex;
@@ -815,7 +815,7 @@
     margin-bottom: 2%;
 }
 #logodelfooter h3{
-   font-size: clamp(1em, 2vw, 2.5em);
+   font-size: clamp(1.8em, 2vw, 2.5em);
 }
 
 #contderechafooter{
@@ -844,7 +844,7 @@
 #fterleftlogo a{
     margin-right: 6%;
     transition: 0.5s;
-    font-size: 1.5vw;
+    font-size:clamp(1.2em, 2vw, 1.5vw);
     font-weight: 500;
     text-decoration: none;
     color: white;
@@ -864,7 +864,7 @@
 
 .pie-pag p{
     color: rgba(255, 255, 255, 0.527);
-    font-size: 1.5vw;
+    font-size:clamp(0.8em, 2vw, 1.2em);
 }
 
 #spnAfter{
@@ -1728,13 +1728,28 @@ width: 30%;
    flex-direction: column;
 }
 #fterleftlogo{
-    padding-left: 8%;
+    padding-left: 2%;
     width: 100%;
 }
 #fterRight {
     width: 100%;
 }
-
+#fter-contact{
+    width: 20vw;
+    height: 4vh;
+    border: 1px solid white;
+    border-radius: 0.5vw;
+    color: white;
+    font-size: 2vw;
+    background-color:transparent;
+    font-family: 'lato';
+    margin-bottom: 6%;
+}
+#fterleftlogo img{
+    width: 15vw;
+    height: 15vw;
+    margin-inline: -10%;
+}
 
 
 }
