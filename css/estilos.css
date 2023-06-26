@@ -1280,7 +1280,8 @@ width: 30%;
 }
 #imgHder{
     position: relative;
-    contain: cover;
+    display: flexbox;
+    contain:content;
     width: 100%;
     height: 100%;
   
