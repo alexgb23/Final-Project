@@ -628,8 +628,15 @@
     font-size: 1.2vw;
     font-family: 'lato';
     display: flex;
+    align-items: center;
     color: #474848;
  }
+ .icoImgSvg{
+    cursor: pointer;
+    width: 3vw;
+    padding: 2%;
+ }
+ 
  #s2DivDown a{
   text-decoration: none;
   color: #474848;
@@ -1350,13 +1357,25 @@ width: 30%;
     text-align: left;
     border: 2px solid red
 }
+.s2artDiv{
+    padding-top: 25%;
+    height: 80%;
+    text-decoration: none;  
+   
+}
 
 .s2artDiv a{
    padding: 0%;
    font-size: 2.3vw;
    line-height: 4vw ;    
-   
 }
+.s2artDiv h4{
+    padding: 2%;
+    margin-bottom: 10%;
+   font-size: 2vw;
+    font-family: 'lato';
+    color: #474848;
+ }
 #s3srtleft{
     padding-left: 0%; 
     padding-inline: 3%;
@@ -1672,7 +1691,7 @@ width: 30%;
 #s2DivDown{
     position: absolute;
     width: 78%;
-    margin-top: 55%;
+    margin-top: 60%;
     right: 2%;
     font-size: 2.5vw;
     font-family: 'lato';
@@ -1684,7 +1703,7 @@ width: 30%;
     cursor: pointer;
     width: 7vw;
     padding: 2%;
-    margin-top: 2%;
+    margin-top: 5%;
  }
 
 
