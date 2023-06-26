@@ -35,7 +35,7 @@
     position: fixed;
     overflow: auto;
     background-image: url('../multimedia/vista-superior-arreglo-verduras-otono-_1_.webp');
-    background-size:contain;
+    background-size:cover;
     background-position:center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
