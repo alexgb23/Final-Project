@@ -1131,15 +1131,14 @@ border-bottom: 2px solid white;
     grid-template-columns: 1fr 1fr;
 }
 #disp__form__right{
-   display: block;
-   flex-direction: wrap;
+  
     border: 1px solid black;
 }
 
 
 
 .inp-largo{
-    width: 80%;
+    width: 90%;
     height: 6vh;
     border-radius: 0 5vw 5vw 5vw;
     margin: 3%;
@@ -1151,7 +1150,6 @@ border-bottom: 2px solid white;
     border-radius: 0 5vw 5vw 5vw;
     margin: 3%;
     border: none;
-    display: flex;
    
 }
 
