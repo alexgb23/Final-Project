@@ -1386,9 +1386,7 @@ width: 30%;
 
 #s4articulo{
     display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    width: 82%;
-    height: 100%;
+    grid-template-columns:repeat(4, 1fr);
     margin-right: 0%;
     padding-left:24%;
     background-color: rgba(7, 7, 7, 0.048);
@@ -1699,13 +1697,14 @@ width: 30%;
     padding: 2%;
     margin-top: 5%;
  }
+
  .s4artDiv li{
-    padding: 2%;
+    padding: 0%;
     list-style:none;
-    font-size: 2vw;
-    padding: 2%;   
+    font-size: 2vw;  
     font-family: 'prata';
     color: #292929;
+   
  }
  #s4DivUp{
     position: absolute;
@@ -1713,6 +1712,8 @@ width: 30%;
     left: 3%;
     margin-top: 3%;
     padding: 3%;
+   
+  
 }
 #s4articulo{
     display: grid;
@@ -1721,13 +1722,22 @@ width: 30%;
     padding-bottom: 4%;
     padding-left: 15%;
     background-color: rgba(7, 7, 7, 0.048);
+ 
 }
 .s4artDiv h4{
     padding: 2%;
     margin-bottom: 5%;
-    font-size: 1.8vw;
+    font-size: 2vw;
     font-family: 'lato';
     color: #474848;
+}
+.s4artDiv{
+    padding-top: 25%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 0%;
 }
 
 
