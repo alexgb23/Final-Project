@@ -864,7 +864,7 @@
 
 .pie-pag p{
     color: rgba(255, 255, 255, 0.527);
-    font-size:clamp(0.6em, 2vw, 1.2em);
+    font-size:clamp(0.7em, 2vw, 1.2em);
 }
 
 #spnAfter{
@@ -899,7 +899,7 @@ border-bottom: 2px solid white;
 
 
 #spnFter{
-    font-size: 1.2em;
+    font-size:clamp(0.8em, 2vw, 1.2em);
     font-family: 'lato';
     line-height: 2em ; 
 }
@@ -1735,15 +1735,17 @@ width: 30%;
     width: 100%;
 }
 #fter-contact{
+    position: absolute;
     width: 25vw;
     height: 4vh;
+    left: 40%;
     border: 1px solid white;
     border-radius: 0.5vw;
     color: white;
     font-size: 2.5vw;
     background-color:transparent;
     font-family: 'lato';
-    margin-bottom: 6%;
+    margin-bottom: 0%;
 }
 #fterleftlogo img{
     width: 15vw;
@@ -1764,6 +1766,13 @@ width: 30%;
 #stars{
     width: 12vw;
 }
+#ocultarp{
+    display: none;
+}
+.pie-pag p{
+ padding-bottom: 2%;
+}
+
 
 
 
