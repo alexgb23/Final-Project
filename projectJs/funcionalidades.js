@@ -670,7 +670,7 @@ function crearDivWassap(){
 
   let btnCloseWassap=document.createElement('img')
   btnCloseWassap.id='btnCloseWassap'
-  btnCloseWassap.src='multimedia/btnCerrar - copia.png'
+  btnCloseWassap.src='multimedia/btnCerrar.png'
   btnCloseWassap.addEventListener('click', () => {
     divWassap.remove()
   })
