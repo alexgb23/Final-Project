@@ -25,7 +25,6 @@ const btniSesion = document.querySelector('#isesion')
 const btnMostrarOcultarContraseña = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 const contWassap=document.querySelector('.pie-pag')
-const navlateralList = document.querySelector('.list-lat-down')
 
 //////////////////variables de los inputs de registrar usuarios////////////
 
@@ -80,6 +79,8 @@ addEventListener("scroll", () => { ///declaracion para que haga una instruccion 
 //// haga el slider con transision y se repita y salgan las cookis 
 
 addEventListener('load', () => {
+  colocarFecha()
+
 if(header.id == 'cab-Index') {
   sliderHeadIndex()
   setInterval(() => {
@@ -655,8 +656,32 @@ function crearDivWassap(){
   wassapContainer.appendChild(btnCloseWassap)
 }
 
-navlateralList.addEventListener('click', () => {
-  if(navlateralList.textContent=='Dee Jae'){
+document.addEventListener('click', (e) => {
+  if((e.target.className=='list-lat-down') && (e.target.textContent=='Dee Jae')){
     location.href = 'DeeJae.html'
   }
+ else if((e.target.className=='list-lat-down') && (e.target.textContent=='Cocteles y Bebidas')){
+    location.href = 'Bebidas.html'
+  }
+ else if((e.target.className=='list-lat-down') && (e.target.textContent=='Nuestros Chef')){
+    location.href = 'Chef.html'
+  }
+ else if((e.target.className=='list-lat-down') && (e.target.textContent=='Menus')){
+    location.href = 'tiposMenus.html'
+  }
+ else if((e.target.className=='list-lat-down') && (e.target.textContent=='Contactenos')){
+    location.href = 'disponibilidad.html'
+  }
 })
+
+function colocarFecha(){
+  const pDeFecha= document.querySelector('#fecha')
+  let fecha
+  const fechaActual = new Date();
+
+  const opciones = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+
+   fecha=fechaActual.toLocaleDateString('es-ES', opciones)
+
+  pDeFecha.textContent='Bolueta, '+' Grupo Peñascal, '+ fecha+'.';
+}
