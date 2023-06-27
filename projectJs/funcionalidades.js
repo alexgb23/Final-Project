@@ -25,6 +25,7 @@ const btniSesion = document.querySelector('#isesion')
 const btnMostrarOcultarContraseña = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 const contWassap=document.querySelector('.pie-pag')
+const navlateralList = document.querySelector('.list-lat-down')
 
 //////////////////variables de los inputs de registrar usuarios////////////
 
@@ -654,3 +655,8 @@ function crearDivWassap(){
   wassapContainer.appendChild(btnCloseWassap)
 }
 
+navlateralList.addEventListener('click', () => {
+  if(navlateralList.textContent=='Dee Jae'){
+    location.href = 'DeeJae.html'
+  }
+})
