@@ -1199,11 +1199,11 @@ border-bottom: 2px solid white;
     position: absolute;
     top: 6%;
     left: 5%;
-    font-size: clamp(0.5em, 1.5vw, 1em);
+    font-size: clamp(0.8em, 1.5vw, 1em);
     font-family: 'lato';
 }
 #spanWassap{
-    font-size: clamp(1em, 1.5vw, 1.8em);
+    font-size: clamp(1.2em, 1.5vw, 1.8em);
     font-family: 'prata';
     font-weight: 600;
 }
@@ -1870,7 +1870,10 @@ width: 30%;
     top: 6%;
     right: 6%;
 }
-
+#textopowBy{
+    top: 8%;
+    left: 8%;
+}
 
 
 
