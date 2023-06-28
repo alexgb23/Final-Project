@@ -238,9 +238,9 @@
 
         <section class="disponibilidad">
                 <div id="disp__form__right">
-                    <form action="" method="post">
+                    <form action="" method="post" id="form-disponibilidad">
                         <label for="nombre">Nombre <span>*</span></label>
-                        <label for="telefono">Telefono<span>*</span></label><br>
+                        <label for="telefono" class="cambposicion">Telefono<span>*</span></label><br>
                         <input type="text" name="disp-nombre" class="inp-corto" placeholder="Nombre">
                         <input type="tel" name="disp-telefono" class="inp-corto" placeholder="Telefono"><br>
                         <label for="email">Correo Electronico<span>*</span></label><br>
@@ -248,13 +248,24 @@
                         <label for="disp-Empresa">Empresa</label><br>
                         <input type="text" name="disp-Empresa" class="inp-largo" placeholder="Empresa"><br>
                         <label for="disp-fecha">Fecha"<span>*</span></label>
-                        <label for="disp-hora">Hora</label><br>
-                        <input type="date" name="disp-fecha" class="inp-corto">
-                        <input type="time" name="disp-hora" class="inp-corto">
+                        <label for="disp-hora" class="cambposicion">Hora</label><br>
+                        <input type="date" name="disp-fecha" class="inp-corto" placeholder="dd/mm/aaaa">
+                        <input type="time" name="disp-hora" class="inp-corto" placeholder="Fecha"><br>
+                        <label for="disp-lugar">Lugar<span>*</span></label>
+                        <label for="disp-numpersonas" class="cambposicion">Numero de Personas</label><br>
+                        <input type="text" name="disp-lugar" class="inp-corto" placeholder="Lugar">
+                        <input type="number" name="disp-numpersonas" class="inp-corto" placeholder="Numero de Personas"><br>
+                        <label for="disp-mensaje">Mensaje</label><br>
+                        <textarea name="disp-mensaje" class="inp-largo" id="inp-tarea" placeholder="Mensaje"></textarea><br>
+                        <label for="disp-politica">Política de privacidad<span>*</span></label><br>
+                        <input type="checkbox" name="disp-politica" id="disp-politica"><label for="disp-politica">He leído y acepto la política de privacidad.</label><br>
+                        <input type="submit" name="submit" value="Enviar" id="disp-btnEnviar">
 
                     </form>
                 </div>
-                <div id="disp__form__left"></div>
+                <div id="disp__form__left">
+                    <div id="disp__form__left--container"></div>
+                </div>
          
         </section> 
 

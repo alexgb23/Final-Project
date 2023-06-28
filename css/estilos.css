@@ -866,6 +866,9 @@
     color: rgba(255, 255, 255, 0.527);
     font-size:clamp(0.7em, 2vw, 1.2em);
 }
+#mostrarp{
+    display: none;
+}
 
 #spnAfter{
 text-decoration: none;
@@ -977,6 +980,7 @@ border-bottom: 2px solid white;
 ::placeholder {
     color: red;
   }
+
 
 .rellenar label{
     font-family: 'prata';
@@ -1126,32 +1130,67 @@ border-bottom: 2px solid white;
     width: 100%;
     height: 100%;
     background-color:rgba(142, 28, 51, 0.454);
-    padding: 2%;
+    padding: 3%;
+    padding-bottom: 6%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 #disp__form__right{
-  
-    border: 1px solid black;
+  border: 1px solid white;
 }
 
 
 
 .inp-largo{
-    width: 90%;
-    height: 6vh;
-    border-radius: 0 5vw 5vw 5vw;
-    margin: 3%;
+    width: 82%;
+    height: 7vh;
+    border-radius: 0 2vw 2vw 2vw;
+    margin: 1%;
     border: none;
+    padding: 2%;
+
+}
+.inp-largo::placeholder{
+    color: rgb(153, 152, 152);
+    font-size: 1.2em;
 }
 .inp-corto{
-    width: 30%;
-    height: 6vh;
-    border-radius: 0 5vw 5vw 5vw;
-    margin: 3%;
+    width: 40%;
+    height: 7vh;
+    border-radius: 0 2vw 2vw 2vw;
+    margin: 1%;
     border: none;
-   
+    padding: 2%;
 }
+.inp-corto::placeholder{
+    color: rgb(153, 152, 152);
+    font-size: 1.2em;
+}
+#inp-tarea{
+    height: 16vh;
+    border-radius: 0 1.5vw 1.5vw 1.5vw;
+}
+#form-disponibilidad span{
+    color: red;
+    font-size: 1em;
+    font-weight: 800;
+}
+#form-disponibilidad label{
+    color: rgb(59, 59, 59);
+    font-size: 1.2em;
+    font-weight: 550;
+    margin-left: 3%;
+}
+.cambposicion{
+    padding-left: 38%;
+}
+
+#disp__form__left{
+    border: 1px solid black;
+    
+}
+
+
 
                           /*creacion del contenedor de wassap*/
 
@@ -1769,10 +1808,35 @@ width: 30%;
 #ocultarp{
     display: none;
 }
+#mostrarp{
+    display: block;
+}
+
 .pie-pag p{
  padding-bottom: 2%;
 }
 
+/*formulario responsive*/
+
+.disponibilidad{
+   display: flex;
+   flex-direction: column;
+}
+
+.inp-largo{
+    height: 5vh;
+    border-radius: 0 5vw 5vw 5vw;
+    margin: 3%;
+    padding: 4%;
+
+}
+
+.inp-corto{
+    height: 5vh;
+    border-radius: 0 5vw 5vw 5vw;
+    margin: 3%;
+    padding: 4%;
+}
 
 
 
