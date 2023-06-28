@@ -116,7 +116,6 @@ else if(header.id == 'cab-DeeJae') {
     sliderHeadDJae()
   }, '200001')
 }
-
 })
 
 
