@@ -64,7 +64,7 @@ addEventListener("scroll", () => { ///declaracion para que haga una instruccion 
   ////condicion cuando la rueda del mouse se mueve hacia arriba y que la barra lateral
   /// no se encuentre visible porq me cambia el icono del menu/////
 
-  else if ((scrollY == 0) && (asideLateral.style.visibility == 'hidden')) {
+  if ((scrollY < 20) && (asideLateral.style.visibility === 'hidden')) {
     navegador.removeAttribute('id')
     navlogo.removeAttribute('id')
     icoMenu.style.backgroundColor = '#dc143c3b'
@@ -79,6 +79,12 @@ addEventListener("scroll", () => { ///declaracion para que haga una instruccion 
 //// haga el slider con transision y se repita y salgan las cookis 
 
 addEventListener('load', () => {
+  colocarFecha()
+  setTimeout(() => {
+    crearDivWassap()
+  },'10000')
+
+
 if(header.id == 'cab-Index') {
   sliderHeadIndex()
   setInterval(() => {
@@ -597,8 +603,6 @@ btnAceptcookies.addEventListener('click', () => {
 
 
 document.addEventListener('click', e => {
-  
-
   if((e.target.className=='btnclick') && (e.target.innerHTML=='VER SERVICIO DE DJ »')){
     location.href = 'DeeJae.html'
   }
@@ -640,17 +644,65 @@ function crearDivWassap(){
   divWassap.id='divWassap'
   contWassap.appendChild(divWassap)
 
-   
   let wassapContainer=document.createElement('div')
   wassapContainer.id='wassap-container'
+  wassapContainer.innerHTML='<p id="textopowBy"> powered by <span id="spanWassap"> Join.chat </span></p>'
   divWassap.appendChild(wassapContainer)
+
+  let wassapContainer2=document.createElement('div')
+  wassapContainer2.id='container2'
+  divWassap.appendChild(wassapContainer2)
+
+  let texto=document.createElement('p')
+  texto.id='textoWsP'
+  texto.textContent='Hola, Bienvenid@ a Gourmet Moments. ¿En qué podemos ayudarte?'
+  wassapContainer2.appendChild(texto)
+
+ let btnenviar=document.createElement('button')
+ btnenviar.id='btnenviarWS'
+ btnenviar.textContent='Abrir el Chat'
+ divWassap.appendChild(btnenviar)
+
+ let imgbtn=document.createElement('img')
+ imgbtn.id='imgbtnWsp'
+ imgbtn.src='multimedia/kisspng-computer-icons-send-5adc7d833d7dc9.8193747515243994912519.png'
+ btnenviar.appendChild(imgbtn)
 
   let btnCloseWassap=document.createElement('img')
   btnCloseWassap.id='btnCloseWassap'
-  btnCloseWassap.src='multimedia/btnCerrar - copia.png'
+  btnCloseWassap.src='multimedia/btnCerrar.png'
   btnCloseWassap.addEventListener('click', () => {
     divWassap.remove()
   })
   wassapContainer.appendChild(btnCloseWassap)
 }
 
+document.addEventListener('click', (e) => {
+  if((e.target.className=='list-lat-down') && (e.target.textContent=='Dee Jae')){
+    location.href = 'DeeJae.html'
+  }
+ else if((e.target.className=='list-lat-down') && (e.target.textContent=='Cocteles y Bebidas')){
+    location.href = 'Bebidas.html'
+  }
+ else if((e.target.className=='list-lat-down') && (e.target.textContent=='Nuestros Chef')){
+    location.href = 'Chef.html'
+  }
+ else if((e.target.className=='list-lat-down') && (e.target.textContent=='Menus')){
+    location.href = 'tiposMenus.html'
+  }
+ else if((e.target.className=='list-lat-down') && (e.target.textContent=='Contactenos')){
+    location.href = 'disponibilidad.html'
+  }
+})
+
+function colocarFecha(){
+  const pDeFecha= document.querySelector('#fecha')
+  let fecha
+  const fechaActual = new Date();
+
+  const opciones = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+
+   fecha=fechaActual.toLocaleDateString('es-ES', opciones)
+
+  pDeFecha.textContent='Bolueta, '+' Grupo Peñascal, '+ fecha+'.';
+}
