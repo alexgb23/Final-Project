@@ -303,6 +303,7 @@
 
 
 .list-lat{
+    color: white;
     margin-left: 8%;
     list-style: none;
     padding: 4%;
@@ -310,6 +311,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.5vw;
+    font-family: 'prata';
 }
 #list-lat-ol{
     display: none;
@@ -1410,7 +1412,7 @@ border-bottom: 2px solid white;
     transition: 0.5s;
 }
 .btnclickNav{
-    width: 21vw;
+    width: 24vw;
     padding-inline: 12%;
     height:4vh;
     font-size: 0.6em;
