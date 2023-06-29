@@ -400,6 +400,7 @@
 
 #titulo-pequeno{
     position: absolute;
+    margin-inline: 3%;
     bottom: 15%;
     color: white;
     font-size: 1.5vw;
