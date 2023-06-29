@@ -1168,6 +1168,7 @@ border-bottom: 2px solid white;
     padding: 2%;
 }
 #disp-btnEnviar{
+    margin-top: 5%;
     width: 80%;
     height: 5vh;
     border-radius: 50px 50px 50px 50px / 50px 50px 50px  50px;
@@ -1970,7 +1971,7 @@ width: 30%;
 }
 
 .inp-largo{
-    width: 100%;
+    width: 95%;
     height: 5vh;
     border-radius: 0 5vw 5vw 5vw;
     margin: 3%;
@@ -1978,7 +1979,7 @@ width: 30%;
 }
 
 .inp-corto{
-    width:100%;
+    width:95%;
     height: 5vh;
     border-radius: 0 5vw 5vw 5vw;
     margin: 3%;
