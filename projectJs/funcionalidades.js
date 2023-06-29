@@ -25,7 +25,10 @@ const btniSesion = document.querySelector('#isesion')
 const btnMostrarOcultarContrasena = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 const contWassap=document.querySelector('.pie-pag')
-const btnsslider=document.querySelectorAll('.disp__right_btnSlider')
+const btnsliderAdelante=document.querySelector('#btnsliderAdelante')
+const btnsliderAtras=document.querySelector('#btnsliderAtras')
+let imgDisp=document.querySelector('#disp__right-slider')
+
 
 //////////////////variables de los inputs de registrar usuarios////////////
 
@@ -711,36 +714,60 @@ function colocarFecha(){
   pDeFecha.textContent='Bolueta, '+' Grupo Peñascal, '+ fecha+'.';
 }
 
-btnsslider.forEach((btnsslider) => {
-  btnsslider.addEventListener('click', () => {
-let imagenDisp=document.querySelector('#disp__right-slider')
-    if(btnsslider.alt == 'slider adelante'){
-      cont = 1
-      for (let i = 0; i < cont; i++) {
-      imagenDisp.src='multimedia/slider/imagen'+ i +'.jpeg'
-       
-     
-      }
-     
-    setTimeout(() => {
-      btnsslider.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
-    })
-    setTimeout(() => {
-      btnsslider.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-right.png'
-    },'80')
-    console.log(cont++)
-    
-    }
-    else if(btnsslider.alt == 'slider atras'){
-      setTimeout(() => {
-        btnsslider.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-left.png'
+
+let arrayImgSlider=['multimedia/slider/imagen0.jpg','multimedia/slider/imagen1.jpg','multimedia/slider/imagen2.jpg','multimedia/slider/imagen3.jpg',
+                    'multimedia/slider/imagen4.jpg','multimedia/slider/imagen5.jpg','multimedia/slider/imagen6.jpg'
+                    ,'multimedia/slider/imagen7.jpg','multimedia/slider/imagen8.jpg','multimedia/slider/imagen9.jpg','multimedia/slider/imagen10.jpg']
+
+
+  btnsliderAdelante.addEventListener('click', () => {
+   setTimeout(() => {
+    btnsliderAdelante.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
+  })
+  setTimeout(() => {
+    btnsliderAdelante.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-right.png'
+  },'80')
+  sliderAdelante()
+
+  })
+
+
+  btnsliderAtras.addEventListener('click', () => {
+        setTimeout(() => {
+        btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-left.png'
       })
       setTimeout(() => {
-        btnsslider.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-left.png'
+        btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-left.png'
       },'80')
-    }
+      sliderAtras()
   })
-})
+
+
+//funcion para desplegar slider hacia adelante
+var indiceImagen = 0
+function sliderAdelante(){
+
+  if(indiceImagen < arrayImgSlider.length-1){
+    indiceImagen++
+    imgDisp.src = arrayImgSlider[indiceImagen]
+  }
+  else{
+    indiceImagen = 0
+    imgDisp.src =  arrayImgSlider[indiceImagen]
+  }  
+}
+
+function sliderAtras(){
+  if(indiceImagen > 0){
+    indiceImagen--
+    imgDisp.src = arrayImgSlider[indiceImagen]
+  }
+  else{
+    indiceImagen = arrayImgSlider.length-1
+    imgDisp.src = arrayImgSlider[indiceImagen]
+  }
+}
+  
 
 
 
