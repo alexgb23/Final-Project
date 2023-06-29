@@ -401,7 +401,7 @@
 #titulo-pequeno{
     position: absolute;
     margin-inline: 3%;
-    padding: 0.5%;
+    padding: 0.2%;
     bottom: 15%;
     color: white;
     font-size: 1.5vw;
@@ -1611,6 +1611,7 @@ width: 30%;
     margin-top: 10%;
 }
 .list-lat{
+    font-size: 4vw;
     margin-left: 4%;
     list-style: none;
     padding: 4%;
@@ -2029,6 +2030,11 @@ width: 30%;
 #textopowBy{
     top: 8%;
     left: 8%;
+}
+#arrow{
+    width: 3vw;
+    margin-right: 10%;
+    cursor: pointer;
 }
 
 

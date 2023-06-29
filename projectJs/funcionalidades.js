@@ -25,7 +25,7 @@ const btniSesion = document.querySelector('#isesion')
 const btnMostrarOcultarContrasena = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 const contWassap=document.querySelector('.pie-pag')
-const btnsliderAdelante=document.querySelector('#btnsliderAdelante')
+const btnsliderNext=document.querySelector('#btnsliderAdelante')
 const btnsliderAtras=document.querySelector('#btnsliderAtras')
 const imgDisp=document.querySelector('#disp__right-slider')
 
@@ -634,6 +634,9 @@ document.addEventListener('click', e => {
   else if((e.target.className=='icnsRedes') && (e.target.alt=='icono de ubicacion')){
     location.href = 'https://www.google.es/maps/preview'
   }
+  else if((e.target.className=='btnclickAside')){
+    location.href = 'index.html'
+  }
   else if(e.target.id=='fter-contact'){
     location.href = 'disponibilidad.html'
     
@@ -685,24 +688,24 @@ function crearDivWassap(){
   wassapContainer.appendChild(btnCloseWassap)
 }
 
-document.addEventListener('click', (e) => {
-  if((e.target.className=='list-lat-down') && (e.target.textContent=='Dee Jae')){
-    location.href = 'DeeJae.html'
-  }
- else if((e.target.className=='list-lat-down') && (e.target.textContent=='Cocteles y Bebidas')){
-    location.href = 'Bebidas.html'
-  }
- else if((e.target.className=='list-lat-down') && (e.target.textContent=='Nuestros Chef')){
-    location.href = 'Chef.html'
-  }
- else if((e.target.className=='list-lat-down') && (e.target.textContent=='Menus')){
-    location.href = 'tiposMenus.html'
-  }
- else if((e.target.className=='list-lat-down') && (e.target.textContent=='Contactenos')){
-    location.href = 'disponibilidad.html'
-  }
+// document.addEventListener('click', (e) => {
+//   if((e.target.className=='list-lat-down') && (e.target.textContent=='Dee Jae')){
+//     location.href = 'DeeJae.html'
+//   }
+//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Cocteles y Bebidas')){
+//     location.href = 'Bebidas.html'
+//   }
+//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Nuestros Chef')){
+//     location.href = 'Chef.html'
+//   }
+//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Menus')){
+//     location.href = 'tiposMenus.html'
+//   }
+//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Contactenos')){
+//     location.href = 'disponibilidad.html'
+//   }
  
-})
+// })
 
 function colocarFecha(){
   const pDeFecha= document.querySelector('#fecha')
@@ -724,32 +727,29 @@ let arrayImgSlider=['multimedia/slider/imagen0.jpg','multimedia/slider/imagen1.j
 
 
                     ///////btn de slider adelante y atras y q haga el active del boton //////
-btnsliderAdelante.addEventListener('click', () => {
-  setTimeout(() => {
-    btnsliderAdelante.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
-  })
-  setTimeout(() => {
-    btnsliderAdelante.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-right.png'
-  },'80')
+
+if(btnsliderNext)
+btnsliderNext.addEventListener('click', () => {
   sliderAdelante()
   cambiarCirculosSlider()
 })
-   
-  btnsliderAtras.addEventListener('click', () => {
-        setTimeout(() => {
-        btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-left.png'
-      })
-      setTimeout(() => {
-        btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-left.png'
-      },'80')
-      sliderAtras()
-      cambiarCirculosSlider()
-  })
+
+if(btnsliderAtras)
+btnsliderAtras.addEventListener('click', () => {
+  sliderAtras()
+  cambiarCirculosSlider()
+})
 
 
-                    //funcion para desplegar slider hacia adelante y atras
-var indiceImagen = 0
+                    //funcion para desplegar slider hacia adelante y atras///////////////
+let indiceImagen = 0
 function sliderAdelante(){
+  setTimeout(() => {
+    btnsliderNext.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
+  })
+  setTimeout(() => {
+    btnsliderNext.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-right.png'
+  },'80')
 
   if(indiceImagen < arrayImgSlider.length-1){
     indiceImagen++
@@ -762,6 +762,13 @@ function sliderAdelante(){
 }
 
 function sliderAtras(){
+  setTimeout(() => {
+    btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-left.png'
+  })
+  setTimeout(() => {
+    btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-left.png'
+  },'80')
+
   if(indiceImagen > 0){
     indiceImagen--
     imgDisp.src = arrayImgSlider[indiceImagen]
