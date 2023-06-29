@@ -84,6 +84,7 @@ document.addEventListener("scroll", () => { ///declaracion para que haga una ins
 
 addEventListener('load', () => {
   localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
+  cambiarCirculosSlider()
   colocarFecha()
   setTimeout(() => {
     crearDivWassap()
@@ -714,12 +715,14 @@ function colocarFecha(){
   pDeFecha.textContent='Bolueta, '+' Grupo Peñascal, '+ fecha+'.';
 }
 
+                     ///////////*array de imagenes del slider/////
 
 let arrayImgSlider=['multimedia/slider/imagen0.jpg','multimedia/slider/imagen1.jpg','multimedia/slider/imagen2.jpg','multimedia/slider/imagen3.jpg',
                     'multimedia/slider/imagen4.jpg','multimedia/slider/imagen5.jpg','multimedia/slider/imagen6.jpg'
                     ,'multimedia/slider/imagen7.jpg','multimedia/slider/imagen8.jpg','multimedia/slider/imagen9.jpg','multimedia/slider/imagen10.jpg']
 
 
+                    ///////btn de slider adelante y atras y q haga el active del boton //////
   btnsliderAdelante.addEventListener('click', () => {
    setTimeout(() => {
     btnsliderAdelante.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
@@ -728,7 +731,7 @@ let arrayImgSlider=['multimedia/slider/imagen0.jpg','multimedia/slider/imagen1.j
     btnsliderAdelante.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-right.png'
   },'80')
   sliderAdelante()
-
+  cambiarCirculosSlider()
   })
 
 
@@ -740,10 +743,11 @@ let arrayImgSlider=['multimedia/slider/imagen0.jpg','multimedia/slider/imagen1.j
         btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-left.png'
       },'80')
       sliderAtras()
+      cambiarCirculosSlider()
   })
 
 
-//funcion para desplegar slider hacia adelante
+                    //funcion para desplegar slider hacia adelante y atras
 var indiceImagen = 0
 function sliderAdelante(){
 
@@ -768,6 +772,18 @@ function sliderAtras(){
   }
 }
   
+function cambiarCirculosSlider(){
+  let circulos=document.querySelectorAll('.disp__span-circle')
+  circulos.forEach((circulo)=>{
+    if(circulo.id=='Circle'+indiceImagen){
+      circulo.style.backgroundColor = 'red'
+    }
+    else{
+      circulo.style.backgroundColor = 'white'
+    }
+  
+  })
+}
 
 
 

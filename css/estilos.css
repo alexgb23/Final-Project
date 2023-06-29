@@ -1194,7 +1194,7 @@ border-bottom: 2px solid white;
 }
 #form-disponibilidad label{
     color: rgb(59, 59, 59);
-    font-size: 1.2em;
+    font-size:clamp(1em, 2vw, 1.2em);
     font-weight: 550;
     margin-left: 3%;
 }
@@ -1205,6 +1205,7 @@ border-bottom: 2px solid white;
     display: none;
 }
 .disp__form-slider{
+    padding-top: 5%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1225,12 +1226,12 @@ border-bottom: 2px solid white;
     height:15vh;
     display: flex;
     justify-content: space-around;
+    margin-top: 3%;
     margin-bottom: 8%;
     padding: 2%;
 }
 #disp__form__left{
     border: 1px solid black;
-    padding: 3%;
 }
 .disp__right_btnSlider{
     margin: 2%;
@@ -1244,14 +1245,23 @@ border-bottom: 2px solid white;
     justify-content: center;
     align-items: center;
 }
-#disp__right-slider{
+
+#contenedor-slider{
     width: 80%;
+    height: 55vh;
+}
+#disp__right-slider{
+    width: 100%;
+    height: 100%;
     box-shadow: 10px 10px 10px rgb(142, 28, 51);
 }
 .disp__span-circle{
+    transition: 0.5s;
     background-color:white;
-    margin: 1%;
+    margin-top: 3%;
+    padding: 1.5%;
     width: 1vw;
+    margin-inline: 1%;
     height: 1vw;
     border-radius: 50px 50px 50px 50px / 50px 50px 50px  50px;
 }
@@ -1503,7 +1513,6 @@ width: 30%;
     contain:content;
     width: 100%;
     height: 100%;
-  
 }
 #titulo{
     position: absolute;
@@ -1541,8 +1550,6 @@ width: 30%;
     padding-left: 24%;
     margin-right: 0%;
     background-color: rgba(7, 7, 7, 0.048);
-   
-  
 }
 .s2artDiv{
     padding-top: 25%;
@@ -1550,10 +1557,7 @@ width: 30%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-  
     text-align:center;
-   
-
 }
 
 
