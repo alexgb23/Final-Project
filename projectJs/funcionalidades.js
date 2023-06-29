@@ -27,7 +27,7 @@ const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 const contWassap=document.querySelector('.pie-pag')
 const btnsliderAdelante=document.querySelector('#btnsliderAdelante')
 const btnsliderAtras=document.querySelector('#btnsliderAtras')
-let imgDisp=document.querySelector('#disp__right-slider')
+const imgDisp=document.querySelector('#disp__right-slider')
 
 
 //////////////////variables de los inputs de registrar usuarios////////////
@@ -636,6 +636,7 @@ document.addEventListener('click', e => {
   }
   else if(e.target.id=='fter-contact'){
     location.href = 'disponibilidad.html'
+    
   }
   else if((e.target.id=='img-diferente')){
     crearDivWassap()
@@ -723,8 +724,8 @@ let arrayImgSlider=['multimedia/slider/imagen0.jpg','multimedia/slider/imagen1.j
 
 
                     ///////btn de slider adelante y atras y q haga el active del boton //////
-  btnsliderAdelante.addEventListener('click', () => {
-   setTimeout(() => {
+btnsliderAdelante.addEventListener('click', () => {
+  setTimeout(() => {
     btnsliderAdelante.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
   })
   setTimeout(() => {
@@ -732,9 +733,8 @@ let arrayImgSlider=['multimedia/slider/imagen0.jpg','multimedia/slider/imagen1.j
   },'80')
   sliderAdelante()
   cambiarCirculosSlider()
-  })
-
-
+})
+   
   btnsliderAtras.addEventListener('click', () => {
         setTimeout(() => {
         btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-left.png'
