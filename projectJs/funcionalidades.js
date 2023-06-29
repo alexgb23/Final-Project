@@ -96,7 +96,7 @@ if(header.id == 'cab-Index') {
   setInterval(() => {
     sliderHeadIndex()
   }, '150001')
-  //  cokis()
+   cokis()
 }
 else if(header.id == 'cab-Tragos') {
   sliderHeadBebidas()
@@ -586,6 +586,7 @@ function replegarArrow() {                          //funcion para replegar flec
   listDownAside.style.display = 'none'
 }
 //////////////////////////////////////////////eventos a realizar al clicar en boton de aceptar cookies////////////////////////////
+if(checkCookies)
 checkCookies.addEventListener('click', () => {
   if (checkCookies.checked == true) {
     btnAceptcookies.style.opacity = '1'
@@ -597,6 +598,8 @@ checkCookies.addEventListener('click', () => {
     btnAceptcookies.setAttribute('disabled', 'true')
   }
 })
+
+if(btnAceptcookies)
 btnAceptcookies.addEventListener('click', () => {
   cookisCont.style.display = 'none'
   document.body.style.overflow = 'auto'
@@ -672,6 +675,9 @@ function crearDivWassap(){
  let btnenviar=document.createElement('button')
  btnenviar.id='btnenviarWS'
  btnenviar.textContent='Abrir el Chat'
+ btnenviar.addEventListener('click', () => {
+  location.href = 'tel:+34688872515'
+})
  divWassap.appendChild(btnenviar)
 
  let imgbtn=document.createElement('img')
@@ -682,9 +688,6 @@ function crearDivWassap(){
   let btnCloseWassap=document.createElement('img')
   btnCloseWassap.id='btnCloseWassap'
   btnCloseWassap.src='multimedia/btnCerrar.png'
-  btnCloseWassap.addEventListener('click', () => {
-    divWassap.remove()
-  })
   wassapContainer.appendChild(btnCloseWassap)
 }
 
