@@ -706,3 +706,5 @@ function colocarFecha(){
 
   pDeFecha.textContent='Bolueta, '+' Grupo Peñascal, '+ fecha+'.';
 }
+
+let prua
