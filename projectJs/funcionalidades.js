@@ -25,6 +25,7 @@ const btniSesion = document.querySelector('#isesion')
 const btnMostrarOcultarContrasena = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 const contWassap=document.querySelector('.pie-pag')
+const btnsslider=document.querySelectorAll('.disp__right_btnSlider')
 
 //////////////////variables de los inputs de registrar usuarios////////////
 
@@ -710,4 +711,37 @@ function colocarFecha(){
   pDeFecha.textContent='Bolueta, '+' Grupo Peñascal, '+ fecha+'.';
 }
 
-let prua
+btnsslider.forEach((btnsslider) => {
+  btnsslider.addEventListener('click', () => {
+let imagenDisp=document.querySelector('#disp__right-slider')
+    if(btnsslider.alt == 'slider adelante'){
+      cont = 1
+      for (let i = 0; i < cont; i++) {
+      imagenDisp.src='multimedia/slider/imagen'+ i +'.jpeg'
+       
+     
+      }
+     
+    setTimeout(() => {
+      btnsslider.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
+    })
+    setTimeout(() => {
+      btnsslider.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-right.png'
+    },'80')
+    console.log(cont++)
+    
+    }
+    else if(btnsslider.alt == 'slider atras'){
+      setTimeout(() => {
+        btnsslider.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-left.png'
+      })
+      setTimeout(() => {
+        btnsslider.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-left.png'
+      },'80')
+    }
+  })
+})
+
+
+
+
