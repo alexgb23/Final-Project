@@ -1950,8 +1950,16 @@ width: 30%;
 /*formulario responsive*/
 
 .disponibilidad{
+    padding: 2%;
    display: flex;
    flex-direction: column;
+}
+.disp__form-slider{
+    padding-top: 0%;
+}
+#contenedor-slider{
+   height: 30vh;
+
 }
 
 .cambposicion{
