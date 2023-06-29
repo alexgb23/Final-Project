@@ -1141,12 +1141,14 @@ border-bottom: 2px solid white;
 }
 #disp__form__right{
   border: 1px solid white;
+  display: flex;
+  flex-direction: column;
 }
 
 
 
 .inp-largo{
-    width: 82%;
+    width: 97%;
     height: 7vh;
     border-radius: 0 2vw 2vw 2vw;
     margin: 1%;
@@ -1159,12 +1161,24 @@ border-bottom: 2px solid white;
     font-size: 1.2em;
 }
 .inp-corto{
-    width: 40%;
+    width: 47%;
     height: 7vh;
     border-radius: 0 2vw 2vw 2vw;
     margin: 1%;
     border: none;
     padding: 2%;
+}
+#disp-btnEnviar{
+    width: 80%;
+    height: 5vh;
+    border-radius: 50px 50px 50px 50px / 50px 50px 50px  50px;
+    box-shadow: 0 1px 3px  rgb(142, 28, 51);
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
 }
 .inp-corto::placeholder{
     color: rgb(153, 152, 152);
@@ -1187,6 +1201,9 @@ border-bottom: 2px solid white;
 }
 .cambposicion{
     padding-left: 38%;
+}
+.posicion-label-Responsive{
+    display: none;
 }
 
 #disp__form__left{
@@ -1889,20 +1906,29 @@ width: 30%;
    flex-direction: column;
 }
 
+.cambposicion{
+    display: none;
+}
+.posicion-label-Responsive{
+    display: block;
+}
+
 .inp-largo{
+    width: 95%;
     height: 5vh;
     border-radius: 0 5vw 5vw 5vw;
     margin: 3%;
     padding: 4%;
-
 }
 
 .inp-corto{
+    width:95%;
     height: 5vh;
     border-radius: 0 5vw 5vw 5vw;
     margin: 3%;
     padding: 4%;
 }
+
 
 /* contenedor wassap*/
 

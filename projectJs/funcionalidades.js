@@ -130,7 +130,6 @@ function cokis() {            //////funcion para que se active el contenido de l
 
 function sliderHeadIndex() {
   imgCabecera.src = 'multimedia/cart-with-oysters-caesar-salad-flutes-lemonade-1920x1080.jpg.webp'
-  '/imgDeeJae'
   imgCabecera.style.transition = '8s'
   imgCabecera.style.scale = '1.5'
 
@@ -630,6 +629,9 @@ document.addEventListener('click', e => {
   else if((e.target.className=='icnsRedes') && (e.target.alt=='icono de ubicacion')){
     location.href = 'https://www.google.es/maps/preview'
   }
+  else if(e.target.id=='fter-contact'){
+    location.href = 'disponibilidad.html'
+  }
   else if((e.target.id=='img-diferente')){
     crearDivWassap()
   }
@@ -693,6 +695,7 @@ document.addEventListener('click', (e) => {
  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Contactenos')){
     location.href = 'disponibilidad.html'
   }
+ 
 })
 
 function colocarFecha(){
