@@ -4,7 +4,7 @@ const imglogo = document.querySelector('#logo')
 const btnHelp = document.querySelector('#interrogacion')
 const mensajeAyuda = document.querySelector('#ayuda-btn')
 const header = document.querySelector('.cabecera')
-const imgCabecera = document.querySelector('#imgHder');
+const imgCabecera = document.querySelector('#imgHder')
 const iniciarSesion = document.querySelector('.btnclickNav')
 const modalLogin = document.querySelector('.modal-Login')
 const btnCloseISesion = document.querySelector('#btnCerrar-login')
@@ -22,7 +22,7 @@ const listDownAside = document.querySelector('#list-lat-ol')
 const btnAceptcookies = document.querySelector('#btnAceptar-cookies')
 const checkCookies = document.querySelector('#Acept-Privacity')
 const btniSesion = document.querySelector('#isesion')
-const btnMostrarOcultarContraseña = document.querySelector('#verContrasena')
+const btnMostrarOcultarContrasena = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
 const contWassap=document.querySelector('.pie-pag')
 
@@ -50,27 +50,27 @@ let usuarioRegistrado = [{ nombre: 'Alexander', primerApellido: 'Galvez', segund
 
 /////////////////////////////////eventos de mover la rueda del mouse///////////////////////////////
 
-addEventListener("scroll", () => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
+document.addEventListener("scroll", () => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
 
-  if ((scrollY > 20) && (icoMenu.id == 'icono-menu')) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
-    navegador.id = 'cont-del-nav'
-    navlogo.id = 'logo-modified'
-    imglogo.src = 'multimedia/logomod.png'
-    icoMenu.src = 'multimedia/pngwingModified.png'
+  if ((window.scrollY > 20) && (icoMenu.id == 'icono-menu')) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
+    navegador.setAttribute('id','cont-del-nav')
+    navlogo.setAttribute('id','logo-modified') 
+    imglogo.src='multimedia/logomod.png'
+    icoMenu.src='multimedia/pngwingModified.png'
     icoMenu.style.backgroundColor = 'transparent'
-    btnHelp.src = 'multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937copyBlack.png'
+    btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937copyBlack.png'
   }
 
   ////condicion cuando la rueda del mouse se mueve hacia arriba y que la barra lateral
   /// no se encuentre visible porq me cambia el icono del menu/////
 
-  if ((scrollY < 20) && (asideLateral.style.visibility === 'hidden')) {
+  if ((window.scrollY < 20) && (asideLateral.style.visibility === 'hidden')) {
     navegador.removeAttribute('id')
     navlogo.removeAttribute('id')
     icoMenu.style.backgroundColor = '#dc143c3b'
-    icoMenu.src = 'multimedia/pngwing.com.png'
-    imglogo.src = 'multimedia/logo.png'
-    btnHelp.src = 'multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png'
+    icoMenu.src='multimedia/pngwing.com.png'
+    imglogo.src='multimedia/logo.png'
+    btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png'
   }
 
 });
@@ -79,6 +79,7 @@ addEventListener("scroll", () => { ///declaracion para que haga una instruccion 
 //// haga el slider con transision y se repita y salgan las cookis 
 
 addEventListener('load', () => {
+  localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
   colocarFecha()
   setTimeout(() => {
     crearDivWassap()
@@ -412,18 +413,18 @@ function errorEnCampos() {
 
 /////////////////////////////////////////mostrar/ocultar contraseña de registro de usuario
 
-btnMostrarOcultarContraseña.addEventListener('click', () => {
+btnMostrarOcultarContrasena.addEventListener('click', () => {
   mostrarOcultarContraseña()
 })
 
 function mostrarOcultarContraseña() {
   if (password.type === 'password') {
     password.type = 'text'
-    btnMostrarOcultarContraseña.src = 'multimedia/esconder.png'
+    btnMostrarOcultarContrasena.src = 'multimedia/esconder.png'
   }
   else if (password.type === 'text') {
     password.type = 'password'
-    btnMostrarOcultarContraseña.src = 'multimedia/ver.png'
+    btnMostrarOcultarContrasena.src = 'multimedia/ver.png'
   }
 }
 
