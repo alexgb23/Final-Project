@@ -1194,7 +1194,7 @@ border-bottom: 2px solid white;
 }
 #form-disponibilidad label{
     color: rgb(59, 59, 59);
-    font-size:clamp(1em, 2vw, 1.2em);
+    font-size:clamp(0.8em, 2vw, 1.2em);
     font-weight: 550;
     margin-left: 3%;
 }
