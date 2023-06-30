@@ -676,7 +676,7 @@ function crearDivWassap(){
  btnenviar.id='btnenviarWS'
  btnenviar.textContent='Abrir el Chat'
  btnenviar.addEventListener('click', () => {
-  location.href = 'https://api.whatsapp.com/send?phone=17862013838&text=Hola%20quiero%20info'
+  location.href = 'https://api.whatsapp.com/send?phone=34688872515&text=Hola%20quiero%20informacion.'
 })
  divWassap.appendChild(btnenviar)
 
