@@ -682,7 +682,7 @@ function crearDivWassap(){
  btnenviar.textContent='Abrir el Chat'
  btnenviar.addEventListener('click', () => {
   if(nombreUsuario==undefined){
-    alert('registrsese primero')
+    alert('Inicie Sesion Primero para poder enviar mensajes')
   }
   else{
     location.href = 'https://api.whatsapp.com/send?phone=34688872515&text=Hola%20mi%20nombre%20es:'+nombreUsuario+'%20quiero%20informacion%20sobre%20Gourmet%20Moments'
