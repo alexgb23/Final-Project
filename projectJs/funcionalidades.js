@@ -28,6 +28,7 @@ const contWassap=document.querySelector('.pie-pag')
 const btnsliderNext=document.querySelector('#btnsliderAdelante')
 const btnsliderAtras=document.querySelector('#btnsliderAtras')
 const imgDisp=document.querySelector('#disp__right-slider')
+let nombreUsuario;
 
 
 //////////////////variables de los inputs de registrar usuarios////////////
@@ -483,6 +484,7 @@ function login() {
     document.body.style.overflow = 'auto'
     iniciarSesion.innerHTML = 'Bienvenido/a ' + '<br>' + nombreLocal.nombre + '<img src="multimedia/kisspng-computer-icons-user-profile-avatar-5ab752869bb860.8278856115219636546379.png" alt="usuario" id="usuario">'
     iniciarSesion.src = 'multimedia/usuario.png'
+    nombreUsuario = nombreLocal.nombre
   }
   else if (contCorreo == 1 || contContraseña == 0) {
     registroInputPassword.value = ''
@@ -611,6 +613,7 @@ btnAceptcookies.addEventListener('click', () => {
 
 
 document.addEventListener('click', e => {
+  console.log(nombreUsuario)
   if((e.target.className=='btnclick') && (e.target.innerHTML=='VER SERVICIO DE DJ »')){
     location.href = 'DeeJae.html'
   }
@@ -653,6 +656,7 @@ document.addEventListener('click', e => {
   }
 })
 
+
 function crearDivWassap(){
  
   let divWassap=document.createElement('div')
@@ -677,7 +681,13 @@ function crearDivWassap(){
  btnenviar.id='btnenviarWS'
  btnenviar.textContent='Abrir el Chat'
  btnenviar.addEventListener('click', () => {
-  location.href = 'https://api.whatsapp.com/send?phone=34688872515&text=Hola%20mi%20nombre%20es:'+nombreLocal.nombre+'%20quiero%20informacion%20sobre%20Gourmet%20Moments'
+  if(nombreUsuario==undefined){
+    alert('registrsese primero')
+  }
+  else{
+    location.href = 'https://api.whatsapp.com/send?phone=34688872515&text=Hola%20mi%20nombre%20es:'+nombreUsuario+'%20quiero%20informacion%20sobre%20Gourmet%20Moments'
+  }
+  
 })
  divWassap.appendChild(btnenviar)
 
