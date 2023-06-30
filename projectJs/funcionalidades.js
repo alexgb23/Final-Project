@@ -676,7 +676,7 @@ function crearDivWassap(){
  btnenviar.id='btnenviarWS'
  btnenviar.textContent='Abrir el Chat'
  btnenviar.addEventListener('click', () => {
-  location.href = 'tel:+34688872515'
+  location.href = 'wassap:+34688872515'
 })
  divWassap.appendChild(btnenviar)
 
