@@ -457,12 +457,13 @@ btniSesion.addEventListener('click', () => {
 
 
 /////////////funcion para iniciar sesion si se cumplen las condiciones de registro de usuarios////////////
+let nombreLocal
 function login() {
 
   let userSaveLocal = JSON.parse(localStorage.getItem("Usuarios"))
   let contraseñasdelLocal = userSaveLocal.map(element => element.contrasena)
   let correosdelLocal = userSaveLocal.map(element => element.correo)
-  let nombreLocal = userSaveLocal.find(element => element.correo === registroInputCorreo.value)
+  nombreLocal = userSaveLocal.find(element => element.correo === registroInputCorreo.value)
   let contCorreo = 0
   let contContraseña = 0
 
@@ -676,7 +677,7 @@ function crearDivWassap(){
  btnenviar.id='btnenviarWS'
  btnenviar.textContent='Abrir el Chat'
  btnenviar.addEventListener('click', () => {
-  location.href = 'https://api.whatsapp.com/send?phone=34688872515&text=Hola%20quiero%20informacion.'
+  location.href = 'https://api.whatsapp.com/send?phone=34688872515&text=Hola%20mi%20nombre%20es:'+nombreLocal.nombre+'%20quiero%20informacion%20sobre%20Gourmet%20Moments'
 })
  divWassap.appendChild(btnenviar)
 
