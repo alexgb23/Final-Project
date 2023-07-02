@@ -636,6 +636,7 @@
     font-size: 1.2vw;
     font-family: 'lato';
     display: flex;
+    align-items: center;
     color: #474848;
  }
  .icoImgSvg{
