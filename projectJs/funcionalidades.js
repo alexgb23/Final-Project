@@ -24,10 +24,10 @@ const checkCookies = document.querySelector('#Acept-Privacity')
 const btniSesion = document.querySelector('#isesion')
 const btnMostrarOcultarContrasena = document.querySelector('#verContrasena')
 const btnShowHideContraseñaLogin = document.querySelector('#verPassword')
-const contWassap=document.querySelector('.pie-pag')
-const btnsliderNext=document.querySelector('#btnsliderAdelante')
-const btnsliderAtras=document.querySelector('#btnsliderAtras')
-const imgDisp=document.querySelector('#disp__right-slider')
+const contWassap = document.querySelector('.pie-pag')
+const btnsliderNext = document.querySelector('#btnsliderAdelante')
+const btnsliderAtras = document.querySelector('#btnsliderAtras')
+const imgDisp = document.querySelector('#disp__right-slider')
 let nombreUsuario;
 
 
@@ -58,12 +58,12 @@ let usuarioRegistrado = [{ nombre: 'Alexander', primerApellido: 'Galvez', segund
 document.addEventListener("scroll", () => { ///declaracion para que haga una instruccion cuando la rueda del mouse se mueva
 
   if ((window.scrollY > 20) && (icoMenu.id == 'icono-menu')) {              ////condicion cuando la rueda del mouse se mueve hacia abajo
-    navegador.setAttribute('id','cont-del-nav')
-    navlogo.setAttribute('id','logo-modified') 
-    imglogo.src='multimedia/logomod.png'
-    icoMenu.src='multimedia/pngwingModified.png'
+    navegador.setAttribute('id', 'cont-del-nav')
+    navlogo.setAttribute('id', 'logo-modified')
+    imglogo.src = 'multimedia/logomod.png'
+    icoMenu.src = 'multimedia/pngwingModified.png'
     icoMenu.style.backgroundColor = 'transparent'
-    btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937copyBlack.png'
+    btnHelp.src = 'multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937copyBlack.png'
   }
 
   ////condicion cuando la rueda del mouse se mueve hacia arriba y que la barra lateral
@@ -73,9 +73,9 @@ document.addEventListener("scroll", () => { ///declaracion para que haga una ins
     navegador.removeAttribute('id')
     navlogo.removeAttribute('id')
     icoMenu.style.backgroundColor = '#dc143c3b'
-    icoMenu.src='multimedia/pngwing.com.png'
-    imglogo.src='multimedia/logo.png'
-    btnHelp.src='multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png'
+    icoMenu.src = 'multimedia/pngwing.com.png'
+    imglogo.src = 'multimedia/logo.png'
+    btnHelp.src = 'multimedia/kisspng-computer-icons-question-mark-vector-graphics-clip-font-questioncircleo-svg-png-icon-free-download-5c0dda6aa958e3.8118011315444117546937.png'
   }
 
 });
@@ -87,43 +87,43 @@ addEventListener('load', () => {
   cambiarCirculosSlider()
   colocarFecha()
 
-if(header.id == 'cab-Index') {
-  if(localStorage.getItem("Usuarios")==null){
-    localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
-  }
-  sliderHeadIndex()
-  setInterval(() => {
+  if (header.id == 'cab-Index') {
+    if (localStorage.getItem("Usuarios") == null) {
+      localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
+    }
     sliderHeadIndex()
-  }, '150001')
-  setTimeout(() => {
-    crearDivWassap()
-  },'10000')
-   cokis()
-}
-else if(header.id == 'cab-Tragos') {
-  sliderHeadBebidas()
-  setInterval(() => {
+    setInterval(() => {
+      sliderHeadIndex()
+    }, '150001')
+    setTimeout(() => {
+      crearDivWassap()
+    }, '10000')
+    cokis()
+  }
+  else if (header.id == 'cab-Tragos') {
     sliderHeadBebidas()
-  }, '300001')
-}
-else if(header.id == 'cab-Menus') {
-  sliderHeadMenus()
-  setInterval(() => {
+    setInterval(() => {
+      sliderHeadBebidas()
+    }, '300001')
+  }
+  else if (header.id == 'cab-Menus') {
     sliderHeadMenus()
-  }, '200001')
-}
-else if(header.id == 'cab-Chef') {
-  sliderHeadChef()
-  setInterval(() => {
+    setInterval(() => {
+      sliderHeadMenus()
+    }, '200001')
+  }
+  else if (header.id == 'cab-Chef') {
     sliderHeadChef()
-  }, '200001')
-}
-else if(header.id == 'cab-DeeJae') {
-  sliderHeadDJae()
-  setInterval(() => {
+    setInterval(() => {
+      sliderHeadChef()
+    }, '200001')
+  }
+  else if (header.id == 'cab-DeeJae') {
     sliderHeadDJae()
-  }, '200001')
-}
+    setInterval(() => {
+      sliderHeadDJae()
+    }, '200001')
+  }
 })
 
 
@@ -279,7 +279,7 @@ function sliderHeadBebidas() {
     imgCabecera.style.scale = '1.3'
   }, '50001');
   setTimeout(() => {
-    imgCabecera.src ='multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(4).webp'
+    imgCabecera.src = 'multimedia/imgTragos/AnyConv.com__wallpaperflare.com_wallpaper(4).webp'
     imgCabecera.style.transition = '8s'
     imgCabecera.style.scale = '0.99'
   }, '100001');
@@ -354,23 +354,23 @@ btnCerrarModal.addEventListener('click', () => { ////funcion para cerrar la moda
 
 ////funcion para aceptar registro y recoger datos de los input
 
-btnAceptarRegistro.addEventListener('click', () => { 
+btnAceptarRegistro.addEventListener('click', () => {
 
 
   ////////////guardar en el local el array de usuarios registrados
-  let noregistrado=document.querySelector('#texto--cambiante')
+  let noregistrado = document.querySelector('#texto--cambiante')
   let traerLocalRegistro = JSON.parse(localStorage.getItem("Usuarios"))
   let mailLocalRegistro = traerLocalRegistro.map(element => element.correo)
   let contemail = 0
 
- ////////////recorrer y comparar el array de usuarios registrados
+  ////////////recorrer y comparar el array de usuarios registrados
   for (let i = 0; i < mailLocalRegistro.length; i++) {
     if (email.value === mailLocalRegistro[i]) {
       contemail = 1
     }
   }
 
-   ////////////condiciones para el registro
+  ////////////condiciones para el registro
   if ((inputNombre.value.trim() == "") || (email.value.trim() == "")
     || (password.value.trim() == "")) {
     errorEnCampos()
@@ -378,18 +378,18 @@ btnAceptarRegistro.addEventListener('click', () => {
 
   else if ((inputNombre.value.trim() != "") && (email.value.trim() != "")
     && (password.value.trim() != "") && (contemail == 1)) {
-      noregistrado.textContent = '"Este correo ya existe en nuestra base de Datos. Por favor Inicie Sesion"'
-      noregistrado.style.color = 'red'
-      noregistrado.style.fontSize = '1.5em'
-      noregistrado.style.backgroundColor = 'black'
+    noregistrado.textContent = '"Este correo ya existe en nuestra base de Datos. Por favor Inicie Sesion"'
+    noregistrado.style.color = 'red'
+    noregistrado.style.fontSize = '1.5em'
+    noregistrado.style.backgroundColor = 'black'
 
-      btnAceptarRegistro.addEventListener('click', () => {
-        modalLogin.style.display = 'none'
-        noregistrado.textContent='Ahora es el momento de conocerte a ti, estamos ansiosos por Ayudarte.'
-        noregistrado.style.color = 'white'
-        noregistrado.style.fontSize = ''
-        noregistrado.style.backgroundColor = 'transparent'
-      })
+    btnAceptarRegistro.addEventListener('click', () => {
+      modalLogin.style.display = 'none'
+      noregistrado.textContent = 'Ahora es el momento de conocerte a ti, estamos ansiosos por Ayudarte.'
+      noregistrado.style.color = 'white'
+      noregistrado.style.fontSize = ''
+      noregistrado.style.backgroundColor = 'transparent'
+    })
   }
 
   else if ((inputNombre.value.trim() != "") && (email.value.trim() != "")
@@ -461,7 +461,7 @@ btniSesion.addEventListener('click', () => {
 
 
 /////////////funcion para iniciar sesion si se cumplen las condiciones de registro de usuarios////////////
-let nombreLocal
+let nombreLocal;
 function login() {
 
   let userSaveLocal = JSON.parse(localStorage.getItem("Usuarios"))
@@ -487,8 +487,8 @@ function login() {
     document.body.style.overflow = 'auto'
     iniciarSesion.innerHTML = 'Bienvenido/a ' + '<br>' + nombreLocal.nombre + '<img src="multimedia/kisspng-computer-icons-user-profile-avatar-5ab752869bb860.8278856115219636546379.png" alt="usuario" id="usuario">'
     iniciarSesion.src = 'multimedia/usuario.png'
-    
-   localStorage.setItem("nombreUsuario", JSON.stringify(nombreLocal.nombre))
+
+    localStorage.setItem("nombreUsuario", JSON.stringify(nombreLocal.nombre))
     nombreUsuario = JSON.parse(localStorage.getItem("nombreUsuario"))
   }
 
@@ -595,118 +595,118 @@ function replegarArrow() {                          //funcion para replegar flec
   listDownAside.style.display = 'none'
 }
 //////////////////////////////////////////////eventos a realizar al clicar en boton de aceptar cookies////////////////////////////
-if(checkCookies)
-checkCookies.addEventListener('click', () => {
-  if (checkCookies.checked == true) {
-    btnAceptcookies.style.opacity = '1'
-    btnAceptcookies.removeAttribute('disabled')
-    btnAceptcookies.style.cursor = 'pointer'
-  }
-  else if (checkCookies.checked !== true) {
-    btnAceptcookies.style.opacity = '0.3'
-    btnAceptcookies.setAttribute('disabled', 'true')
-  }
-})
+if (checkCookies)
+  checkCookies.addEventListener('click', () => {
+    if (checkCookies.checked == true) {
+      btnAceptcookies.style.opacity = '1'
+      btnAceptcookies.removeAttribute('disabled')
+      btnAceptcookies.style.cursor = 'pointer'
+    }
+    else if (checkCookies.checked !== true) {
+      btnAceptcookies.style.opacity = '0.3'
+      btnAceptcookies.setAttribute('disabled', 'true')
+    }
+  })
 
-if(btnAceptcookies)
-btnAceptcookies.addEventListener('click', () => {
-  cookisCont.style.display = 'none'
-  document.body.style.overflow = 'auto'
-})
+if (btnAceptcookies)
+  btnAceptcookies.addEventListener('click', () => {
+    cookisCont.style.display = 'none'
+    document.body.style.overflow = 'auto'
+  })
 
 
 /////////////////////condicionales de botones/////////////////////////////////
 
 
 document.addEventListener('click', e => {
-  if((e.target.className=='btnclick') && (e.target.innerHTML=='VER SERVICIO DE DJ »')){
+  if ((e.target.className == 'btnclick') && (e.target.innerHTML == 'VER SERVICIO DE DJ »')) {
     location.href = 'DeeJae.html'
   }
-  else if((e.target.className=='btnclick') && (e.target.innerHTML=='VER CHEF DISPONIBLES »')){
+  else if ((e.target.className == 'btnclick') && (e.target.innerHTML == 'VER CHEF DISPONIBLES »')) {
     location.href = 'Chef.html'
   }
-  else if((e.target.id=='s3artR-Btn2')){
+  else if ((e.target.id == 's3artR-Btn2')) {
     location.href = 'Bebidas.html'
   }
-  else if((e.target.id=='s1artR-Btn2')){
+  else if ((e.target.id == 's1artR-Btn2')) {
     location.href = 'tiposMenus.html'
   }
-  else if((e.target.className=='icnsRedes') && (e.target.alt=='Red social instagram')){
+  else if ((e.target.className == 'icnsRedes') && (e.target.alt == 'Red social instagram')) {
     location.href = 'https://www.instagram.com/'
   }
-  else if((e.target.className=='icnsRedes') && (e.target.alt=='Red social facebook')){
+  else if ((e.target.className == 'icnsRedes') && (e.target.alt == 'Red social facebook')) {
     location.href = 'https://es-es.facebook.com/'
   }
-  else if((e.target.className=='icnsRedes') && (e.target.alt=='red social linkedin')){
+  else if ((e.target.className == 'icnsRedes') && (e.target.alt == 'red social linkedin')) {
     location.href = 'https://es.linkedin.com/?src=go-pa&trk=sem-ga_campid.18146679037_asid.140850334975_crid.619061882347_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.20271&mcid=6968657504633266178&cid=&gclid=Cj0KCQjwy9-kBhCHARIsAHpBjHgFDljIVo6L3-49VRGvOgSnVR-zjwloIGdC3eX1J2PqJXDGwdK-nsEaAgQcEALw_wcB&gclsrc=aw.ds'
   }
-  else if((e.target.className=='icnsRedes') && (e.target.alt=='red sicial twitter')){
+  else if ((e.target.className == 'icnsRedes') && (e.target.alt == 'red sicial twitter')) {
     location.href = 'https://twitter.com/?lang=es'
   }
-  else if((e.target.className=='icnsRedes') && (e.target.alt=='icono de ubicacion')){
+  else if ((e.target.className == 'icnsRedes') && (e.target.alt == 'icono de ubicacion')) {
     location.href = 'https://www.google.es/maps/preview'
   }
-  else if((e.target.className=='btnclickAside')){
+  else if ((e.target.className == 'btnclickAside')) {
     location.href = 'index.html'
   }
-  else if(e.target.id=='fter-contact'){
+  else if (e.target.id == 'fter-contact') {
     location.href = 'disponibilidad.html'
-    
+
   }
-  else if((e.target.id=='img-diferente')){
+  else if ((e.target.id == 'img-diferente')) {
     crearDivWassap()
   }
-  else if(e.target.id !=='interrogacion'){
+  else if (e.target.id !== 'interrogacion') {
     mensajeAyuda.style.display = 'none'
   }
 })
 
 
-function crearDivWassap(){
- 
-  let divWassap=document.createElement('div')
-  divWassap.id='divWassap'
+function crearDivWassap() {
+
+  let divWassap = document.createElement('div')
+  divWassap.id = 'divWassap'
   contWassap.appendChild(divWassap)
 
-  let wassapContainer=document.createElement('div')
-  wassapContainer.id='wassap-container'
-  wassapContainer.innerHTML='<p id="textopowBy"> powered by <span id="spanWassap"> Join.chat </span></p>'
+  let wassapContainer = document.createElement('div')
+  wassapContainer.id = 'wassap-container'
+  wassapContainer.innerHTML = '<p id="textopowBy"> powered by <span id="spanWassap"> Join.chat </span></p>'
   divWassap.appendChild(wassapContainer)
 
-  let wassapContainer2=document.createElement('div')
-  wassapContainer2.id='container2'
+  let wassapContainer2 = document.createElement('div')
+  wassapContainer2.id = 'container2'
   divWassap.appendChild(wassapContainer2)
 
-  let texto=document.createElement('p')
-  texto.id='textoWsP'
-  texto.textContent='Hola, Bienvenid@ a Gourmet Moments. ¿En qué podemos ayudarte?'
+  let texto = document.createElement('p')
+  texto.id = 'textoWsP'
+  texto.textContent = 'Hola, Bienvenid@ a Gourmet Moments. ¿En qué podemos ayudarte?'
   wassapContainer2.appendChild(texto)
 
- let btnenviar=document.createElement('button')
- btnenviar.id='btnenviarWS'
- btnenviar.textContent='Abrir el Chat'
- btnenviar.addEventListener('click', () => {
-  if(nombreUsuario==undefined){
-    alert('Inicie Sesion Primero para poder enviar mensajes')
-  }
-  else{
-    location.href = 'https://api.whatsapp.com/send?phone=34688872515&text=Hola%20mi%20nombre%20es:'+nombreUsuario+'%20quiero%20informacion%20sobre%20Gourmet%20Moments'
-  }
-  
-})
- divWassap.appendChild(btnenviar)
+  let btnenviar = document.createElement('button')
+  btnenviar.id = 'btnenviarWS'
+  btnenviar.textContent = 'Abrir el Chat'
+  btnenviar.addEventListener('click', () => {
+    if (nombreUsuario == undefined) {
+      alert('Inicie Sesion Primero para poder enviar mensajes')
+    }
+    else {
+      location.href = 'https://api.whatsapp.com/send?phone=34688872515&text=Hola%20mi%20nombre%20es:' + nombreUsuario + '%20quiero%20informacion%20sobre%20Gourmet%20Moments'
+    }
 
- let imgbtn=document.createElement('img')
- imgbtn.id='imgbtnWsp'
- imgbtn.src='multimedia/kisspng-computer-icons-send-5adc7d833d7dc9.8193747515243994912519.png'
- btnenviar.appendChild(imgbtn)
+  })
+  divWassap.appendChild(btnenviar)
 
-  let btnCloseWassap=document.createElement('img')
-  btnCloseWassap.id='btnCloseWassap'
-  btnCloseWassap.src='multimedia/btnCerrar.png'
+  let imgbtn = document.createElement('img')
+  imgbtn.id = 'imgbtnWsp'
+  imgbtn.src = 'multimedia/kisspng-computer-icons-send-5adc7d833d7dc9.8193747515243994912519.png'
+  btnenviar.appendChild(imgbtn)
+
+  let btnCloseWassap = document.createElement('img')
+  btnCloseWassap.id = 'btnCloseWassap'
+  btnCloseWassap.src = 'multimedia/btnCerrar.png'
   btnCloseWassap.addEventListener('click', () => {
-      divWassap.remove()
-})
+    divWassap.remove()
+  })
   wassapContainer.appendChild(btnCloseWassap)
 }
 
@@ -726,91 +726,91 @@ function crearDivWassap(){
 //  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Contactenos')){
 //     location.href = 'disponibilidad.html'
 //   }
- 
+
 // })
 
-function colocarFecha(){
-  const pDeFecha= document.querySelector('#fecha')
+function colocarFecha() {
+  const pDeFecha = document.querySelector('#fecha')
   let fecha
   const fechaActual = new Date();
 
   const opciones = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
 
-   fecha=fechaActual.toLocaleDateString('es-ES', opciones)
+  fecha = fechaActual.toLocaleDateString('es-ES', opciones)
 
-  pDeFecha.textContent='Bolueta, '+' Grupo Peñascal, '+ fecha+'.';
+  pDeFecha.textContent = 'Bolueta, ' + ' Grupo Peñascal, ' + fecha + '.';
 }
 
-                     ///////////*array de imagenes del slider/////
+///////////*array de imagenes del slider/////
 
-let arrayImgSlider=['multimedia/slider/imagen0.jpg','multimedia/slider/imagen1.jpg','multimedia/slider/imagen2.jpg','multimedia/slider/imagen3.jpg',
-                    'multimedia/slider/imagen4.jpg','multimedia/slider/imagen5.jpg','multimedia/slider/imagen6.jpg'
-                    ,'multimedia/slider/imagen7.jpg','multimedia/slider/imagen8.jpg','multimedia/slider/imagen9.jpg','multimedia/slider/imagen10.jpg']
-
-
-                    ///////btn de slider adelante y atras y q haga el active del boton //////
-
-if(btnsliderNext)
-btnsliderNext.addEventListener('click', () => {
-  sliderAdelante()
-  cambiarCirculosSlider()
-})
-
-if(btnsliderAtras)
-btnsliderAtras.addEventListener('click', () => {
-  sliderAtras()
-  cambiarCirculosSlider()
-})
+let arrayImgSlider = ['multimedia/slider/imagen0.jpg', 'multimedia/slider/imagen1.jpg', 'multimedia/slider/imagen2.jpg', 'multimedia/slider/imagen3.jpg',
+  'multimedia/slider/imagen4.jpg', 'multimedia/slider/imagen5.jpg', 'multimedia/slider/imagen6.jpg'
+  , 'multimedia/slider/imagen7.jpg', 'multimedia/slider/imagen8.jpg', 'multimedia/slider/imagen9.jpg', 'multimedia/slider/imagen10.jpg']
 
 
-                    //funcion para desplegar slider hacia adelante y atras///////////////
+///////btn de slider adelante y atras y q haga el active del boton //////
+
+if (btnsliderNext)
+  btnsliderNext.addEventListener('click', () => {
+    sliderAdelante()
+    cambiarCirculosSlider()
+  })
+
+if (btnsliderAtras)
+  btnsliderAtras.addEventListener('click', () => {
+    sliderAtras()
+    cambiarCirculosSlider()
+  })
+
+
+//funcion para desplegar slider hacia adelante y atras///////////////
 let indiceImagen = 0
-function sliderAdelante(){
+function sliderAdelante() {
   setTimeout(() => {
-    btnsliderNext.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
+    btnsliderNext.src = 'multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-right.png'
   })
   setTimeout(() => {
-    btnsliderNext.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-right.png'
-  },'80')
+    btnsliderNext.src = 'multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-right.png'
+  }, '80')
 
-  if(indiceImagen < arrayImgSlider.length-1){
+  if (indiceImagen < arrayImgSlider.length - 1) {
     indiceImagen++
     imgDisp.src = arrayImgSlider[indiceImagen]
   }
-  else{
+  else {
     indiceImagen = 0
-    imgDisp.src =  arrayImgSlider[indiceImagen]
-  }  
+    imgDisp.src = arrayImgSlider[indiceImagen]
+  }
 }
 
-function sliderAtras(){
+function sliderAtras() {
   setTimeout(() => {
-    btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-left.png'
+    btnsliderAtras.src = 'multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-black-left.png'
   })
   setTimeout(() => {
-    btnsliderAtras.src='multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-left.png'
-  },'80')
+    btnsliderAtras.src = 'multimedia/simbolo-de-doble-flecha-derecha-de-avance-rapido-left.png'
+  }, '80')
 
-  if(indiceImagen > 0){
+  if (indiceImagen > 0) {
     indiceImagen--
     imgDisp.src = arrayImgSlider[indiceImagen]
   }
-  else{
-    indiceImagen = arrayImgSlider.length-1
+  else {
+    indiceImagen = arrayImgSlider.length - 1
     imgDisp.src = arrayImgSlider[indiceImagen]
   }
 }
-  
-function cambiarCirculosSlider(){
-  let circulos=document.querySelectorAll('.disp__span-circle')
-  circulos.forEach((circulo)=>{
-    if(circulo.id=='Circle'+indiceImagen){
+
+function cambiarCirculosSlider() {
+  let circulos = document.querySelectorAll('.disp__span-circle')
+  circulos.forEach((circulo) => {
+    if (circulo.id == 'Circle' + indiceImagen) {
       circulo.style.backgroundColor = 'red'
     }
-    else{
+    else {
       circulo.style.backgroundColor = 'white'
     }
-  
+
   })
 }
 
