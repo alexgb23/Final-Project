@@ -28,7 +28,7 @@ const contWassap = document.querySelector('.pie-pag')
 const btnsliderNext = document.querySelector('#btnsliderAdelante')
 const btnsliderAtras = document.querySelector('#btnsliderAtras')
 const imgDisp = document.querySelector('#disp__right-slider')
-let nombreUsuario;
+let nombreUsuario=JSON.parse(localStorage.getItem("nombreUsuario"))
 
 
 //////////////////variables de los inputs de registrar usuarios////////////
@@ -91,6 +91,7 @@ addEventListener('load', () => {
     if (localStorage.getItem("Usuarios") == null) {
       localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
     }
+    ponernombre()
     sliderHeadIndex()
     setInterval(() => {
       sliderHeadIndex()
@@ -101,33 +102,45 @@ addEventListener('load', () => {
     cokis()
   }
   else if (header.id == 'cab-Tragos') {
+    ponernombre()
     sliderHeadBebidas()
     setInterval(() => {
       sliderHeadBebidas()
     }, '300001')
   }
   else if (header.id == 'cab-Menus') {
+    ponernombre()
     sliderHeadMenus()
     setInterval(() => {
       sliderHeadMenus()
     }, '200001')
   }
   else if (header.id == 'cab-Chef') {
+    ponernombre()
     sliderHeadChef()
     setInterval(() => {
       sliderHeadChef()
     }, '200001')
   }
   else if (header.id == 'cab-DeeJae') {
+    ponernombre()
     sliderHeadDJae()
     setInterval(() => {
       sliderHeadDJae()
     }, '200001')
   }
+  else if (header.id == 'disponibilidad') {
+    ponernombre()
+  }
 })
 
 
-
+function ponernombre(){
+  if((nombreUsuario!=undefined)||(nombreUsuario!=null)){
+    iniciarSesion.innerHTML = 'Bienvenido/a ' + '<br>' + nombreUsuario+ '<img src="multimedia/kisspng-computer-icons-user-profile-avatar-5ab752869bb860.8278856115219636546379.png" alt="usuario" id="usuario">'
+    iniciarSesion.src = 'multimedia/usuario.png'
+  }
+}
 
 function cokis() {            //////funcion para que se active el contenido de las cookis
   setTimeout(() => {
@@ -489,7 +502,6 @@ function login() {
     iniciarSesion.src = 'multimedia/usuario.png'
 
     localStorage.setItem("nombreUsuario", JSON.stringify(nombreLocal.nombre))
-    nombreUsuario = JSON.parse(localStorage.getItem("nombreUsuario"))
   }
 
   else if (contCorreo == 1 || contContraseña == 0) {
