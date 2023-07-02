@@ -87,16 +87,15 @@ addEventListener('load', () => {
   localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
   cambiarCirculosSlider()
   colocarFecha()
-  setTimeout(() => {
-    crearDivWassap()
-  },'10000')
-
 
 if(header.id == 'cab-Index') {
   sliderHeadIndex()
   setInterval(() => {
     sliderHeadIndex()
   }, '150001')
+  setTimeout(() => {
+    crearDivWassap()
+  },'10000')
    cokis()
 }
 else if(header.id == 'cab-Tragos') {
@@ -613,7 +612,6 @@ btnAceptcookies.addEventListener('click', () => {
 
 
 document.addEventListener('click', e => {
-  console.log(nombreUsuario)
   if((e.target.className=='btnclick') && (e.target.innerHTML=='VER SERVICIO DE DJ »')){
     location.href = 'DeeJae.html'
   }
