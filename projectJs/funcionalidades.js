@@ -84,11 +84,13 @@ document.addEventListener("scroll", () => { ///declaracion para que haga una ins
 //// haga el slider con transision y se repita y salgan las cookis 
 
 addEventListener('load', () => {
-  localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
   cambiarCirculosSlider()
   colocarFecha()
 
 if(header.id == 'cab-Index') {
+  if(localStorage.getItem("Usuarios")==null){
+    localStorage.setItem("Usuarios", JSON.stringify(usuarioRegistrado));
+  }
   sliderHeadIndex()
   setInterval(() => {
     sliderHeadIndex()
@@ -123,6 +125,8 @@ else if(header.id == 'cab-DeeJae') {
   }, '200001')
 }
 })
+
+
 
 
 function cokis() {            //////funcion para que se active el contenido de las cookis
@@ -483,8 +487,11 @@ function login() {
     document.body.style.overflow = 'auto'
     iniciarSesion.innerHTML = 'Bienvenido/a ' + '<br>' + nombreLocal.nombre + '<img src="multimedia/kisspng-computer-icons-user-profile-avatar-5ab752869bb860.8278856115219636546379.png" alt="usuario" id="usuario">'
     iniciarSesion.src = 'multimedia/usuario.png'
-    nombreUsuario = nombreLocal.nombre
+    
+   localStorage.setItem("nombreUsuario", JSON.stringify(nombreLocal.nombre))
+    nombreUsuario = JSON.parse(localStorage.getItem("nombreUsuario"))
   }
+
   else if (contCorreo == 1 || contContraseña == 0) {
     registroInputPassword.value = ''
     registroInputPassword.setAttribute('placeholder', '"CONTRASEÑA INCORRECTA"')
@@ -806,7 +813,4 @@ function cambiarCirculosSlider(){
   
   })
 }
-
-
-
 
