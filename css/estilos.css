@@ -427,6 +427,23 @@
     font-family: 'prata';
     line-height: 1.6em ;  
 }
+
+#parrafo-presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 8%;
+    padding-inline: 10%;
+    text-align: justify;
+   }
+ #parrafo-presentacion p{
+    font-size:clamp(0.7em, 2vw, 1.5em);
+    font-weight: 100;
+    font-family: 'prata';
+    line-height: 1.6em ;  
+}
+
 #firma{
     width: 38%;
     margin: 0 auto;
@@ -1775,6 +1792,7 @@ width: 30%;
     padding-inline: 3%;
     text-align: justify;
    }
+
    .s1l-text{
     text-align: justify;
     line-height: 1.6em ;    
