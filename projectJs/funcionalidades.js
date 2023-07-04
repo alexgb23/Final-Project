@@ -723,22 +723,18 @@ function crearDivWassap() {
 }
 
 // document.addEventListener('click', (e) => {
-//   if((e.target.className=='list-lat-down') && (e.target.textContent=='Dee Jae')){
+//   if((e.target.className=='list-lat-down') && (e.target.textContent=='Nosotros:')){
 //     location.href = 'DeeJae.html'
 //   }
-//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Cocteles y Bebidas')){
+//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Lugares:')){
 //     location.href = 'Bebidas.html'
 //   }
-//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Nuestros Chef')){
+//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Acontecimientos:')){
 //     location.href = 'Chef.html'
 //   }
-//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Menus')){
+//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Compañias:')){
 //     location.href = 'tiposMenus.html'
 //   }
-//  else if((e.target.className=='list-lat-down') && (e.target.textContent=='Contactenos')){
-//     location.href = 'disponibilidad.html'
-//   }
-
 // })
 
 function colocarFecha() {
